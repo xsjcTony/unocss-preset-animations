@@ -59,7 +59,6 @@
   },
   "peerDependencies": {
     "unocss": ">= 0.56.0 < 1",
-    "@unocss/core": ">= 0.56.0 < 1",
-    "@unocss/preset-mini": ">= 0.56.0 < 1"
+    "@unocss/preset-wind": ">= 0.56.0 < 1"
   }
 }
