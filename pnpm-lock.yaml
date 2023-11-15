@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+dependencies:
+  '@unocss/preset-wind':
+    specifier: '>= 0.56.0 < 1'
+    version: 0.57.4
+
 devDependencies:
   '@aelita-dev/eslint-config':
     specifier: 1.0.0-beta.14
@@ -810,7 +815,6 @@ packages:
 
   /@jridgewell/sourcemap-codec@1.4.15:
     resolution: {integrity: sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==}
-    dev: true
 
   /@jridgewell/trace-mapping@0.3.20:
     resolution: {integrity: sha512-R8LcPeWZol2zR8mmH3JeKQ6QRCFb7XgUhV9ZlGhHLGyg4wpPiPZNQOOWhFZhxKw8u//yTbNGI42Bx/3paXEQ+Q==}
@@ -1192,7 +1196,6 @@ packages:
 
   /@unocss/core@0.57.4:
     resolution: {integrity: sha512-JXufixa501p7+uwUkfG9voIUvNYXv58shZCKXO4Q9AojOzOMu6TDj35x8f3Sv5WFtZ3tp03sIETAfQRo7ksshw==}
-    dev: true
 
   /@unocss/eslint-plugin@0.57.3(eslint@8.53.0)(typescript@5.2.2):
     resolution: {integrity: sha512-S2xhVdfApBYz/ORhN2jdUPC6EFLczzEINRBoxcVHLlRaOydpsSgWZNux9WkP4zdifuCUM1VvfBJoMokHn+sEBA==}
@@ -1213,7 +1216,6 @@ packages:
     resolution: {integrity: sha512-BPvS2ePUrhGMSuEkNMnPcOcTC7SkrRblARwGk00PGGfCRSWhCi6Csz0oHvn2Qm8147hoQzkEwM74+dox8gcsxw==}
     dependencies:
       '@unocss/core': 0.57.4
-    dev: true
 
   /@unocss/inspector@0.57.4:
     resolution: {integrity: sha512-0GV4g2/jXVf+5YKvm1g/ExQTeU5+Zfl2qhkzJXuUT7IigDrG+dAEuQ2oaTwXHpdtGfxdYWYS8Cbr7rxRsZU/Pg==}
@@ -1261,7 +1263,6 @@ packages:
       '@unocss/core': 0.57.4
       '@unocss/extractor-arbitrary-variants': 0.57.4
       '@unocss/rule-utils': 0.57.4
-    dev: true
 
   /@unocss/preset-tagify@0.57.4:
     resolution: {integrity: sha512-qNcEwbbjNi6XifxbCI8AUUee2PF2FmgERKDZkUwxH42CA9ODnN3Lu+nvVXF5B623cImnUDtwa+8kuCAhRIQs8g==}
@@ -1298,7 +1299,6 @@ packages:
       '@unocss/core': 0.57.4
       '@unocss/preset-mini': 0.57.4
       '@unocss/rule-utils': 0.57.4
-    dev: true
 
   /@unocss/reset@0.57.4:
     resolution: {integrity: sha512-4i2d5SrERGDJmN18CY5pgkPqZ3PMvAoDHe7MSF1Eqtv4YW6CsxohrTmAJtS3B/2xw68ngtnbf0EFMbwyUwW+ug==}
@@ -1310,7 +1310,6 @@ packages:
     dependencies:
       '@unocss/core': 0.57.4
       magic-string: 0.30.5
-    dev: true
 
   /@unocss/scope@0.57.4:
     resolution: {integrity: sha512-LGmRp/KQYgRSWQ5oYykD5FewUELc43IfFQx0H6aJmNtlqzm6q0VmRqMhR/2TPNp3o+pD6eYUrQ4WqbSsZoMRJA==}
@@ -3274,7 +3273,6 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
-    dev: true
 
   /mdn-data@2.0.30:
     resolution: {integrity: sha512-GaqWWShW4kv/G9IEucWScBx9G1/vsFZZJUO+tD26M8J8z3Kw5RDQjaoZe03YAClgeS/SWPOcb4nkFBTEi5DUEA==}
