@@ -2,6 +2,7 @@
   "name": "unocss-preset-tailwind-animate",
   "version": "0.0.1",
   "description": "💅 An adaptation of the tailwindcss-animate Tailwind plugin for UnoCSS",
+  "packageManager": "pnpm@8.10.5",
   "type": "module",
   "author": "Aelita <https://github.com/xsjcTony>",
   "license": "MIT",
@@ -17,7 +18,8 @@
     "css",
     "unocss",
     "unocss-preset",
-    "unocss-preset-tailwind-animate"
+    "unocss-preset-tailwind-animate",
+    "tailwind-animate"
   ],
   "exports": {
     ".": {
@@ -33,18 +35,25 @@
     "dist"
   ],
   "scripts": {
-    "build": "unbuild"
+    "build": "pnpm typecheck && unbuild",
+    "release": "pnpm build && bumpp && pnpm publish",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint ."
   },
   "devDependencies": {
-    "@aelita-dev/eslint-config": "1.0.0-beta.13",
+    "@aelita-dev/eslint-config": "1.0.0-beta.14",
     "@typescript-eslint/eslint-plugin": "^6.11.0",
     "@typescript-eslint/parser": "^6.11.0",
+    "@unocss/core": "^0.57.4",
+    "@unocss/preset-mini": "^0.57.4",
+    "bumpp": "^9.2.0",
     "eslint": "^8.53.0",
     "eslint-import-resolver-node": "^0.3.9",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.0",
     "typescript": "^5.2.2",
     "unbuild": "^2.0.0",
+    "unocss": "^0.57.4",
     "vitest": "^0.34.6"
   },
   "peerDependencies": {

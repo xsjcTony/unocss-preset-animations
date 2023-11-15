@@ -8,12 +8,14 @@ export default defineBuildConfig({
   clean: true,
   declaration: true,
   externals: [
-    // TODO: add externals
+    '@unocss/core',
+    '@unocss/preset-mini'
   ],
   rollup: {
     emitCJS: true,
     dts: {
       respectExternal: false
     }
-  }
+  },
+  failOnWarn: false
 })
