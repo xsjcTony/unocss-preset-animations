@@ -4,12 +4,12 @@ import { shortcuts } from './shortcuts'
 import { theme } from './theme'
 
 
-export const presetTailwindAnimate = definePreset({
+export const presetTailwindAnimate = definePreset(() => ({
   name: 'unocss-preset-tailwind-animate',
   theme,
   shortcuts,
   rules
-})
+}))
 
 
 export default presetTailwindAnimate
