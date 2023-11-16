@@ -9,6 +9,8 @@
     "noUncheckedIndexedAccess": true
   },
   "include": [
-    "**/*.ts"
+    "**/*.ts",
+    "**/.vitepress/**/*.ts",
+    "**/.vitepress/**/*.vue"
   ]
 }

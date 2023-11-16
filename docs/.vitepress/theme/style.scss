@@ -1,0 +1,66 @@
+:root {
+  --vp-c-brand-1: #ff7189;
+  --vp-c-brand-2: #ff879a;
+  --vp-c-brand-3: #ff9eac;
+  --vp-c-brand-soft: rgb(255 158 172 / 0.14);
+}
+
+:root.dark {
+  --vp-c-brand-1: #ffb7c2;
+  --vp-c-brand-2: #ff9eac;
+  --vp-c-brand-3: #ff879a;
+  --vp-c-brand-soft: rgb(255 158 172 / 0.14);
+}
+
+/**
+ * Component: Home
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(135deg, #ff9eac 20%, #5effff);
+  --vp-home-hero-image-background-image: linear-gradient(135deg, #ff9eac 35%, #5effff);
+  --vp-home-hero-image-filter: blur(72px);
+}
+
+:root.dark {
+  --vp-home-hero-name-background: linear-gradient(135deg, #ffb7c2 20%, #9dffff);
+  --vp-home-hero-image-background-image: linear-gradient(135deg, #ffb7c2 35%, #9dffff);
+}
+
+
+.VPHero .image-bg {
+  @apply opacity-80 z-1;
+}
+
+@apply keyframes-pulse;
+
+.VPFeatures {
+  .VPFeature {
+    @apply transition-border-color,background-color,opacity,transform transition-duration-800;
+  }
+
+  .item:nth-child(1) .VPFeature {
+    @apply @hover:opacity-20;
+  }
+
+  .item:nth-child(2) .VPFeature {
+    @apply @hover:scale-150;
+  }
+
+  .item:nth-child(3) .VPFeature {
+    @apply @hover:rotate-360;
+  }
+
+  .item:nth-child(4) .VPFeature {
+    @apply @hover:-translate-y-50%;
+  }
+}
+
+/**
+ * Component: Algolia
+ * -------------------------------------------------------------------------- */
+
+.DocSearch {
+  --docsearch-primary-color: var(--vp-c-brand-1) !important;
+}

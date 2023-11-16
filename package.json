@@ -39,26 +39,36 @@
     "build": "pnpm typecheck && unbuild",
     "release": "pnpm build && bumpp && pnpm publish",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
-    "@aelita-dev/eslint-config": "1.0.0-beta.14",
+    "@aelita-dev/eslint-config": "1.0.0-beta.17",
+    "@types/markdown-it": "^13.0.6",
     "@typescript-eslint/eslint-plugin": "^6.11.0",
     "@typescript-eslint/parser": "^6.11.0",
+    "@unocss/core": "^0.57.4",
+    "@unocss/preset-mini": "^0.57.4",
+    "@unocss/vite": "^0.57.4",
+    "@vue/language-server": "^1.8.22",
     "bumpp": "^9.2.0",
     "eslint": "^8.53.0",
     "eslint-import-resolver-node": "^0.3.9",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.0",
+    "markdown-it": "^13.0.2",
+    "sass": "^1.69.5",
     "typescript": "^5.2.2",
     "unbuild": "^2.0.0",
     "unocss": "^0.57.4",
+    "vitepress": "1.0.0-rc.25",
     "vitest": "^0.34.6",
-    "@unocss/core": "^0.57.4",
-    "@unocss/preset-mini": "^0.57.4"
+    "vue": "^3.3.8"
   },
   "peerDependencies": {
-    "unocss": ">= 0.56.0 < 1",
-    "@unocss/preset-wind": ">= 0.56.0 < 1"
+    "@unocss/preset-wind": ">= 0.56.0 < 1",
+    "unocss": ">= 0.56.0 < 1"
   }
 }
