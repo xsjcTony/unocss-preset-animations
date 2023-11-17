@@ -9,8 +9,8 @@ export default defineConfig({
 
   vite: {
     plugins: [
-      unocssPlugin()
-    ]
+      unocssPlugin(),
+    ],
   },
 
   lastUpdated: true,
@@ -19,20 +19,25 @@ export default defineConfig({
   title: 'unocss-preset-tailwind-animate',
   titleTemplate: ':title | unocss-preset-tailwind-animate',
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo-with-shadow.svg' }]
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
   ],
   description: '💅 An adaptation of the tailwindcss-animate Tailwind plugin for UnoCSS',
   markdown: {
+    theme: {
+      dark: 'material-theme-palenight',
+      light: 'min-light',
+    },
     config: (md) => {
       md.use(externalLinkIcon)
-    }
+    },
   },
   themeConfig: {
     logo: '/logo.svg',
+    siteTitle: 'unocss ❤ animate',
     // TODO: algolia
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Examples', link: '/markdown-examples' },
     ],
 
     sidebar: [
@@ -40,13 +45,13 @@ export default defineConfig({
         text: 'Examples',
         items: [
           { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
+          { text: 'Runtime API Examples', link: '/api-examples' },
+        ],
+      },
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
-  }
+      { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
+    ],
+  },
 })

@@ -24,7 +24,7 @@ const externalLinkIcon = (md: MarkdownIt): void => {
 
     if (href && /^((ht|f)tps?):\/\/?/.test(href)) {
       isExternalLink = true
-      token?.attrSet('style', 'display: inline-flex; align-items: center; column-gap: .4em;')
+      token?.attrSet('style', 'display: inline-flex; align-items: center; column-gap: .3em;')
     }
 
     return defaultLinkOpenRenderer(tokens, idx, options, env, self)

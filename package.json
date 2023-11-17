@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "@aelita-dev/eslint-config": "1.0.0-beta.17",
+    "@iconify/json": "^2.2.142",
     "@types/markdown-it": "^13.0.6",
     "@typescript-eslint/eslint-plugin": "^6.11.0",
     "@typescript-eslint/parser": "^6.11.0",

@@ -45,7 +45,7 @@
   }
 
   .item:nth-child(2) .VPFeature {
-    @apply @hover:scale-150;
+    @apply @hover:scale-130;
   }
 
   .item:nth-child(3) .VPFeature {
@@ -53,7 +53,7 @@
   }
 
   .item:nth-child(4) .VPFeature {
-    @apply @hover:-translate-y-50%;
+    @apply @hover:-translate-y-30%;
   }
 }
 
@@ -63,4 +63,16 @@
 
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
+}
+
+
+/**
+ * Component: Docs
+ */
+.vp-doc a {
+  @apply decoration-dotted;
+}
+
+.custom-block a:focus,.custom-block a:active,.custom-block a:hover,.vp-doc a:focus,.vp-doc a:active,.vp-doc a:hover {
+  @apply decoration-solid;
 }
