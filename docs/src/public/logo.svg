@@ -3,32 +3,29 @@
 <defs>
 </defs>
 <rect x="0" y="0" width="100%" height="100%" fill="rgba(102,51,102,0)"/>
-<g transform="matrix(4.2329 0 0 4.2329 500.004 500.004)" id="596998">
+<g transform="matrix(4.2329 0 0 4.2329 500.004 500.004)" id="880032">
 <g style="" vector-effect="non-scaling-stroke">
-		<g transform="matrix(1 0 0 1 57.444 57.888)">
+		<g transform="matrix(1 0 0 1 57.444 57.888)" id="221146">
 <path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill: rgb(133,133,133); fill-rule: nonzero; opacity: 1;" transform=" translate(-167.444, -167.888)" d="M 117.444 167.888 C 117.444 140.273 139.83 117.888 167.444 117.888 V 117.888 C 195.058 117.888 217.444 140.273 217.444 167.888 V 167.888 C 217.444 195.502 195.058 217.888 167.444 217.888 V 217.888 C 139.83 217.888 117.444 195.502 117.444 167.888 V 167.888 Z" stroke-linecap="round"/>
 </g>
-		<g transform="matrix(1 0 0 1 57.444 -57)">
+		<g transform="matrix(1 0 0 1 57.444 -57)" id="109340">
 <path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill: rgb(204,204,204); fill-rule: nonzero; opacity: 1;" transform=" translate(-167.444, -53)" d="M 117.444 53 C 117.444 25.3858 139.83 3 167.444 3 V 3 C 195.058 3 217.444 25.3858 217.444 53 V 98 C 217.444 100.761 215.205 103 212.444 103 H 122.444 C 119.683 103 117.444 100.761 117.444 98 V 53 Z" stroke-linecap="round"/>
 </g>
-		<g transform="matrix(1 0 0 1 -58 57.888)">
+		<g transform="matrix(1 0 0 1 -58 57.888)" id="924624">
 <path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill: rgb(77,77,77); fill-rule: nonzero; opacity: 1;" transform=" translate(-52, -167.888)" d="M 102 167.888 C 102 195.502 79.6142 217.888 52 217.888 V 217.888 C 24.3858 217.888 2 195.502 2 167.888 L 2.00001 122.888 C 2.00001 120.126 4.23859 117.888 7.00001 117.888 L 97 117.888 C 99.7614 117.888 102 120.126 102 122.888 L 102 167.888 Z" stroke-linecap="round"/>
 </g>
 </g>
 </g>
-<g transform="matrix(22.5656 0 0 22.5656 249.0278 251.3513)" id="352251">
-<path style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill: rgb(89,89,89); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke" transform=" translate(-12, -12)" d="M 12 6 c -2.67 0 -4.33 1.33 -5 4 c 1 -1.33 2.17 -1.83 3.5 -1.5 c 0.76 0.19 1.31 0.74 1.91 1.35 c 0.98 1 2.09 2.15 4.59 2.15 c 2.67 0 4.33 -1.33 5 -4 c -1 1.33 -2.17 1.83 -3.5 1.5 c -0.76 -0.19 -1.3 -0.74 -1.91 -1.35 C 15.61 7.15 14.5 6 12 6 m -5 6 c -2.67 0 -4.33 1.33 -5 4 c 1 -1.33 2.17 -1.83 3.5 -1.5 c 0.76 0.19 1.3 0.74 1.91 1.35 C 8.39 16.85 9.5 18 12 18 c 2.67 0 4.33 -1.33 5 -4 c -1 1.33 -2.17 1.83 -3.5 1.5 c -0.76 -0.19 -1.3 -0.74 -1.91 -1.35 C 10.61 13.15 9.5 12 7 12 Z" stroke-linecap="round"/>
-</g>
-<g transform="matrix(9.2762 0 0 9.2762 743.6527 745.8553)" id="692555">
+<g transform="matrix(15.0367 0 0 15.0367 252.8271 258.9594)" id="442744">
 <g style="" vector-effect="non-scaling-stroke">
-		<g transform="matrix(0.8889 0 0 0.8889 -9.2967 9.6666)" id="clarityAnimationSolid0">
-<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill: rgb(89,89,89); fill-rule: nonzero; opacity: 1;" transform=" translate(-7.5411, -28.8749)" d="M 3.5 23.77 a 6.41 6.41 0 0 0 9.33 8.67 a 11.65 11.65 0 0 1 -9.33 -8.67 Z" stroke-linecap="round"/>
+		<g transform="matrix(0.8889 0 0 0.8889 -9.2967 9.6666)" id="391377">
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill: rgb(133,133,133); fill-rule: nonzero; opacity: 1;" transform=" translate(-7.5411, -28.8749)" d="M 3.5 23.77 a 6.41 6.41 0 0 0 9.33 8.67 a 11.65 11.65 0 0 1 -9.33 -8.67 Z" stroke-linecap="round"/>
 </g>
-		<g transform="matrix(0.8889 0 0 0.8889 -4.3193 4.0436)" id="clarityAnimationSolid0">
-<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill: rgb(89,89,89); fill-rule: nonzero; opacity: 1;" transform=" translate(-13.1407, -22.5489)" d="M 7.68 14.53 a 9.6 9.6 0 0 0 13.4 13.7 a 14.11 14.11 0 0 1 -13.4 -13.7 Z" stroke-linecap="round"/>
+		<g transform="matrix(0.8889 0 0 0.8889 -4.3193 4.0436)" id="145444">
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill: rgb(133,133,133); fill-rule: nonzero; opacity: 1;" transform=" translate(-13.1407, -22.5489)" d="M 7.68 14.53 a 9.6 9.6 0 0 0 13.4 13.7 a 14.11 14.11 0 0 1 -13.4 -13.7 Z" stroke-linecap="round"/>
 </g>
-		<g transform="matrix(0.8889 0 0 0.8889 3.3601 -3.4488)" id="clarityAnimationSolid0">
-<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill: rgb(89,89,89); fill-rule: nonzero; opacity: 1;" transform=" translate(-21.78, -14.12)" d="M 21.78 2 A 12.12 12.12 0 1 1 9.66 14.15 A 12.12 12.12 0 0 1 21.78 2" stroke-linecap="round"/>
+		<g transform="matrix(0.8889 0 0 0.8889 3.3601 -3.4488)" id="501989">
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill: rgb(133,133,133); fill-rule: nonzero; opacity: 1;" transform=" translate(-21.78, -14.12)" d="M 21.78 2 A 12.12 12.12 0 1 1 9.66 14.15 A 12.12 12.12 0 0 1 21.78 2" stroke-linecap="round"/>
 </g>
 </g>
 </g>

@@ -4,32 +4,29 @@
 
 This is a preset of [UnoCSS](https://unocss.dev/), which adapts the [tailwindcss-animate](https://github.com/jamiebuilds/tailwindcss-animate) TailwindCSS plugin to be compatible with UnoCSS.
 
-The original `tailwindcss-animate` plugin are consist with 2 parts, the core animations and classnames to adjust animation properties.
-
-- The animation property classnames are included in `@unocss/preset-wind` (or `@unocss/preset-uno`), so they are removed from this preset.
-- The core animations part remains as is, please refer to # TODO: link to the animations' documentation.
-
-# TODO: link to the animations' documentation.
-
 ## Installation
 
 ::: code-group
 ```bash [npm]
-npm install -D unocss-preset-tailwind-animate
+npm install -D unocss-preset-animations
 ```
 ```bash [yarn]
-yarn add -D unocss-preset-tailwind-animate
+yarn add -D unocss-preset-animations
 ```
 ```bash [pnpm]
-pnpm add -D unocss-preset-tailwind-animate
+pnpm add -D unocss-preset-animations
 ```
 ```bash [bun]
-bun add -D unocss-preset-tailwind-animate
+bun add -D unocss-preset-animations
 ```
 :::
 
+::: danger
+This preset requires `unocss` version of **v0.56.0+**
+:::
+
 ::: warning
-This preset is based on is based on `@unocss/preset-wind` (or `@unocss/preset-uno`), please make sure they are included in the `presets`, otherwise they won't work as expected.
+This preset is based on is based on `@unocss/preset-wind` or `@unocss/preset-uno`, please make sure they are included in the `presets`, otherwise it won't work as expected.
 :::
 
 ## Usage
@@ -37,18 +34,18 @@ This preset is based on is based on `@unocss/preset-wind` (or `@unocss/preset-un
 In your UnoCSS config, add this preset to the `presets` option:
 
 ```ts
-import { defineConfig } from 'unocss'
-import presetTailwindAnimate from 'unocss-preset-tailwind-animate' // [!code ++]
+import { defineConfig } from 'unocss' // v0.56.0 and above required
+import presetAnimations from 'unocss-preset-animations' // [!code ++]
 import type { Theme } from '@unocss/preset-uno'
 
 export default defineConfig<Theme>({
   presets: [
     presetUno(), // This must be defined before this preset
-    presetTailwindAnimate() // [!code ++]
+    presetAnimations() // [!code ++]
   ]
 })
 ```
 
 ::: warning
-Note that either `presetUno` or `presetWind` must be defined before this preset.
+Note that either `presetUno` or `presetWind` must be defined **before** this preset.
 :::

@@ -1,6 +1,6 @@
 {
-  "name": "unocss-preset-tailwind-animate",
-  "version": "1.0.0-beta.4",
+  "name": "unocss-preset-animations",
+  "version": "0.0.1",
   "description": "💅 An adaptation of the tailwindcss-animate Tailwind plugin for UnoCSS",
   "packageManager": "pnpm@8.10.5",
   "type": "module",
@@ -9,16 +9,16 @@
   "homepage": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/xsjcTony/unocss-preset-tailwind-animate"
+    "url": "https://github.com/xsjcTony/unocss-preset-animations"
   },
   "bugs": {
-    "url": "https://github.com/xsjcTony/unocss-preset-tailwind-animate/issues"
+    "url": "https://github.com/xsjcTony/unocss-preset-animations/issues"
   },
   "keywords": [
     "css",
     "unocss",
     "unocss-preset",
-    "unocss-preset-tailwind-animate",
+    "unocss-preset-animations",
     "tailwind-animate"
   ],
   "sideEffects": false,

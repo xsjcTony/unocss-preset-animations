@@ -41,7 +41,7 @@
   }
 
   .item:nth-child(1) .VPFeature {
-    @apply @hover:opacity-20;
+    @apply @hover:opacity-30;
   }
 
   .item:nth-child(2) .VPFeature {
@@ -49,11 +49,15 @@
   }
 
   .item:nth-child(3) .VPFeature {
-    @apply @hover:rotate-360;
+    @apply @hover:rotate-30;
   }
 
   .item:nth-child(4) .VPFeature {
     @apply @hover:-translate-y-30%;
+  }
+
+  .item:nth-child(5) .VPFeature {
+    @apply @hover:(opacity-50 scale-130 rotate-30 -translate-y-30% translate-x-50%);
   }
 }
 

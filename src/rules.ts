@@ -62,7 +62,7 @@ const spinRules: Rule<Theme>[] = [
 
 const slideRules: Rule<Theme>[] = [
   [
-    /^slide-in-from-(top|bottom|left|right)(?:-(.+))?$/,
+    /^slide-in-from-(t|b|l|r|top|bottom|left|right)(?:-(.+))?$/,
     ([, dir, val]) => {
       const value = h.bracket.cssvar.fraction.rem(val || DEFAULT_SLIDE_TRANSLATE)
 
@@ -70,12 +70,16 @@ const slideRules: Rule<Theme>[] = [
         return
 
       switch (dir) {
+        case 't':
         case 'top':
           return { [`${CSS_VARIABLE_PREFIX}-enter-translate-y`]: `-${value}` }
+        case 'b':
         case 'bottom':
           return { [`${CSS_VARIABLE_PREFIX}-enter-translate-y`]: value }
+        case 'l':
         case 'left':
           return { [`${CSS_VARIABLE_PREFIX}-enter-translate-x`]: `-${value}` }
+        case 'r':
         case 'right':
           return { [`${CSS_VARIABLE_PREFIX}-enter-translate-x`]: value }
         default:
@@ -84,14 +88,14 @@ const slideRules: Rule<Theme>[] = [
     },
     {
       autocomplete: [
-        'slide-in-(from|to)-(top|bottom|left|right)-<percent>',
-        'slide-in-(from|to)-(top|bottom|left|right)-full'
+        'slide-in-from-(t|b|l|r|top|bottom|left|right)-<percent>',
+        'slide-in-from-(t|b|l|r|top|bottom|left|right)-full'
       ]
     }
   ],
 
   [
-    /^slide-out-to-(top|bottom|left|right)(?:-(.+))?$/,
+    /^slide-out-to-(t|b|l|r|top|bottom|left|right)(?:-(.+))?$/,
     ([, dir, val]) => {
       const value = h.bracket.cssvar.fraction.rem(val || DEFAULT_SLIDE_TRANSLATE)
 
@@ -99,17 +103,27 @@ const slideRules: Rule<Theme>[] = [
         return
 
       switch (dir) {
+        case 't':
         case 'top':
           return { [`${CSS_VARIABLE_PREFIX}-exit-translate-y`]: `-${value}` }
+        case 'b':
         case 'bottom':
           return { [`${CSS_VARIABLE_PREFIX}-exit-translate-y`]: value }
+        case 'l':
         case 'left':
           return { [`${CSS_VARIABLE_PREFIX}-exit-translate-x`]: `-${value}` }
+        case 'r':
         case 'right':
           return { [`${CSS_VARIABLE_PREFIX}-exit-translate-x`]: value }
         default:
           return
       }
+    },
+    {
+      autocomplete: [
+        'slide-out-to-(t|b|l|r|top|bottom|left|right)-<percent>',
+        'slide-out-to-(t|b|l|r|top|bottom|left|right)-full'
+      ]
     }
   ]
 ]

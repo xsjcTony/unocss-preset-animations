@@ -16,8 +16,8 @@ export default defineConfig({
   lastUpdated: true,
   lang: 'en-US',
   appearance: 'dark',
-  title: 'unocss-preset-tailwind-animate',
-  titleTemplate: ':title | unocss-preset-tailwind-animate',
+  title: 'unocss-preset-animations',
+  titleTemplate: ':title | unocss-preset-animations',
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
   ],
@@ -33,25 +33,37 @@ export default defineConfig({
   },
   themeConfig: {
     logo: '/logo.svg',
-    siteTitle: 'unocss ❤ animate',
+    siteTitle: 'Animations Preset',
     // TODO: algolia
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' },
+      { text: 'Guide', link: '/guide/', activeMatch: '^/guide/' },
+      { text: 'Animations', link: '/animations/', activeMatch: '^/animations/' },
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: 'Guide',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' },
+          { text: 'Getting Started', link: '/guide/' },
+          { text: 'Comparisons', link: '/guide/comparisons' },
+          { text: 'Migration Guide', link: '/guide/migration' },
+        ],
+      },
+      {
+        text: 'Animations',
+        items: [
+          { text: 'Base', link: '/animations/' },
+          { text: 'Fade', link: '/animations/fade' },
+          { text: 'Zoom', link: '/animations/zoom' },
+          { text: 'Spin', link: '/animations/spin' },
+          { text: 'Slide', link: '/animations/slide' },
         ],
       },
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
+      { icon: 'github', link: 'https://github.com/xsjcTony/unocss-preset-animations' },
     ],
   },
 })
