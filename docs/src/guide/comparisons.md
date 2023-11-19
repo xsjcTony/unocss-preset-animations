@@ -12,4 +12,4 @@ Animations part remains as is, please refer to [Animations](/animations/).
 
 <br />
 
-For detailed migration guide, please refer to [Migrate from `tailwindcss-animate`](/./migration#tailwindcss-animate).
+For detailed migration guide, please refer to [Migrate from `tailwindcss-animate`](./migration#tailwindcss-animate).
