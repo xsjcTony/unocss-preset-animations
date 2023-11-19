@@ -52,7 +52,6 @@
     "@typescript-eslint/parser": "^6.11.0",
     "@unocss/core": "^0.57.5",
     "@unocss/preset-mini": "^0.57.5",
-    "@unocss/vite": "^0.57.5",
     "@vue/language-server": "^1.8.22",
     "bumpp": "^9.2.0",
     "eslint": "^8.54.0",

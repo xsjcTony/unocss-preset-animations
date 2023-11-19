@@ -1,4 +1,4 @@
-import unocssPlugin from '@unocss/vite'
+import unocss from 'unocss/vite'
 import { defineConfig } from 'vitepress'
 import externalLinkIcon from './plugins/externalLinkIcon'
 
@@ -9,7 +9,7 @@ export default defineConfig({
 
   vite: {
     plugins: [
-      unocssPlugin(),
+      unocss(),
     ],
   },
 
