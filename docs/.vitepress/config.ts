@@ -4,7 +4,6 @@ import externalLinkIcon from './plugins/externalLinkIcon'
 
 
 export default defineConfig({
-  outDir: './dist',
   srcDir: './src',
 
   vite: {
