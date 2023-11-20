@@ -12,6 +12,7 @@
   --vp-c-brand-soft: rgb(255 158 172 / 0.14);
 }
 
+
 /**
  * Component: Home
  * -------------------------------------------------------------------------- */
@@ -28,16 +29,13 @@
   --vp-home-hero-image-background-image: linear-gradient(135deg, #ffb7c2 35%, #9dffff);
 }
 
-
 .VPHero .image-bg {
   @apply opacity-80 z-1;
 }
 
-@apply keyframes-pulse;
-
 .VPFeatures {
   .VPFeature {
-    @apply transition-border-color,background-color,opacity,transform transition-duration-800;
+    @apply transition-all transition-duration-800;
   }
 
   .item:nth-child(1) .VPFeature {
@@ -60,6 +58,7 @@
     @apply @hover:(opacity-50 scale-130 rotate-30 -translate-y-30% translate-x-50%);
   }
 }
+
 
 /**
  * Component: Algolia

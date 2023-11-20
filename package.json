@@ -6,7 +6,7 @@
   "type": "module",
   "author": "Aelita <https://github.com/xsjcTony>",
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://unocss-preset-animations.aelita.me/",
   "repository": {
     "type": "git",
     "url": "https://github.com/xsjcTony/unocss-preset-animations"
@@ -45,7 +45,7 @@
     "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
-    "@aelita-dev/eslint-config": "1.0.0-beta.17",
+    "@aelita-dev/eslint-config": "1.0.0-beta.19",
     "@iconify/json": "^2.2.143",
     "@types/markdown-it": "^13.0.6",
     "@typescript-eslint/eslint-plugin": "^6.11.0",

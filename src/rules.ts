@@ -10,6 +10,9 @@ const DEFAULT_SPIN_DEGREE = '30'
 const DEFAULT_SLIDE_TRANSLATE = '100%'
 
 
+const directionsAutocomplete = '(t|b|l|r|top|bottom|left|right)'
+
+
 const fadeRules: Rule<Theme>[] = [
   [
     /^fade-in(?:-(.+))?$/,
@@ -62,7 +65,7 @@ const spinRules: Rule<Theme>[] = [
 
 const slideRules: Rule<Theme>[] = [
   [
-    /^slide-in-from-(t|b|l|r|top|bottom|left|right)(?:-(.+))?$/,
+    /^slide-in(?:-from)?-(t|b|l|r|top|bottom|left|right)(?:-(.+))?$/,
     ([, dir, val]) => {
       const value = h.bracket.cssvar.fraction.rem(val || DEFAULT_SLIDE_TRANSLATE)
 
@@ -88,14 +91,16 @@ const slideRules: Rule<Theme>[] = [
     },
     {
       autocomplete: [
-        'slide-in-from-(t|b|l|r|top|bottom|left|right)-<percent>',
-        'slide-in-from-(t|b|l|r|top|bottom|left|right)-full'
+        `slide-(in|out)-${directionsAutocomplete}-<percent>`,
+        `slide-(in|out)-${directionsAutocomplete}-full`,
+        `slide-in-from-${directionsAutocomplete}-<percent>`,
+        `slide-in-from-${directionsAutocomplete}-full`
       ]
     }
   ],
 
   [
-    /^slide-out-to-(t|b|l|r|top|bottom|left|right)(?:-(.+))?$/,
+    /^slide-out(?:-to)?-(t|b|l|r|top|bottom|left|right)(?:-(.+))?$/,
     ([, dir, val]) => {
       const value = h.bracket.cssvar.fraction.rem(val || DEFAULT_SLIDE_TRANSLATE)
 
@@ -121,8 +126,8 @@ const slideRules: Rule<Theme>[] = [
     },
     {
       autocomplete: [
-        'slide-out-to-(t|b|l|r|top|bottom|left|right)-<percent>',
-        'slide-out-to-(t|b|l|r|top|bottom|left|right)-full'
+        `slide-out-to-${directionsAutocomplete}-<percent>`,
+        `slide-out-to-${directionsAutocomplete}-full`
       ]
     }
   ]

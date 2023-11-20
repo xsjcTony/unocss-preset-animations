@@ -5,7 +5,7 @@ In order to use animations provided by this preset, you need to add the `animate
 ::: tip
 Different animations ([`fade`](./fade), [`zoom`](./zoom), [`spin`](./spin) and [`slide`](./slide)) can be used together.
 
-E.g. the below code will make the element fade in, zoom in and slide in from top animation at the same time.
+E.g. the below code will make the element fade in, zoom in and slide in from top at the same time.
 
 ```html
 <button class="animate-in fade-in-50 zoom-in-80 slide-in-from-top-5">Button A</button>

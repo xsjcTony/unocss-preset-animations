@@ -35,4 +35,5 @@ features:
   - title: Composable animations
     icon: <i class="i-streamline:interface-page-controller-settings-page-setting-square-triangle-circle-line-combination-variation text-primary"></i>
     details: Animations can be easily combined together
+    link: /animations/
 ---
