@@ -11,8 +11,8 @@ dependencies:
 
 devDependencies:
   '@aelita-dev/eslint-config':
-    specifier: 1.0.0-beta.19
-    version: 1.0.0-beta.19(eslint@8.54.0)(typescript@5.2.2)
+    specifier: 1.0.0-beta.20
+    version: 1.0.0-beta.20(eslint@8.54.0)(typescript@5.2.2)
   '@iconify/json':
     specifier: ^2.2.143
     version: 2.2.143
@@ -81,8 +81,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /@aelita-dev/eslint-config@1.0.0-beta.19(eslint@8.54.0)(typescript@5.2.2):
-    resolution: {integrity: sha512-zR2270vwgvwPgsVSekVbZ+cdtTCUD9/ykoGjryer1Rv3uHqW+r1uzOXzhxMdpJM3xdE4CIXxVPAOrs1BCZIz+g==}
+  /@aelita-dev/eslint-config@1.0.0-beta.20(eslint@8.54.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-zlHmgN8bV0/iCYK58ntZr4GyqENCXWLijSNa6M+/m41g89hECO10zrSuhbifhmrnvvc4wEw6t7pkxMoLw53Isg==}
     peerDependencies:
       eslint: '>=8.0.0'
     dependencies:
