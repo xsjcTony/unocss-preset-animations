@@ -2,7 +2,9 @@
 
 ## Overview
 
-This is a preset of [UnoCSS](https://unocss.dev/), which adapts the [tailwindcss-animate](https://github.com/jamiebuilds/tailwindcss-animate) TailwindCSS plugin to be compatible with UnoCSS.
+This is a preset of [UnoCSS](https://unocss.dev/) for creating beautiful animations with simple classnames.
+
+It adapts the [tailwindcss-animate](https://github.com/jamiebuilds/tailwindcss-animate) TailwindCSS plugin to be compatible with UnoCSS but more flexible and user-friendly.
 
 ## Installation
 

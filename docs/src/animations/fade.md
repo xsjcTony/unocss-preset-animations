@@ -2,61 +2,119 @@
 
 Use classname `fade-(in|out)-<value>` to define animation's `opacity`.
 
-The `-<value>` part is ***optional***.
+- The `-<value>` part is ***optional***.
 
-You can use either any of below as the `<value>`:
-- Any number between `0` and `100` including decimals, e.g. `fade-in-50`.
-- Any raw value within brackets, e.g. `fade-in-[0.5]`.
-- Css variable with either `$foo`, `[--foo]` or `[var(--foo)]`, e.g. `fade-in-$my-css-var`.
+<br />
+
+You can use either of below as the `<value>`:
+
+- Any number between `0` and `100` including decimals. E.g. `fade-in-50`
+- CSS variable. E.g. `fade-in-$my-css-var`
 
 ## Fade In
 
 Define enter animation's starting `opacity`.
 
-The default is `0` if no value is specified.
+- The default **value** is `0` if not specified.
 
 ```html
 <button class="animate-in fade-in">Button A</button>
 <button class="animate-in fade-in-50">Button B</button>
-<button class="animate-in fade-in-[0.5]">Button C</button>
-<button class="animate-in fade-in-$my-css-var">Button D</button>
+<button class="animate-in fade-in-$my-css-var">Button C</button>
 ```
 
-| Classname                      | Property                                  |
-|--------------------------------|-------------------------------------------|
-| `fade-in`                      | `--una-enter-opacity: 0;`                 |
-| `fade-in-0`                    | `--una-enter-opacity: 0;`                 |
-| `fade-in-10`                   | `--una-enter-opacity: 0.1;`               |
-| `fade-in-52.1`                 | `--una-enter-opacity: 0.521;`             |
-| `fade-in-66.66`                | `--una-enter-opacity: 0.6666;`            |
-| `fade-in-100`                  | `--una-enter-opacity: 1;`                 |
-| `fade-in-[.8]`                 | `--una-enter-opacity: .8;`                |
-| `fade-in-$my-css-var`          | `--una-enter-opacity: var(--my-css-var);` |
-| `fade-in-[--my-css-var]`       | `--una-enter-opacity: var(--my-css-var);` |
-| `fade-in-[var(--$my-css-var)]` | `--una-enter-opacity: var(--my-css-var);` |
+<table>
+  <thead>
+    <tr>
+      <th>Classname</th>
+      <th>Property</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>fade-in</code></td>
+      <td rowspan="2"><code>--una-enter-opacity: 0;</code></td>
+    </tr>
+    <tr>
+      <td><code>fade-in-0</code></td>
+    </tr>
+    <tr>
+      <td><code>fade-in-10</code></td>
+      <td><code>--una-enter-opacity: 0.1;</code></td>
+    </tr>
+    <tr>
+      <td><code>fade-in-.8</code></td>
+      <td><code>--una-enter-opacity: 0.008;</code></td>
+    </tr>
+    <tr>
+      <td><code>fade-in-52.1</code></td>
+      <td><code>--una-enter-opacity: 0.521;</code></td>
+    </tr>
+    <tr>
+      <td><code>fade-in-66.66</code></td>
+      <td><code>--una-enter-opacity: 0.6666;</code></td>
+    </tr>
+    <tr>
+      <td><code>fade-in-100</code></td>
+      <td><code>--una-enter-opacity: 1;</code></td>
+    </tr>
+    <tr>
+      <td><code>fade-in-$my-css-var</code></td>
+      <td><code>--una-enter-opacity: var(--my-css-var);</code></td>
+    </tr>
+  </tbody>
+</table>
 
-## Fade out
+## Fade Out
 
 Define exit animation's ending `opacity`.
 
-The default value is `0` if no value is specified.
+- The default **value** is `0` if not specified.
 
 ```html
-<button class="animate-in fade-out">Button A</button>
-<button class="animate-in fade-out-50">Button B</button>
-<button class="animate-in fade-out-[0.5]">Button C</button>
-<button class="animate-in fade-out-$my-css-var">Button D</button>
+<button class="animate-out fade-out">Button A</button>
+<button class="animate-out fade-out-50">Button B</button>
+<button class="animate-out fade-out-$my-css-var">Button C</button>
 ```
 
-| Classname                       | Property                                 |
-|---------------------------------|------------------------------------------|
-| `fade-out`                      | `--una-exit-opacity: 0;`                 |
-| `fade-out-0`                    | `--una-exit-opacity: 0;`                 |
-| `fade-out-10`                   | `--una-exit-opacity: 0.1;`               |
-| `fade-out-52.1`                 | `--una-exit-opacity: 0.521;`             |
-| `fade-out-66.66`                | `--una-exit-opacity: 0.6666;`            |
-| `fade-out-100`                  | `--una-exit-opacity: 1;`                 |
-| `fade-out-[.8]`                 | `--una-exit-opacity: .8;`                |
-| `fade-out-$my-css-var`          | `--una-exit-opacity: var(--my-css-var);` |
-| `fade-out-[--my-css-var]`       | `--una-exit-opacity: var(--my-css-var);` |
-| `fade-out-[var(--$my-css-var)]` | `--una-exit-opacity: var(--my-css-var);` |
+<table>
+  <thead>
+    <tr>
+      <th>Classname</th>
+      <th>Property</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>fade-out</code></td>
+      <td rowspan="2"><code>--una-exit-opacity: 0;</code></td>
+    </tr>
+    <tr>
+      <td><code>fade-out-0</code></td>
+    </tr>
+    <tr>
+      <td><code>fade-out-10</code></td>
+      <td><code>--una-exit-opacity: 0.1;</code></td>
+    </tr>
+    <tr>
+      <td><code>fade-out-.8</code></td>
+      <td><code>--una-exit-opacity: 0.008;</code></td>
+    </tr>
+    <tr>
+      <td><code>fade-out-52.1</code></td>
+      <td><code>--una-exit-opacity: 0.521;</code></td>
+    </tr>
+    <tr>
+      <td><code>fade-out-66.66</code></td>
+      <td><code>--una-exit-opacity: 0.6666;</code></td>
+    </tr>
+    <tr>
+      <td><code>fade-out-100</code></td>
+      <td><code>--una-exit-opacity: 1;</code></td>
+    </tr>
+    <tr>
+      <td><code>fade-out-$my-css-var</code></td>
+      <td><code>--una-exit-opacity: var(--my-css-var);</code></td>
+    </tr>
+  </tbody>
+</table>

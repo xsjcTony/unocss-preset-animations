@@ -12,6 +12,24 @@ E.g. the below code will make the element fade in, zoom in and slide in from top
 ```
 :::
 
+::: warning
+Usage of the bracket `[]` syntax is dropped in this preset from **v1.0.0-beta.8**. 
+
+This is **intentional** because
+- UnoCSS is very flexible, and you don't need to use it at all in this preset.
+- The syntax is error-prone and may destroy the whole animation with a single invalid value.
+
+For anything you define in `[]` except specific syntax for CSS variables (e.g. `[--foo]`), it will always use the value inside as is, hence it's very easy to make mistakes.
+
+E.g. the below code will destroy the whole animation since it's not a valid `rotate()` value.
+```html
+<button class="animate-in spin-in-[30]">Button A</button>
+```
+It will generate `--una-enter-rotate: 30;`, which lacks a unit and will make the whole `transform` property invalid.
+
+Instead, just write `spin-in-30` or `spin-in-30deg` to make it work, which will generate `--una-enter-rotate: 30deg;`.
+:::
+
 ## Enter Animations
 
 To give an element enter animations, use the `animate-in` shortcut in combination with [`fade-in`](./fade#fade-in), [`zoom-in`](./zoom#zoom-in), [`spin-in`](./spin#spin-in) and [`slide-in`](./slide#slide-in) classnames.
@@ -20,7 +38,7 @@ To give an element enter animations, use the `animate-in` shortcut in combinatio
 <button class="animate-in fade-in ...">Button A</button>
 <button class="animate-in spin-in ...">Button B</button>
 <button class="animate-in zoom-in ...">Button C</button>
-<button class="animate-in slide-in-from-top ...">Button D</button>
+<button class="animate-in slide-in-top ...">Button D</button>
 ```
 
 ## Exit Animations
@@ -31,5 +49,5 @@ To give an element exit animations, use the `animate-out` shortcut in combinatio
 <button class="animate-out fade-out ...">Button A</button>
 <button class="animate-out spin-out ...">Button B</button>
 <button class="animate-out zoom-out ...">Button C</button>
-<button class="animate-out slide-out-to-bottom ...">Button D</button>
+<button class="animate-out slide-out-bottom ...">Button D</button>
 ```

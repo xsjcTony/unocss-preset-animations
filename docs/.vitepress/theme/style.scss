@@ -61,6 +61,27 @@
 
 
 /**
+ * Component: Custom Block
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-custom-block-tip-border: transparent;
+  --vp-custom-block-tip-text: var(--vp-c-text-1);
+  --vp-custom-block-tip-bg: var(--vp-c-green-soft);
+  --vp-custom-block-tip-code-bg: var(--vp-c-green-soft);
+}
+
+.custom-block.tip a,
+.custom-block.tip code {
+  color: var(--vp-c-green-1);
+}
+
+.custom-block.tip a:hover {
+  color: var(--vp-c-green-2);
+}
+
+
+/**
  * Component: Algolia
  * -------------------------------------------------------------------------- */
 

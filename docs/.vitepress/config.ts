@@ -1,5 +1,6 @@
 import unocss from 'unocss/vite'
 import { defineConfig } from 'vitepress'
+import { version } from '../../package.json'
 import externalLinkIcon from './plugins/externalLinkIcon'
 
 
@@ -24,7 +25,7 @@ export default defineConfig({
   markdown: {
     theme: {
       dark: 'material-theme-palenight',
-      light: 'min-light',
+      light: 'vitesse-light',
     },
     config: (md) => {
       md.use(externalLinkIcon)
@@ -33,11 +34,37 @@ export default defineConfig({
   themeConfig: {
     logo: '/logo.svg',
     siteTitle: 'Animations Preset',
-    // TODO: algolia
+
+    editLink: {
+      pattern: 'https://github.com/xsjcTony/unocss-preset-animations/edit/main/docs/src/:path',
+      text: 'Edit this page on GitHub',
+    },
+
+    search: {
+      provider: 'algolia',
+      options: {
+        appId: '59LIXN9T8K',
+        apiKey: 'c029fa22a73158f7b77eab5f47a4f33a',
+        indexName: 'unocss-preset-animations-aelita',
+      },
+    },
+
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2023-present Aelita (Tony Jiang)',
+    },
+
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Guide', link: '/guide/', activeMatch: '^/guide/' },
       { text: 'Animations', link: '/animations/', activeMatch: '^/animations/' },
+      {
+        // eslint-disable-next-line ts/restrict-template-expressions
+        text: `v${version}`,
+        items: [
+          { text: 'Release Notes', link: 'https://github.com/xsjcTony/unocss-preset-animations/releases' },
+        ],
+      },
     ],
 
     sidebar: [

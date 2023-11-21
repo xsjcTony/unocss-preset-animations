@@ -2,8 +2,8 @@
 layout: home
 
 hero:
-  name: "Animations Preset for UnoCSS"
-  tagline: <span class="vp-doc">An adaptation of the <a href="https://github.com/jamiebuilds/tailwindcss-animate" target="_blank" rel="noreferrer">tailwindcss-animate</a> TailwindCSS plugin for <a href="https://unocss.dev/" target="_blank" rel="noreferrer">UnoCSS</a></span>
+  name: Animations Preset for UnoCSS
+  tagline: Simple · Flexible · Beautiful · Composable
   image:
     src: /logo.svg
     alt: UnoCSS

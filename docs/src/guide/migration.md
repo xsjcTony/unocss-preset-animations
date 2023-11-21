@@ -7,7 +7,7 @@ next: Animations
 
 ## tailwindcss-animate
 
-Animations part remains as is, but way more powerful thanks to UnoCSS's [dynamic rules](https://unocss.dev/config/rules#dynamic-rules). Please refer to [Animations](/animations/).
+Animations part remains as is, but way more flexible and powerful thanks to UnoCSS's [dynamic rules](https://unocss.dev/config/rules#dynamic-rules). Please refer to [Animations](/animations/).
 
 Animation property modifiers are already supported by `@unocss/preset-wind` or `@unocss/preset-uno`, but with slightly different syntax.
 
@@ -18,9 +18,9 @@ Animation property modifiers are already supported by `@unocss/preset-wind` or `
 | `delay-<number>`    | `animate-delay-<number>` |
 
 ```html
-<button class="animate-bounce animate-delay-150">Button A</button>
-<button class="animate-bounce animate-delay-300">Button B</button>
-<button class="animate-bounce animate-delay-700">Button C</button>
+<button class="animate-in fade-in animate-delay-150">Button A</button>
+<button class="animate-in fade-in animate-delay-300">Button B</button>
+<button class="animate-in fade-in animate-delay-700">Button C</button>
 ```
 
 ### `animation-direction`
@@ -40,12 +40,12 @@ Animation property modifiers are already supported by `@unocss/preset-wind` or `
 </table>
 
 ```html
-<button class="animate-bounce animate-normal">Button A</button>
-<button class="animate-bounce animate-reverse">Button B</button>
-<button class="animate-bounce animate-alternate">Button C</button>
-<button class="animate-bounce animate-alternate-reverse">Button D</button>
+<button class="animate-in fade-in animate-normal">Button A</button>
+<button class="animate-in fade-in animate-reverse">Button B</button>
+<button class="animate-in fade-in animate-alternate">Button C</button>
+<button class="animate-in fade-in animate-alternate-reverse">Button D</button>
 
-<button class="animate-bounce animate-direction-normal">Button E</button>
+<button class="animate-in fade-in animate-direction-normal">Button E</button>
 ```
 
 ### `animation-duration`
@@ -55,15 +55,15 @@ Animation property modifiers are already supported by `@unocss/preset-wind` or `
 | `duration-<number>` | `animate-duration-<number>` |
 
 ```html
-<button class="animate-bounce animate-duration-150">Button A</button>
-<button class="animate-bounce animate-duration-300">Button B</button>
-<button class="animate-bounce animate-duration-700">Button C</button>
+<button class="animate-in fade-in animate-duration-150">Button A</button>
+<button class="animate-in fade-in animate-duration-300">Button B</button>
+<button class="animate-in fade-in animate-duration-700">Button C</button>
 ```
 
 ::: tip
 If no `animation-duration` is defined, it will fall back to `theme.duration.DEFAULT`.
 
-The value `150ms` by default if unchanged, see [unocss/packages/preset-mini/src/_theme/misc.ts at main · unocss/unocss](https://github.com/unocss/unocss/blob/efdc358897a308323e1d943dd0f7c13e344e1495/packages/preset-mini/src/_theme/misc.ts#L37)
+The value is `150ms` by default if unchanged, see [unocss/packages/preset-mini/src/_theme/misc.ts at main · unocss/unocss](https://github.com/unocss/unocss/blob/efdc358897a308323e1d943dd0f7c13e344e1495/packages/preset-mini/src/_theme/misc.ts#L37)
 :::
 
 ### `animation-fill-mode`
@@ -89,14 +89,14 @@ The value `150ms` by default if unchanged, see [unocss/packages/preset-mini/src/
 </table>
 
 ```html
-<button class="animate-bounce animate-none">Button A</button>
-<button class="animate-bounce animate-forwards">Button B</button>
-<button class="animate-bounce animate-backwards">Button C</button>
-<button class="animate-bounce animate-both">Button D</button>
+<button class="animate-in fade-in animate-none">Button A</button>
+<button class="animate-in fade-in animate-forwards">Button B</button>
+<button class="animate-in fade-in animate-backwards">Button C</button>
+<button class="animate-in fade-in animate-both">Button D</button>
 
-<button class="animate-bounce animate-fill-none">Button E</button>
-<button class="animate-bounce animate-mode-none">Button F</button>
-<button class="animate-bounce animate-fill-mode-none">Button G</button>
+<button class="animate-in fade-in animate-fill-none">Button E</button>
+<button class="animate-in fade-in animate-mode-none">Button F</button>
+<button class="animate-in fade-in animate-fill-mode-none">Button G</button>
 ```
 
 ### `animation-iteration-count`
@@ -119,12 +119,12 @@ The value `150ms` by default if unchanged, see [unocss/packages/preset-mini/src/
 </table>
 
 ```html
-<button class="animate-bounce animate-iteration-0">Button A</button>
-<button class="animate-bounce animate-iteration-1">Button B</button>
-<button class="animate-bounce animate-iteration-infinite">Button C</button>
+<button class="animate-in fade-in animate-iteration-0">Button A</button>
+<button class="animate-in fade-in animate-iteration-1">Button B</button>
+<button class="animate-in fade-in animate-iteration-infinite">Button C</button>
 
-<button class="animate-bounce animate-count-0">Button D</button>
-<button class="animate-bounce animate-iteration-count-0">Button E</button>
+<button class="animate-in fade-in animate-count-0">Button D</button>
+<button class="animate-in fade-in animate-iteration-count-0">Button E</button>
 ```
 
 ### `animation-play-state`
@@ -150,12 +150,12 @@ The value `150ms` by default if unchanged, see [unocss/packages/preset-mini/src/
 </table>
 
 ```html
-<button class="animate-bounce animate-paused">Button A</button>
-<button class="animate-bounce animate-running">Button B</button>-play
+<button class="animate-in fade-in animate-paused">Button A</button>
+<button class="animate-in fade-in animate-running">Button B</button>-play
 
-<button class="animate-bounce animate-play-paused">Button C</button>
-<button class="animate-bounce animate-state-paused">Button D</button>
-<button class="animate-bounce animate-play-state-paused">Button E</button>
+<button class="animate-in fade-in animate-play-paused">Button C</button>
+<button class="animate-in fade-in animate-state-paused">Button D</button>
+<button class="animate-in fade-in animate-play-state-paused">Button E</button>
 ```
 
 ### `animation-timing-function`
@@ -165,10 +165,10 @@ The value `150ms` by default if unchanged, see [unocss/packages/preset-mini/src/
 | `ease-<easing>`     | `animate-ease-<easing>`  |
 
 ```html
-<button class="animate-bounce animate-ease-linear">Button A</button>
-<button class="animate-bounce animate-ease-in">Button B</button>
-<button class="animate-bounce animate-ease-out">Button C</button>
-<button class="animate-bounce animate-ease-in-out">Button D</button>
+<button class="animate-in fade-in animate-ease-linear">Button A</button>
+<button class="animate-in fade-in animate-ease-in">Button B</button>
+<button class="animate-in fade-in animate-ease-out">Button C</button>
+<button class="animate-in fade-in animate-ease-in-out">Button D</button>
 ```
 
 ### Prefers reduced motion
