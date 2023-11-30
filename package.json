@@ -49,11 +49,11 @@
   },
   "devDependencies": {
     "@aelita-dev/eslint-config": "^1.0.0-beta.32",
-    "@iconify/json": "^2.2.149",
+    "@iconify/json": "^2.2.150",
     "@types/markdown-it": "^13.0.7",
     "@unocss/core": "^0.57.7",
     "@unocss/preset-mini": "^0.57.7",
-    "@vue/language-server": "^1.8.22",
+    "@vue/language-server": "^1.8.24",
     "bumpp": "^9.2.0",
     "changelogithub": "^0.13.2",
     "eslint": "^8.54.0",
