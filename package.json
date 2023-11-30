@@ -41,7 +41,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "test": "vitest",
-    "test:update": "vitest -u",
+    "test:update": "vitest run -u",
     "test:ci": "pnpm typecheck && pnpm build && pnpm lint && pnpm test",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",

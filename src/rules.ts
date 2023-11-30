@@ -1,6 +1,6 @@
 import { h } from '@unocss/preset-mini/utils'
-import { CSS_VARIABLE_PREFIX } from './constants'
-import { normalizeDirection } from './utils'
+import { CSS_VARIABLE_PREFIX } from '@/constants'
+import { handleSlide } from '@/utils'
 import type { Theme } from '@unocss/preset-mini'
 import type { Rule } from 'unocss'
 
@@ -8,7 +8,7 @@ import type { Rule } from 'unocss'
 const DEFAULT_FADE_OPACITY = '0'
 const DEFAULT_ZOOM_SCALE = '0'
 const DEFAULT_SPIN_DEGREE = '30deg'
-const DEFAULT_SLIDE_TRANSLATE = '100%'
+export const DEFAULT_SLIDE_TRANSLATE = '100%'
 
 
 const DIRECTIONS_AUTOCOMPLETE = '(t|b|l|r|top|bottom|left|right)'
@@ -64,40 +64,20 @@ const spinRules: Rule<Theme>[] = [
 ]
 
 
-const _handleSlideValue = (val: string | undefined, dir: string | undefined): string | undefined => {
-  let value = h.cssvar.fraction.rem(val || DEFAULT_SLIDE_TRANSLATE)
-
-  if (!value)
-    return
-
-  dir = normalizeDirection(dir)
-
-  if (!value.startsWith('var(--') && ['top', 'left'].includes(dir ?? '')) {
-    if (value.startsWith('-'))
-      value = value.slice(1)
-    else
-      value = `-${value}`
-  }
-
-  return value
-}
-
 const slideRules: Rule<Theme>[] = [
   [
     /^slide-in(?:-from)?-(t|b|l|r|top|bottom|left|right)(?:-(.+))?$/,
     ([, dir, val]) => {
-      const value = _handleSlideValue(val, dir)
+      const [value, direction] = handleSlide(val, dir)
 
       if (!value)
         return
 
-      switch (dir) {
+      switch (direction) {
         case 'top':
-          return { [`${CSS_VARIABLE_PREFIX}-enter-translate-y`]: `-${value}` }
         case 'bottom':
           return { [`${CSS_VARIABLE_PREFIX}-enter-translate-y`]: value }
         case 'left':
-          return { [`${CSS_VARIABLE_PREFIX}-enter-translate-x`]: `-${value}` }
         case 'right':
           return { [`${CSS_VARIABLE_PREFIX}-enter-translate-x`]: value }
         default:
@@ -117,12 +97,12 @@ const slideRules: Rule<Theme>[] = [
   [
     /^slide-out(?:-to)?-(t|b|l|r|top|bottom|left|right)(?:-(.+))?$/,
     ([, dir, val]) => {
-      const value = _handleSlideValue(val, dir)
+      const [value, direction] = handleSlide(val, dir)
 
       if (!value)
         return
 
-      switch (dir) {
+      switch (direction) {
         case 'top':
         case 'bottom':
           return { [`${CSS_VARIABLE_PREFIX}-exit-translate-y`]: value }

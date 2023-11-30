@@ -1,7 +1,7 @@
 import { definePreset } from '@unocss/core'
-import { rules } from './rules'
-import { shortcuts } from './shortcuts'
-import { theme } from './theme'
+import { rules } from '@/rules'
+import { shortcuts } from '@/shortcuts'
+import { theme } from '@/theme'
 
 
 // This is for fixing the `rollup-plugin-dts` generating wrong import issue.
