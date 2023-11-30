@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url'
 import { defineBuildConfig } from 'unbuild'
 
 
@@ -11,6 +12,9 @@ export default defineBuildConfig({
     '@unocss/core',
     '@unocss/preset-mini'
   ],
+  alias: {
+    '@': fileURLToPath(new URL('src', import.meta.url))
+  },
   rollup: {
     emitCJS: true,
     dts: {
