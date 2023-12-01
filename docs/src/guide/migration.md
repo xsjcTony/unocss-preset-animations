@@ -151,7 +151,7 @@ The value is `150ms` by default if unchanged, see [unocss/packages/preset-mini/s
 
 ```html
 <button class="animate-in fade-in animate-paused">Button A</button>
-<button class="animate-in fade-in animate-running">Button B</button>-play
+<button class="animate-in fade-in animate-running">Button B</button>
 
 <button class="animate-in fade-in animate-play-paused">Button C</button>
 <button class="animate-in fade-in animate-state-paused">Button D</button>

@@ -37,7 +37,7 @@ export default defineConfig({
 
     editLink: {
       pattern: 'https://github.com/xsjcTony/unocss-preset-animations/edit/main/docs/src/:path',
-      text: 'Edit this page on GitHub',
+      text: 'Suggest changes to this page',
     },
 
     search: {
@@ -59,7 +59,6 @@ export default defineConfig({
       { text: 'Guide', link: '/guide/', activeMatch: '^/guide/' },
       { text: 'Animations', link: '/animations/', activeMatch: '^/animations/' },
       {
-        // eslint-disable-next-line ts/restrict-template-expressions
         text: `v${version}`,
         items: [
           { text: 'Release Notes', link: 'https://github.com/xsjcTony/unocss-preset-animations/releases' },

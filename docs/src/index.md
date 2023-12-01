@@ -32,7 +32,7 @@ features:
     icon: <i class="i-material-symbols:transition-push text-primary"></i>
     details: Define starting / ending translate
     link: /animations/slide
-  - title: Composable animations
+  - title: Composable
     icon: <i class="i-streamline:interface-page-controller-settings-page-setting-square-triangle-circle-line-combination-variation text-primary"></i>
     details: Animations can be easily combined together
     link: /animations/

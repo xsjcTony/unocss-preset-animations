@@ -17,7 +17,7 @@ You can use either of below as the `<direction>` (alias / full):
 ::: tip
 `top` / `bottom` and `left` / `right` can be used together.
 
-| x-axis Direction | y-axis Direction | Result |
+| y-axis Direction | x-axis Direction | Result |
 |------------------|------------------|--------|
 | `t` / `top`      | `l` / `left`     | ↖      |
 | `t` / `top`      | `r` / `right`    | ↗      |

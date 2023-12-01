@@ -36,7 +36,7 @@ This preset is based on is based on `@unocss/preset-wind` or `@unocss/preset-uno
 In your UnoCSS config, add this preset to the `presets` option:
 
 ```ts
-import { defineConfig } from 'unocss' // v0.56.0 and above required
+import { defineConfig, presetUno } from 'unocss' // v0.56.0 and above required
 import presetAnimations from 'unocss-preset-animations' // [!code ++]
 import type { Theme } from '@unocss/preset-uno'
 
