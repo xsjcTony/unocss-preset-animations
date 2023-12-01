@@ -28,7 +28,7 @@ export const handleSlide = (
   if (!value.startsWith('var(--') && ['top', 'left'].includes(dir ?? '')) {
     if (value.startsWith('-'))
       value = value.slice(1)
-    else
+    else if (value !== '0')
       value = `-${value}`
   }
 

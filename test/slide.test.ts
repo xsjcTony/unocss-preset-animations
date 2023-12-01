@@ -205,7 +205,7 @@ describe('slide animation', () => {
           .slide-in-t--70{--una-enter-translate-y:17.5rem;}
           .slide-in-t--80{--una-enter-translate-y:20rem;}
           .slide-in-t--90{--una-enter-translate-y:22.5rem;}
-          .slide-in-t-0{--una-enter-translate-y:-0;}
+          .slide-in-t-0{--una-enter-translate-y:0;}
           .slide-in-t-10{--una-enter-translate-y:-2.5rem;}
           .slide-in-t-100{--una-enter-translate-y:-25rem;}
           .slide-in-t-110{--una-enter-translate-y:-27.5rem;}
@@ -510,7 +510,7 @@ describe('slide animation', () => {
           .slide-out-t--70{--una-exit-translate-y:17.5rem;}
           .slide-out-t--80{--una-exit-translate-y:20rem;}
           .slide-out-t--90{--una-exit-translate-y:22.5rem;}
-          .slide-out-t-0{--una-exit-translate-y:-0;}
+          .slide-out-t-0{--una-exit-translate-y:0;}
           .slide-out-t-10{--una-exit-translate-y:-2.5rem;}
           .slide-out-t-100{--una-exit-translate-y:-25rem;}
           .slide-out-t-110{--una-exit-translate-y:-27.5rem;}
