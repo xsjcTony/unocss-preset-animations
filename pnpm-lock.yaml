@@ -11,8 +11,8 @@ dependencies:
 
 devDependencies:
   '@aelita-dev/eslint-config':
-    specifier: ^1.0.0-beta.32
-    version: 1.0.0-beta.32(eslint@8.54.0)(typescript@5.3.2)
+    specifier: ^1.0.0
+    version: 1.0.0(eslint@8.54.0)(typescript@5.3.2)
   '@iconify/json':
     specifier: ^2.2.150
     version: 2.2.150
@@ -69,8 +69,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /@aelita-dev/eslint-config@1.0.0-beta.32(eslint@8.54.0)(typescript@5.3.2):
-    resolution: {integrity: sha512-YrCnjeqFdDBguBlBYoDe/7Vg1EOo++JIbR16yy0xyAVwQ+YV4F5MysiMsWFR1o3JDCzMM6KOyAVbZ81A28lJAw==}
+  /@aelita-dev/eslint-config@1.0.0(eslint@8.54.0)(typescript@5.3.2):
+    resolution: {integrity: sha512-8nHavHCv+MuHFwDOALsMdlnBNSFP+xmYoaCFjieSjGvZDxRvgoEPZ6Bo7Jr03DLkUdZlFxOzgmIX1TAe5O9yvQ==}
     peerDependencies:
       eslint: '>=8.0.0'
     dependencies:
@@ -79,16 +79,16 @@ packages:
       '@typescript-eslint/parser': 6.13.1(eslint@8.54.0)(typescript@5.3.2)
       '@unocss/eslint-plugin': 0.57.7(eslint@8.54.0)(typescript@5.3.2)
       eslint: 8.54.0
-      eslint-config-flat-gitignore: 0.1.1
+      eslint-config-flat-gitignore: 0.1.2
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.13.1)(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0)(eslint@8.54.0)
       eslint-plugin-import: 2.29.0(@typescript-eslint/parser@6.13.1)(eslint-import-resolver-typescript@3.6.1)(eslint@8.54.0)
       eslint-plugin-jsx-a11y: 6.8.0(eslint@8.54.0)
-      eslint-plugin-playwright: 0.18.0(eslint@8.54.0)
+      eslint-plugin-playwright: 0.19.0(eslint@8.54.0)
       eslint-plugin-react: 7.33.2(eslint@8.54.0)
       eslint-plugin-react-hooks: 4.6.0(eslint@8.54.0)
       eslint-plugin-react-refresh: 0.4.4(eslint@8.54.0)
-      eslint-plugin-vue: 9.18.1(eslint@8.54.0)
+      eslint-plugin-vue: 9.19.2(eslint@8.54.0)
       eslint-plugin-vuejs-accessibility: 2.2.0(eslint@8.54.0)
       globals: 13.23.0
       local-pkg: 0.5.0
@@ -2858,8 +2858,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-config-flat-gitignore@0.1.1:
-    resolution: {integrity: sha512-ysq0QpN63+uaxE67U0g0HeCweIpv8Ztp7yvm0nYiM2TBalRIG6KQLO5J6lAz2gkA8KVis/QsJppe+BR5VigtWQ==}
+  /eslint-config-flat-gitignore@0.1.2:
+    resolution: {integrity: sha512-PcBsqtd5QHEZH4ROvpnRN4EP0qcHh9voCCHgtyHxnJZHGspJREcZn7oPqRG/GfWt9m3C0fkC2l5CuBtMig2wXQ==}
     dependencies:
       parse-gitignore: 2.0.0
     dev: true
@@ -2987,8 +2987,8 @@ packages:
       object.fromentries: 2.0.7
     dev: true
 
-  /eslint-plugin-playwright@0.18.0(eslint@8.54.0):
-    resolution: {integrity: sha512-VLvKOAaDvRTonUeI3J8plXIJQuReXjbjrgDGoNwsiydwdqk3lt+mbzgsBcxJscMJDHc9XgnLVo0nWTiaYHLGYQ==}
+  /eslint-plugin-playwright@0.19.0(eslint@8.54.0):
+    resolution: {integrity: sha512-/pk5oDxusdPnsPNo16o7kWk4Pq8e0Jw7vM0xI/G4wDHhYw1ImQpclB3fQGbjKAO1eauGRLWtJAq5l1Xq3oF16A==}
     peerDependencies:
       eslint: '>=7'
       eslint-plugin-jest: '>=25'
@@ -3042,8 +3042,8 @@ packages:
       string.prototype.matchall: 4.0.10
     dev: true
 
-  /eslint-plugin-vue@9.18.1(eslint@8.54.0):
-    resolution: {integrity: sha512-7hZFlrEgg9NIzuVik2I9xSnJA5RsmOfueYgsUGUokEDLJ1LHtxO0Pl4duje1BriZ/jDWb+44tcIlC3yi0tdlZg==}
+  /eslint-plugin-vue@9.19.2(eslint@8.54.0):
+    resolution: {integrity: sha512-CPDqTOG2K4Ni2o4J5wixkLVNwgctKXFu6oBpVJlpNq7f38lh9I80pRTouZSJ2MAebPJlINU/KTFSXyQfBUlymA==}
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^6.2.0 || ^7.0.0 || ^8.0.0

@@ -48,7 +48,7 @@
     "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
-    "@aelita-dev/eslint-config": "^1.0.0-beta.32",
+    "@aelita-dev/eslint-config": "^1.0.0",
     "@iconify/json": "^2.2.150",
     "@types/markdown-it": "^13.0.7",
     "@unocss/core": "^0.57.7",
