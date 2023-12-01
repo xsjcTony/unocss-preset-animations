@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: Animations Preset for UnoCSS
-  tagline: Simple · Flexible · Beautiful · Composable
+  tagline: Simple · Beautiful · Flexible · Composable
   image:
     src: /logo.svg
     alt: UnoCSS

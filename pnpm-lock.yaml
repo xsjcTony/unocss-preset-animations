@@ -11,11 +11,14 @@ dependencies:
 
 devDependencies:
   '@aelita-dev/eslint-config':
-    specifier: ^1.0.0
-    version: 1.0.0(eslint@8.54.0)(typescript@5.3.2)
+    specifier: ^1.1.0
+    version: 1.1.0(eslint@8.54.0)(typescript@5.3.2)
   '@iconify/json':
     specifier: ^2.2.150
     version: 2.2.150
+  '@types/dom-view-transitions':
+    specifier: ^1.0.4
+    version: 1.0.4
   '@types/markdown-it':
     specifier: ^13.0.7
     version: 13.0.7
@@ -69,8 +72,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /@aelita-dev/eslint-config@1.0.0(eslint@8.54.0)(typescript@5.3.2):
-    resolution: {integrity: sha512-8nHavHCv+MuHFwDOALsMdlnBNSFP+xmYoaCFjieSjGvZDxRvgoEPZ6Bo7Jr03DLkUdZlFxOzgmIX1TAe5O9yvQ==}
+  /@aelita-dev/eslint-config@1.1.0(eslint@8.54.0)(typescript@5.3.2):
+    resolution: {integrity: sha512-De4wv6OPK3wTykqTrc4V2sneIe/XqN6jNtzc1XpGUKHZlIk7kRLfTsSzodB2dfruYzxWrKd2z/qkOEU3OyGMrw==}
     peerDependencies:
       eslint: '>=8.0.0'
     dependencies:
@@ -1208,6 +1211,10 @@ packages:
 
   /@types/chai@4.3.10:
     resolution: {integrity: sha512-of+ICnbqjmFCiixUnqRulbylyXQrPqIGf/B3Jax1wIF3DvSheysQxAWvqHhZiW3IQrycvokcLcFQlveGp+vyNg==}
+    dev: true
+
+  /@types/dom-view-transitions@1.0.4:
+    resolution: {integrity: sha512-oDuagM6G+xPLrLU4KeCKlr1oalMF5mJqV5pDPMDVIEaa8AkUW00i6u+5P02XCjdEEUQJC9dpnxqSLsZeAciSLQ==}
     dev: true
 
   /@types/estree@1.0.5:

@@ -48,8 +48,9 @@
     "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
-    "@aelita-dev/eslint-config": "^1.0.0",
+    "@aelita-dev/eslint-config": "^1.1.0",
     "@iconify/json": "^2.2.150",
+    "@types/dom-view-transitions": "^1.0.4",
     "@types/markdown-it": "^13.0.7",
     "@unocss/core": "^0.57.7",
     "@unocss/preset-mini": "^0.57.7",
