@@ -1,6 +1,6 @@
 {
   "name": "unocss-preset-animations",
-  "version": "1.0.0-rc.2",
+  "version": "1.0.0",
   "description": "💅 An animation preset for UnoCSS, which adapts the tailwindcss-animate plugin",
   "packageManager": "pnpm@8.11.0",
   "type": "module",
@@ -38,7 +38,7 @@
   "scripts": {
     "build": "unbuild",
     "release": "pnpm test:ci && bumpp",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "vue-tsc --noEmit",
     "lint": "eslint .",
     "test": "vitest",
     "test:update": "vitest run -u",
@@ -65,7 +65,8 @@
     "unocss": "^0.57.7",
     "vitepress": "1.0.0-rc.31",
     "vitest": "^0.34.6",
-    "vue": "^3.3.9"
+    "vue": "^3.3.9",
+    "vue-tsc": "^1.8.24"
   },
   "peerDependencies": {
     "@unocss/preset-wind": ">= 0.56.0 < 1",
