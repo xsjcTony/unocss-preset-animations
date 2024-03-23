@@ -5,17 +5,17 @@ import type { Theme } from '@unocss/preset-mini'
 export default defineConfig<Theme>({
   presets: [
     presetUno(),
-    presetIcons()
+    presetIcons(),
   ],
   transformers: [
     transformerVariantGroup(),
-    transformerDirectives()
+    transformerDirectives(),
   ],
   theme: {
     colors: {
       primary: {
-        DEFAULT: 'var(--vp-c-brand-1)'
-      }
-    }
-  }
+        DEFAULT: 'var(--vp-c-brand-1)',
+      },
+    },
+  },
 })

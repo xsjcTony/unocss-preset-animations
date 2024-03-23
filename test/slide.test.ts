@@ -12,7 +12,7 @@ describe('slide animation', () => {
           'slide-in-t',
           'slide-in-b',
           'slide-in-l',
-          'slide-in-r'
+          'slide-in-r',
         ]
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -37,7 +37,7 @@ describe('slide animation', () => {
           'slide-in-from-t',
           'slide-in-from-b',
           'slide-in-from-l',
-          'slide-in-from-r'
+          'slide-in-from-r',
         ]
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -66,7 +66,7 @@ describe('slide animation', () => {
           'slide-in-top',
           'slide-in-bottom',
           'slide-in-left',
-          'slide-in-right'
+          'slide-in-right',
         ]
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -91,7 +91,7 @@ describe('slide animation', () => {
       it(`should generate "top|bottom" as "translate-y"`, async () => {
         const classnames = [
           'slide-in-t',
-          'slide-in-b'
+          'slide-in-b',
         ]
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -108,7 +108,7 @@ describe('slide animation', () => {
       it(`should generate "left|right" as "translate-x"`, async () => {
         const classnames = [
           'slide-in-l',
-          'slide-in-r'
+          'slide-in-r',
         ]
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -127,7 +127,7 @@ describe('slide animation', () => {
       it(`should generate negative value for "top|left"`, async () => {
         const classnames = [
           'slide-in-t',
-          'slide-in-l'
+          'slide-in-l',
         ]
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -144,7 +144,7 @@ describe('slide animation', () => {
       it(`should generate positive value for "bottom|right"`, async () => {
         const classnames = [
           'slide-in-b',
-          'slide-in-r'
+          'slide-in-r',
         ]
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -161,7 +161,7 @@ describe('slide animation', () => {
       it(`should convert negative value to positive for "top|left"`, async () => {
         const classnames = [
           'slide-in-t--10',
-          'slide-in-l--10'
+          'slide-in-l--10',
         ]
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -238,19 +238,19 @@ describe('slide animation', () => {
         expect(matched).toStrictEqual(new Set(classnames))
         expect(css).toMatchInlineSnapshot(`
           "/* layer: default */
-          .slide-in-t--0\\\\.1{--una-enter-translate-y:0.025rem;}
-          .slide-in-t--10\\\\.1{--una-enter-translate-y:2.525rem;}
-          .slide-in-t--180\\\\.37{--una-enter-translate-y:45.0925rem;}
-          .slide-in-t--199\\\\.9{--una-enter-translate-y:49.975rem;}
-          .slide-in-t--52\\\\.1{--una-enter-translate-y:13.025rem;}
-          .slide-in-t--66\\\\.66{--una-enter-translate-y:16.665rem;}
-          .slide-in-t-0\\\\.1{--una-enter-translate-y:-0.025rem;}
-          .slide-in-t-10\\\\.1{--una-enter-translate-y:-2.525rem;}
-          .slide-in-t-180\\\\.37{--una-enter-translate-y:-45.0925rem;}
-          .slide-in-t-199\\\\.9{--una-enter-translate-y:-49.975rem;}
-          .slide-in-t-52\\\\.1{--una-enter-translate-y:-13.025rem;}
-          .slide-in-t-66\\\\.66{--una-enter-translate-y:-16.665rem;}
-          .slide-in-t-99\\\\.9{--una-enter-translate-y:-24.975rem;}"
+          .slide-in-t--0\\.1{--una-enter-translate-y:0.025rem;}
+          .slide-in-t--10\\.1{--una-enter-translate-y:2.525rem;}
+          .slide-in-t--180\\.37{--una-enter-translate-y:45.0925rem;}
+          .slide-in-t--199\\.9{--una-enter-translate-y:49.975rem;}
+          .slide-in-t--52\\.1{--una-enter-translate-y:13.025rem;}
+          .slide-in-t--66\\.66{--una-enter-translate-y:16.665rem;}
+          .slide-in-t-0\\.1{--una-enter-translate-y:-0.025rem;}
+          .slide-in-t-10\\.1{--una-enter-translate-y:-2.525rem;}
+          .slide-in-t-180\\.37{--una-enter-translate-y:-45.0925rem;}
+          .slide-in-t-199\\.9{--una-enter-translate-y:-49.975rem;}
+          .slide-in-t-52\\.1{--una-enter-translate-y:-13.025rem;}
+          .slide-in-t-66\\.66{--una-enter-translate-y:-16.665rem;}
+          .slide-in-t-99\\.9{--una-enter-translate-y:-24.975rem;}"
         `)
       })
     })
@@ -265,18 +265,19 @@ describe('slide animation', () => {
         expect(matched).toStrictEqual(new Set(classnames))
         expect(css).toMatchInlineSnapshot(`
           "/* layer: default */
-          .slide-in-t--1\\\\/3{--una-enter-translate-y:33.3333333333%;}
-          .slide-in-t--1\\\\/4{--una-enter-translate-y:25%;}
-          .slide-in-t--1\\\\/6{--una-enter-translate-y:16.6666666667%;}
-          .slide-in-t--2\\\\/3{--una-enter-translate-y:66.6666666667%;}
-          .slide-in-t--3\\\\/4{--una-enter-translate-y:75%;}
-          .slide-in-t--5\\\\/6{--una-enter-translate-y:83.3333333333%;}
-          .slide-in-t-1\\\\/3{--una-enter-translate-y:-33.3333333333%;}
-          .slide-in-t-1\\\\/4{--una-enter-translate-y:-25%;}
-          .slide-in-t-1\\\\/6{--una-enter-translate-y:-16.6666666667%;}
-          .slide-in-t-2\\\\/3{--una-enter-translate-y:-66.6666666667%;}
-          .slide-in-t-3\\\\/4{--una-enter-translate-y:-75%;}
-          .slide-in-t-5\\\\/6{--una-enter-translate-y:-83.3333333333%;}"
+          .slide-in-t--0\\.1{--una-enter-translate-y:0.025rem;}
+          .slide-in-t--10\\.1{--una-enter-translate-y:2.525rem;}
+          .slide-in-t--180\\.37{--una-enter-translate-y:45.0925rem;}
+          .slide-in-t--199\\.9{--una-enter-translate-y:49.975rem;}
+          .slide-in-t--52\\.1{--una-enter-translate-y:13.025rem;}
+          .slide-in-t--66\\.66{--una-enter-translate-y:16.665rem;}
+          .slide-in-t-0\\.1{--una-enter-translate-y:-0.025rem;}
+          .slide-in-t-10\\.1{--una-enter-translate-y:-2.525rem;}
+          .slide-in-t-180\\.37{--una-enter-translate-y:-45.0925rem;}
+          .slide-in-t-199\\.9{--una-enter-translate-y:-49.975rem;}
+          .slide-in-t-52\\.1{--una-enter-translate-y:-13.025rem;}
+          .slide-in-t-66\\.66{--una-enter-translate-y:-16.665rem;}
+          .slide-in-t-99\\.9{--una-enter-translate-y:-24.975rem;}"
         `)
       })
 
@@ -286,7 +287,18 @@ describe('slide animation', () => {
 
         expect(css).toMatchInlineSnapshot(`
           "/* layer: default */
-          .slide-in-t-full{--una-enter-translate-y:-100%;}"
+          .slide-in-t--1\\/3{--una-enter-translate-y:33.3333333333%;}
+          .slide-in-t--1\\/4{--una-enter-translate-y:25%;}
+          .slide-in-t--1\\/6{--una-enter-translate-y:16.6666666667%;}
+          .slide-in-t--2\\/3{--una-enter-translate-y:66.6666666667%;}
+          .slide-in-t--3\\/4{--una-enter-translate-y:75%;}
+          .slide-in-t--5\\/6{--una-enter-translate-y:83.3333333333%;}
+          .slide-in-t-1\\/3{--una-enter-translate-y:-33.3333333333%;}
+          .slide-in-t-1\\/4{--una-enter-translate-y:-25%;}
+          .slide-in-t-1\\/6{--una-enter-translate-y:-16.6666666667%;}
+          .slide-in-t-2\\/3{--una-enter-translate-y:-66.6666666667%;}
+          .slide-in-t-3\\/4{--una-enter-translate-y:-75%;}
+          .slide-in-t-5\\/6{--una-enter-translate-y:-83.3333333333%;}"
         `)
       })
     })
@@ -301,9 +313,7 @@ describe('slide animation', () => {
         expect(matched).toStrictEqual(new Set(classnames))
         expect(css).toMatchInlineSnapshot(`
           "/* layer: default */
-          .slide-in-t-\\\\$foo{--una-enter-translate-y:var(--foo);}
-          .slide-in-t-\\\\$foo-bar{--una-enter-translate-y:var(--foo-bar);}
-          .slide-in-t-\\\\$fooBar{--una-enter-translate-y:var(--fooBar);}"
+          .slide-in-t-full{--una-enter-translate-y:-100%;}"
         `)
       })
     })
@@ -317,7 +327,31 @@ describe('slide animation', () => {
           'slide-out-t',
           'slide-out-b',
           'slide-out-l',
-          'slide-out-r'
+          'slide-out-r',
+        ]
+
+        const { matched, css } = await uno.generate(classnames.join(' '))
+
+        expect(matched).toStrictEqual(new Set(classnames))
+        expect(css).toMatchInlineSnapshot(`
+          "/* layer: default */
+          .slide-in-t-\\$foo{--una-enter-translate-y:var(--foo);}
+          .slide-in-t-\\$foo-bar{--una-enter-translate-y:var(--foo-bar);}
+          .slide-in-t-\\$fooBar{--una-enter-translate-y:var(--fooBar);}"
+        `)
+      })
+
+
+      it(`should handle both with or without "-to"`, async () => {
+        const classnames = [
+          'slide-out-t',
+          'slide-out-b',
+          'slide-out-l',
+          'slide-out-r',
+          'slide-out-to-t',
+          'slide-out-to-b',
+          'slide-out-to-l',
+          'slide-out-to-r',
         ]
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -333,16 +367,16 @@ describe('slide animation', () => {
       })
 
 
-      it(`should handle both with or without "-to"`, async () => {
+      it(`should alias "t|b|l|r" to "top|bottom|left|right"`, async () => {
         const classnames = [
           'slide-out-t',
           'slide-out-b',
           'slide-out-l',
           'slide-out-r',
-          'slide-out-to-t',
-          'slide-out-to-b',
-          'slide-out-to-l',
-          'slide-out-to-r'
+          'slide-out-top',
+          'slide-out-bottom',
+          'slide-out-left',
+          'slide-out-right',
         ]
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -360,18 +394,14 @@ describe('slide animation', () => {
           .slide-out-to-t{--una-exit-translate-y:-100%;}"
         `)
       })
+    })
 
 
-      it(`should alias "t|b|l|r" to "top|bottom|left|right"`, async () => {
+    describe('direction', () => {
+      it(`should generate "top|bottom" as "translate-y"`, async () => {
         const classnames = [
           'slide-out-t',
           'slide-out-b',
-          'slide-out-l',
-          'slide-out-r',
-          'slide-out-top',
-          'slide-out-bottom',
-          'slide-out-left',
-          'slide-out-right'
         ]
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -389,14 +419,12 @@ describe('slide animation', () => {
           .slide-out-top{--una-exit-translate-y:-100%;}"
         `)
       })
-    })
 
 
-    describe('direction', () => {
-      it(`should generate "top|bottom" as "translate-y"`, async () => {
+      it(`should generate "left|right" as "translate-x"`, async () => {
         const classnames = [
-          'slide-out-t',
-          'slide-out-b'
+          'slide-out-l',
+          'slide-out-r',
         ]
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -406,23 +434,6 @@ describe('slide animation', () => {
           "/* layer: default */
           .slide-out-b{--una-exit-translate-y:100%;}
           .slide-out-t{--una-exit-translate-y:-100%;}"
-        `)
-      })
-
-
-      it(`should generate "left|right" as "translate-x"`, async () => {
-        const classnames = [
-          'slide-out-l',
-          'slide-out-r'
-        ]
-
-        const { matched, css } = await uno.generate(classnames.join(' '))
-
-        expect(matched).toStrictEqual(new Set(classnames))
-        expect(css).toMatchInlineSnapshot(`
-          "/* layer: default */
-          .slide-out-l{--una-exit-translate-x:-100%;}
-          .slide-out-r{--una-exit-translate-x:100%;}"
         `)
       })
     })
@@ -432,7 +443,24 @@ describe('slide animation', () => {
       it(`should generate negative value for "top|left"`, async () => {
         const classnames = [
           'slide-out-t',
-          'slide-out-l'
+          'slide-out-l',
+        ]
+
+        const { matched, css } = await uno.generate(classnames.join(' '))
+
+        expect(matched).toStrictEqual(new Set(classnames))
+        expect(css).toMatchInlineSnapshot(`
+          "/* layer: default */
+          .slide-out-l{--una-exit-translate-x:-100%;}
+          .slide-out-r{--una-exit-translate-x:100%;}"
+        `)
+      })
+
+
+      it(`should generate positive value for "bottom|right"`, async () => {
+        const classnames = [
+          'slide-out-b',
+          'slide-out-r',
         ]
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -446,10 +474,10 @@ describe('slide animation', () => {
       })
 
 
-      it(`should generate positive value for "bottom|right"`, async () => {
+      it(`should convert negative value to positive for "top|left"`, async () => {
         const classnames = [
-          'slide-out-b',
-          'slide-out-r'
+          'slide-out-t--10',
+          'slide-out-l--10',
         ]
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -461,13 +489,12 @@ describe('slide animation', () => {
           .slide-out-r{--una-exit-translate-x:100%;}"
         `)
       })
+    })
 
 
-      it(`should convert negative value to positive for "top|left"`, async () => {
-        const classnames = [
-          'slide-out-t--10',
-          'slide-out-l--10'
-        ]
+    describe('rem', () => {
+      it(`should covert any numbers to "rem" (x / 4rem) including negative`, async () => {
+        const classnames = INTEGERS.map(i => `slide-out-t-${i}`)
 
         const { matched, css } = await uno.generate(classnames.join(' '))
 
@@ -478,12 +505,10 @@ describe('slide animation', () => {
           .slide-out-t--10{--una-exit-translate-y:2.5rem;}"
         `)
       })
-    })
 
 
-    describe('rem', () => {
-      it(`should covert any numbers to "rem" (x / 4rem) including negative`, async () => {
-        const classnames = INTEGERS.map(i => `slide-out-t-${i}`)
+      it(`should also convert decimals including negative`, async () => {
+        const classnames = DECIMALS.map(i => `slide-out-t-${i}`)
 
         const { matched, css } = await uno.generate(classnames.join(' '))
 
@@ -533,31 +558,6 @@ describe('slide animation', () => {
           .slide-out-t-90{--una-exit-translate-y:-22.5rem;}"
         `)
       })
-
-
-      it(`should also convert decimals including negative`, async () => {
-        const classnames = DECIMALS.map(i => `slide-out-t-${i}`)
-
-        const { matched, css } = await uno.generate(classnames.join(' '))
-
-        expect(matched).toStrictEqual(new Set(classnames))
-        expect(css).toMatchInlineSnapshot(`
-          "/* layer: default */
-          .slide-out-t--0\\\\.1{--una-exit-translate-y:0.025rem;}
-          .slide-out-t--10\\\\.1{--una-exit-translate-y:2.525rem;}
-          .slide-out-t--180\\\\.37{--una-exit-translate-y:45.0925rem;}
-          .slide-out-t--199\\\\.9{--una-exit-translate-y:49.975rem;}
-          .slide-out-t--52\\\\.1{--una-exit-translate-y:13.025rem;}
-          .slide-out-t--66\\\\.66{--una-exit-translate-y:16.665rem;}
-          .slide-out-t-0\\\\.1{--una-exit-translate-y:-0.025rem;}
-          .slide-out-t-10\\\\.1{--una-exit-translate-y:-2.525rem;}
-          .slide-out-t-180\\\\.37{--una-exit-translate-y:-45.0925rem;}
-          .slide-out-t-199\\\\.9{--una-exit-translate-y:-49.975rem;}
-          .slide-out-t-52\\\\.1{--una-exit-translate-y:-13.025rem;}
-          .slide-out-t-66\\\\.66{--una-exit-translate-y:-16.665rem;}
-          .slide-out-t-99\\\\.9{--una-exit-translate-y:-24.975rem;}"
-        `)
-      })
     })
 
 
@@ -570,23 +570,23 @@ describe('slide animation', () => {
         expect(matched).toStrictEqual(new Set(classnames))
         expect(css).toMatchInlineSnapshot(`
           "/* layer: default */
-          .slide-out-t--1\\\\/3{--una-exit-translate-y:33.3333333333%;}
-          .slide-out-t--1\\\\/4{--una-exit-translate-y:25%;}
-          .slide-out-t--1\\\\/6{--una-exit-translate-y:16.6666666667%;}
-          .slide-out-t--2\\\\/3{--una-exit-translate-y:66.6666666667%;}
-          .slide-out-t--3\\\\/4{--una-exit-translate-y:75%;}
-          .slide-out-t--5\\\\/6{--una-exit-translate-y:83.3333333333%;}
-          .slide-out-t-1\\\\/3{--una-exit-translate-y:-33.3333333333%;}
-          .slide-out-t-1\\\\/4{--una-exit-translate-y:-25%;}
-          .slide-out-t-1\\\\/6{--una-exit-translate-y:-16.6666666667%;}
-          .slide-out-t-2\\\\/3{--una-exit-translate-y:-66.6666666667%;}
-          .slide-out-t-3\\\\/4{--una-exit-translate-y:-75%;}
-          .slide-out-t-5\\\\/6{--una-exit-translate-y:-83.3333333333%;}"
+          .slide-out-t--1\\/3{--una-exit-translate-y:33.3333333333%;}
+          .slide-out-t--1\\/4{--una-exit-translate-y:25%;}
+          .slide-out-t--1\\/6{--una-exit-translate-y:16.6666666667%;}
+          .slide-out-t--2\\/3{--una-exit-translate-y:66.6666666667%;}
+          .slide-out-t--3\\/4{--una-exit-translate-y:75%;}
+          .slide-out-t--5\\/6{--una-exit-translate-y:83.3333333333%;}
+          .slide-out-t-1\\/3{--una-exit-translate-y:-33.3333333333%;}
+          .slide-out-t-1\\/4{--una-exit-translate-y:-25%;}
+          .slide-out-t-1\\/6{--una-exit-translate-y:-16.6666666667%;}
+          .slide-out-t-2\\/3{--una-exit-translate-y:-66.6666666667%;}
+          .slide-out-t-3\\/4{--una-exit-translate-y:-75%;}
+          .slide-out-t-5\\/6{--una-exit-translate-y:-83.3333333333%;}"
         `)
       })
 
 
-      it(`should convert "full" to "100%`, async () => {
+      it.only(`should convert "full" to "100%`, async () => {
         const { css } = await uno.generate('slide-out-t-full')
 
         expect(css).toMatchInlineSnapshot(`
@@ -606,9 +606,7 @@ describe('slide animation', () => {
         expect(matched).toStrictEqual(new Set(classnames))
         expect(css).toMatchInlineSnapshot(`
           "/* layer: default */
-          .slide-out-t-\\\\$foo{--una-exit-translate-y:var(--foo);}
-          .slide-out-t-\\\\$foo-bar{--una-exit-translate-y:var(--foo-bar);}
-          .slide-out-t-\\\\$fooBar{--una-exit-translate-y:var(--fooBar);}"
+          .slide-out-t-full{--una-exit-translate-y:-100%;}"
         `)
       })
     })

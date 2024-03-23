@@ -45,11 +45,11 @@ describe('fade animation', () => {
         expect(matched).toStrictEqual(new Set(classnames))
         expect(css).toMatchInlineSnapshot(`
           "/* layer: default */
-          .fade-in-0\\\\.1{--una-enter-opacity:0.001;}
-          .fade-in-10\\\\.1{--una-enter-opacity:0.101;}
-          .fade-in-52\\\\.1{--una-enter-opacity:0.521;}
-          .fade-in-66\\\\.66{--una-enter-opacity:0.6666;}
-          .fade-in-99\\\\.9{--una-enter-opacity:0.999;}"
+          .fade-in-0\\.1{--una-enter-opacity:0.001;}
+          .fade-in-10\\.1{--una-enter-opacity:0.101;}
+          .fade-in-52\\.1{--una-enter-opacity:0.521;}
+          .fade-in-66\\.66{--una-enter-opacity:0.6666;}
+          .fade-in-99\\.9{--una-enter-opacity:0.999;}"
         `)
       })
     })
@@ -64,9 +64,9 @@ describe('fade animation', () => {
         expect(matched).toStrictEqual(new Set(classnames))
         expect(css).toMatchInlineSnapshot(`
           "/* layer: default */
-          .fade-in-\\\\$foo{--una-enter-opacity:var(--foo);}
-          .fade-in-\\\\$foo-bar{--una-enter-opacity:var(--foo-bar);}
-          .fade-in-\\\\$fooBar{--una-enter-opacity:var(--fooBar);}"
+          .fade-in-\\$foo{--una-enter-opacity:var(--foo);}
+          .fade-in-\\$foo-bar{--una-enter-opacity:var(--foo-bar);}
+          .fade-in-\\$fooBar{--una-enter-opacity:var(--fooBar);}"
         `)
       })
     })
@@ -113,11 +113,11 @@ describe('fade animation', () => {
         expect(matched).toStrictEqual(new Set(classnames))
         expect(css).toMatchInlineSnapshot(`
           "/* layer: default */
-          .fade-out-0\\\\.1{--una-exit-opacity:0.001;}
-          .fade-out-10\\\\.1{--una-exit-opacity:0.101;}
-          .fade-out-52\\\\.1{--una-exit-opacity:0.521;}
-          .fade-out-66\\\\.66{--una-exit-opacity:0.6666;}
-          .fade-out-99\\\\.9{--una-exit-opacity:0.999;}"
+          .fade-out-0\\.1{--una-exit-opacity:0.001;}
+          .fade-out-10\\.1{--una-exit-opacity:0.101;}
+          .fade-out-52\\.1{--una-exit-opacity:0.521;}
+          .fade-out-66\\.66{--una-exit-opacity:0.6666;}
+          .fade-out-99\\.9{--una-exit-opacity:0.999;}"
         `)
       })
     })
@@ -132,9 +132,9 @@ describe('fade animation', () => {
         expect(matched).toStrictEqual(new Set(classnames))
         expect(css).toMatchInlineSnapshot(`
           "/* layer: default */
-          .fade-out-\\\\$foo{--una-exit-opacity:var(--foo);}
-          .fade-out-\\\\$foo-bar{--una-exit-opacity:var(--foo-bar);}
-          .fade-out-\\\\$fooBar{--una-exit-opacity:var(--fooBar);}"
+          .fade-out-\\$foo{--una-exit-opacity:var(--foo);}
+          .fade-out-\\$foo-bar{--una-exit-opacity:var(--foo-bar);}
+          .fade-out-\\$fooBar{--una-exit-opacity:var(--fooBar);}"
         `)
       })
     })

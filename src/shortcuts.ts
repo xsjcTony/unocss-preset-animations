@@ -15,10 +15,10 @@ export const shortcuts: UserShortcuts<Theme> = [
         [`${CSS_VARIABLE_PREFIX}-enter-scale`]: 'initial',
         [`${CSS_VARIABLE_PREFIX}-enter-rotate`]: 'initial',
         [`${CSS_VARIABLE_PREFIX}-enter-translate-x`]: 'initial',
-        [`${CSS_VARIABLE_PREFIX}-enter-translate-y`]: 'initial'
-      }
+        [`${CSS_VARIABLE_PREFIX}-enter-translate-y`]: 'initial',
+      },
     ],
-    { autocomplete: 'animate-in' }
+    { autocomplete: 'animate-in' },
   ],
   [
     /^animate-out$/,
@@ -31,9 +31,9 @@ export const shortcuts: UserShortcuts<Theme> = [
         [`${CSS_VARIABLE_PREFIX}-exit-scale`]: 'initial',
         [`${CSS_VARIABLE_PREFIX}-exit-rotate`]: 'initial',
         [`${CSS_VARIABLE_PREFIX}-exit-translate-x`]: 'initial',
-        [`${CSS_VARIABLE_PREFIX}-exit-translate-y`]: 'initial'
-      }
+        [`${CSS_VARIABLE_PREFIX}-exit-translate-y`]: 'initial',
+      },
     ],
-    { autocomplete: 'animate-out' }
-  ]
+    { autocomplete: 'animate-out' },
+  ],
 ]

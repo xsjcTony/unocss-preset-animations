@@ -13,7 +13,7 @@ export const presetAnimations = definePreset(() => ({
   name: 'unocss-preset-animations',
   theme,
   shortcuts,
-  rules
+  rules,
 }))
 
 

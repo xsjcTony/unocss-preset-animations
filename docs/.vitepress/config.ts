@@ -83,6 +83,7 @@ export default defineConfig({
           { text: 'Zoom', link: '/animations/zoom' },
           { text: 'Spin', link: '/animations/spin' },
           { text: 'Slide', link: '/animations/slide' },
+          { text: 'Animation Properties', link: '/animations/animation-properties' },
         ],
       },
     ],

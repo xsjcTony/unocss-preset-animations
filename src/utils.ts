@@ -7,7 +7,7 @@ const normalizeDirection = (dir: string | undefined): string | undefined => {
     t: 'top',
     b: 'bottom',
     l: 'left',
-    r: 'right'
+    r: 'right',
   }
 
   return dirMap[dir ?? ''] ?? dir
@@ -16,7 +16,7 @@ const normalizeDirection = (dir: string | undefined): string | undefined => {
 
 export const handleSlide = (
   val: string | undefined,
-  dir: string | undefined
+  dir: string | undefined,
 ): [value?: string | undefined, direction?: string | undefined] => {
   let value = h.cssvar.fraction.rem(val || DEFAULT_SLIDE_TRANSLATE)
 

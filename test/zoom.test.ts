@@ -75,19 +75,19 @@ describe('zoom animation', () => {
         expect(matched).toStrictEqual(new Set(classnames))
         expect(css).toMatchInlineSnapshot(`
           "/* layer: default */
-          .zoom-in--0\\\\.1{--una-enter-scale:-0.001;}
-          .zoom-in--10\\\\.1{--una-enter-scale:-0.101;}
-          .zoom-in--180\\\\.37{--una-enter-scale:-1.8037;}
-          .zoom-in--199\\\\.9{--una-enter-scale:-1.999;}
-          .zoom-in--52\\\\.1{--una-enter-scale:-0.521;}
-          .zoom-in--66\\\\.66{--una-enter-scale:-0.6666;}
-          .zoom-in-0\\\\.1{--una-enter-scale:0.001;}
-          .zoom-in-10\\\\.1{--una-enter-scale:0.101;}
-          .zoom-in-180\\\\.37{--una-enter-scale:1.8037;}
-          .zoom-in-199\\\\.9{--una-enter-scale:1.999;}
-          .zoom-in-52\\\\.1{--una-enter-scale:0.521;}
-          .zoom-in-66\\\\.66{--una-enter-scale:0.6666;}
-          .zoom-in-99\\\\.9{--una-enter-scale:0.999;}"
+          .zoom-in--0\\.1{--una-enter-scale:-0.001;}
+          .zoom-in--10\\.1{--una-enter-scale:-0.101;}
+          .zoom-in--180\\.37{--una-enter-scale:-1.8037;}
+          .zoom-in--199\\.9{--una-enter-scale:-1.999;}
+          .zoom-in--52\\.1{--una-enter-scale:-0.521;}
+          .zoom-in--66\\.66{--una-enter-scale:-0.6666;}
+          .zoom-in-0\\.1{--una-enter-scale:0.001;}
+          .zoom-in-10\\.1{--una-enter-scale:0.101;}
+          .zoom-in-180\\.37{--una-enter-scale:1.8037;}
+          .zoom-in-199\\.9{--una-enter-scale:1.999;}
+          .zoom-in-52\\.1{--una-enter-scale:0.521;}
+          .zoom-in-66\\.66{--una-enter-scale:0.6666;}
+          .zoom-in-99\\.9{--una-enter-scale:0.999;}"
         `)
       })
     })
@@ -102,18 +102,18 @@ describe('zoom animation', () => {
         expect(matched).toStrictEqual(new Set(classnames))
         expect(css).toMatchInlineSnapshot(`
           "/* layer: default */
-          .zoom-in--1\\\\/3{--una-enter-scale:-33.3333333333%;}
-          .zoom-in--1\\\\/4{--una-enter-scale:-25%;}
-          .zoom-in--1\\\\/6{--una-enter-scale:-16.6666666667%;}
-          .zoom-in--2\\\\/3{--una-enter-scale:-66.6666666667%;}
-          .zoom-in--3\\\\/4{--una-enter-scale:-75%;}
-          .zoom-in--5\\\\/6{--una-enter-scale:-83.3333333333%;}
-          .zoom-in-1\\\\/3{--una-enter-scale:33.3333333333%;}
-          .zoom-in-1\\\\/4{--una-enter-scale:25%;}
-          .zoom-in-1\\\\/6{--una-enter-scale:16.6666666667%;}
-          .zoom-in-2\\\\/3{--una-enter-scale:66.6666666667%;}
-          .zoom-in-3\\\\/4{--una-enter-scale:75%;}
-          .zoom-in-5\\\\/6{--una-enter-scale:83.3333333333%;}"
+          .zoom-in--1\\/3{--una-enter-scale:-33.3333333333%;}
+          .zoom-in--1\\/4{--una-enter-scale:-25%;}
+          .zoom-in--1\\/6{--una-enter-scale:-16.6666666667%;}
+          .zoom-in--2\\/3{--una-enter-scale:-66.6666666667%;}
+          .zoom-in--3\\/4{--una-enter-scale:-75%;}
+          .zoom-in--5\\/6{--una-enter-scale:-83.3333333333%;}
+          .zoom-in-1\\/3{--una-enter-scale:33.3333333333%;}
+          .zoom-in-1\\/4{--una-enter-scale:25%;}
+          .zoom-in-1\\/6{--una-enter-scale:16.6666666667%;}
+          .zoom-in-2\\/3{--una-enter-scale:66.6666666667%;}
+          .zoom-in-3\\/4{--una-enter-scale:75%;}
+          .zoom-in-5\\/6{--una-enter-scale:83.3333333333%;}"
         `)
       })
 
@@ -138,9 +138,9 @@ describe('zoom animation', () => {
         expect(matched).toStrictEqual(new Set(classnames))
         expect(css).toMatchInlineSnapshot(`
           "/* layer: default */
-          .zoom-in-\\\\$foo{--una-enter-scale:var(--foo);}
-          .zoom-in-\\\\$foo-bar{--una-enter-scale:var(--foo-bar);}
-          .zoom-in-\\\\$fooBar{--una-enter-scale:var(--fooBar);}"
+          .zoom-in-\\$foo{--una-enter-scale:var(--foo);}
+          .zoom-in-\\$foo-bar{--una-enter-scale:var(--foo-bar);}
+          .zoom-in-\\$fooBar{--una-enter-scale:var(--fooBar);}"
         `)
       })
     })
@@ -217,19 +217,19 @@ describe('zoom animation', () => {
         expect(matched).toStrictEqual(new Set(classnames))
         expect(css).toMatchInlineSnapshot(`
           "/* layer: default */
-          .zoom-out--0\\\\.1{--una-exit-scale:-0.001;}
-          .zoom-out--10\\\\.1{--una-exit-scale:-0.101;}
-          .zoom-out--180\\\\.37{--una-exit-scale:-1.8037;}
-          .zoom-out--199\\\\.9{--una-exit-scale:-1.999;}
-          .zoom-out--52\\\\.1{--una-exit-scale:-0.521;}
-          .zoom-out--66\\\\.66{--una-exit-scale:-0.6666;}
-          .zoom-out-0\\\\.1{--una-exit-scale:0.001;}
-          .zoom-out-10\\\\.1{--una-exit-scale:0.101;}
-          .zoom-out-180\\\\.37{--una-exit-scale:1.8037;}
-          .zoom-out-199\\\\.9{--una-exit-scale:1.999;}
-          .zoom-out-52\\\\.1{--una-exit-scale:0.521;}
-          .zoom-out-66\\\\.66{--una-exit-scale:0.6666;}
-          .zoom-out-99\\\\.9{--una-exit-scale:0.999;}"
+          .zoom-out--0\\.1{--una-exit-scale:-0.001;}
+          .zoom-out--10\\.1{--una-exit-scale:-0.101;}
+          .zoom-out--180\\.37{--una-exit-scale:-1.8037;}
+          .zoom-out--199\\.9{--una-exit-scale:-1.999;}
+          .zoom-out--52\\.1{--una-exit-scale:-0.521;}
+          .zoom-out--66\\.66{--una-exit-scale:-0.6666;}
+          .zoom-out-0\\.1{--una-exit-scale:0.001;}
+          .zoom-out-10\\.1{--una-exit-scale:0.101;}
+          .zoom-out-180\\.37{--una-exit-scale:1.8037;}
+          .zoom-out-199\\.9{--una-exit-scale:1.999;}
+          .zoom-out-52\\.1{--una-exit-scale:0.521;}
+          .zoom-out-66\\.66{--una-exit-scale:0.6666;}
+          .zoom-out-99\\.9{--una-exit-scale:0.999;}"
         `)
       })
     })
@@ -244,18 +244,18 @@ describe('zoom animation', () => {
         expect(matched).toStrictEqual(new Set(classnames))
         expect(css).toMatchInlineSnapshot(`
           "/* layer: default */
-          .zoom-out--1\\\\/3{--una-exit-scale:-33.3333333333%;}
-          .zoom-out--1\\\\/4{--una-exit-scale:-25%;}
-          .zoom-out--1\\\\/6{--una-exit-scale:-16.6666666667%;}
-          .zoom-out--2\\\\/3{--una-exit-scale:-66.6666666667%;}
-          .zoom-out--3\\\\/4{--una-exit-scale:-75%;}
-          .zoom-out--5\\\\/6{--una-exit-scale:-83.3333333333%;}
-          .zoom-out-1\\\\/3{--una-exit-scale:33.3333333333%;}
-          .zoom-out-1\\\\/4{--una-exit-scale:25%;}
-          .zoom-out-1\\\\/6{--una-exit-scale:16.6666666667%;}
-          .zoom-out-2\\\\/3{--una-exit-scale:66.6666666667%;}
-          .zoom-out-3\\\\/4{--una-exit-scale:75%;}
-          .zoom-out-5\\\\/6{--una-exit-scale:83.3333333333%;}"
+          .zoom-out--1\\/3{--una-exit-scale:-33.3333333333%;}
+          .zoom-out--1\\/4{--una-exit-scale:-25%;}
+          .zoom-out--1\\/6{--una-exit-scale:-16.6666666667%;}
+          .zoom-out--2\\/3{--una-exit-scale:-66.6666666667%;}
+          .zoom-out--3\\/4{--una-exit-scale:-75%;}
+          .zoom-out--5\\/6{--una-exit-scale:-83.3333333333%;}
+          .zoom-out-1\\/3{--una-exit-scale:33.3333333333%;}
+          .zoom-out-1\\/4{--una-exit-scale:25%;}
+          .zoom-out-1\\/6{--una-exit-scale:16.6666666667%;}
+          .zoom-out-2\\/3{--una-exit-scale:66.6666666667%;}
+          .zoom-out-3\\/4{--una-exit-scale:75%;}
+          .zoom-out-5\\/6{--una-exit-scale:83.3333333333%;}"
         `)
       })
 
@@ -280,9 +280,9 @@ describe('zoom animation', () => {
         expect(matched).toStrictEqual(new Set(classnames))
         expect(css).toMatchInlineSnapshot(`
           "/* layer: default */
-          .zoom-out-\\\\$foo{--una-exit-scale:var(--foo);}
-          .zoom-out-\\\\$foo-bar{--una-exit-scale:var(--foo-bar);}
-          .zoom-out-\\\\$fooBar{--una-exit-scale:var(--fooBar);}"
+          .zoom-out-\\$foo{--una-exit-scale:var(--foo);}
+          .zoom-out-\\$foo-bar{--una-exit-scale:var(--foo-bar);}
+          .zoom-out-\\$fooBar{--una-exit-scale:var(--fooBar);}"
         `)
       })
     })

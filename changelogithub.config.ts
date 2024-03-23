@@ -13,6 +13,6 @@ export default {
     examples: { title: '🏀 Examples' },
     test: { title: '🧪 Tests' },
     style: { title: '🎨 Styles' },
-    ci: { title: '🤖 CI' }
-  }
+    ci: { title: '🤖 CI' },
+  },
 } satisfies ChangelogOptions

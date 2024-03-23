@@ -8,9 +8,9 @@ import type { Theme } from '@unocss/preset-mini'
 export const generator = (theme?: Theme): UnoGenerator<Theme> => createGenerator({
   presets: [
     presetUno({ preflight: false }),
-    presetAnimations()
+    presetAnimations(),
   ],
-  theme
+  theme,
 })
 
 

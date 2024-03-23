@@ -4,22 +4,22 @@ import { defineBuildConfig } from 'unbuild'
 
 export default defineBuildConfig({
   entries: [
-    'src/index'
+    'src/index',
   ],
   clean: true,
   declaration: true,
   externals: [
     '@unocss/core',
-    '@unocss/preset-mini'
+    '@unocss/preset-mini',
   ],
   alias: {
-    '@': fileURLToPath(new URL('src', import.meta.url))
+    '@': fileURLToPath(new URL('src', import.meta.url)),
   },
   rollup: {
     emitCJS: true,
     dts: {
-      respectExternal: false
-    }
+      respectExternal: false,
+    },
   },
-  failOnWarn: false
+  failOnWarn: false,
 })

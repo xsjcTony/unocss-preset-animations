@@ -75,19 +75,19 @@ describe('spin animation', () => {
         expect(matched).toStrictEqual(new Set(classnames))
         expect(css).toMatchInlineSnapshot(`
           "/* layer: default */
-          .spin-in--0\\\\.1{--una-enter-rotate:-0.1deg;}
-          .spin-in--10\\\\.1{--una-enter-rotate:-10.1deg;}
-          .spin-in--180\\\\.37{--una-enter-rotate:-180.37deg;}
-          .spin-in--199\\\\.9{--una-enter-rotate:-199.9deg;}
-          .spin-in--52\\\\.1{--una-enter-rotate:-52.1deg;}
-          .spin-in--66\\\\.66{--una-enter-rotate:-66.66deg;}
-          .spin-in-0\\\\.1{--una-enter-rotate:0.1deg;}
-          .spin-in-10\\\\.1{--una-enter-rotate:10.1deg;}
-          .spin-in-180\\\\.37{--una-enter-rotate:180.37deg;}
-          .spin-in-199\\\\.9{--una-enter-rotate:199.9deg;}
-          .spin-in-52\\\\.1{--una-enter-rotate:52.1deg;}
-          .spin-in-66\\\\.66{--una-enter-rotate:66.66deg;}
-          .spin-in-99\\\\.9{--una-enter-rotate:99.9deg;}"
+          .spin-in--0\\.1{--una-enter-rotate:-0.1deg;}
+          .spin-in--10\\.1{--una-enter-rotate:-10.1deg;}
+          .spin-in--180\\.37{--una-enter-rotate:-180.37deg;}
+          .spin-in--199\\.9{--una-enter-rotate:-199.9deg;}
+          .spin-in--52\\.1{--una-enter-rotate:-52.1deg;}
+          .spin-in--66\\.66{--una-enter-rotate:-66.66deg;}
+          .spin-in-0\\.1{--una-enter-rotate:0.1deg;}
+          .spin-in-10\\.1{--una-enter-rotate:10.1deg;}
+          .spin-in-180\\.37{--una-enter-rotate:180.37deg;}
+          .spin-in-199\\.9{--una-enter-rotate:199.9deg;}
+          .spin-in-52\\.1{--una-enter-rotate:52.1deg;}
+          .spin-in-66\\.66{--una-enter-rotate:66.66deg;}
+          .spin-in-99\\.9{--una-enter-rotate:99.9deg;}"
         `)
       })
 
@@ -99,7 +99,7 @@ describe('spin animation', () => {
           ...DATASET.map(i => `spin-in-${i}deg`),
           ...DATASET.map(i => `spin-in-${i}rad`),
           ...DATASET.map(i => `spin-in-${i}grad`),
-          ...DATASET.map(i => `spin-in-${i}turn`)
+          ...DATASET.map(i => `spin-in-${i}turn`),
         ]
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -277,7 +277,7 @@ describe('spin animation', () => {
           'spin-in-0deg',
           'spin-in-0rad',
           'spin-in-0grad',
-          'spin-in-0turn'
+          'spin-in-0turn',
         ]
 
         const { matched, css } = await uno.generate(classnames)
@@ -304,9 +304,9 @@ describe('spin animation', () => {
         expect(matched).toStrictEqual(new Set(classnames))
         expect(css).toMatchInlineSnapshot(`
           "/* layer: default */
-          .spin-in-\\\\$foo{--una-enter-rotate:var(--foo);}
-          .spin-in-\\\\$foo-bar{--una-enter-rotate:var(--foo-bar);}
-          .spin-in-\\\\$fooBar{--una-enter-rotate:var(--fooBar);}"
+          .spin-in-\\$foo{--una-enter-rotate:var(--foo);}
+          .spin-in-\\$foo-bar{--una-enter-rotate:var(--foo-bar);}
+          .spin-in-\\$fooBar{--una-enter-rotate:var(--fooBar);}"
         `)
       })
     })
@@ -382,19 +382,19 @@ describe('spin animation', () => {
 
         expect(css).toMatchInlineSnapshot(`
           "/* layer: default */
-          .spin-out--0\\\\.1{--una-exit-rotate:-0.1deg;}
-          .spin-out--10\\\\.1{--una-exit-rotate:-10.1deg;}
-          .spin-out--180\\\\.37{--una-exit-rotate:-180.37deg;}
-          .spin-out--199\\\\.9{--una-exit-rotate:-199.9deg;}
-          .spin-out--52\\\\.1{--una-exit-rotate:-52.1deg;}
-          .spin-out--66\\\\.66{--una-exit-rotate:-66.66deg;}
-          .spin-out-0\\\\.1{--una-exit-rotate:0.1deg;}
-          .spin-out-10\\\\.1{--una-exit-rotate:10.1deg;}
-          .spin-out-180\\\\.37{--una-exit-rotate:180.37deg;}
-          .spin-out-199\\\\.9{--una-exit-rotate:199.9deg;}
-          .spin-out-52\\\\.1{--una-exit-rotate:52.1deg;}
-          .spin-out-66\\\\.66{--una-exit-rotate:66.66deg;}
-          .spin-out-99\\\\.9{--una-exit-rotate:99.9deg;}"
+          .spin-out--0\\.1{--una-exit-rotate:-0.1deg;}
+          .spin-out--10\\.1{--una-exit-rotate:-10.1deg;}
+          .spin-out--180\\.37{--una-exit-rotate:-180.37deg;}
+          .spin-out--199\\.9{--una-exit-rotate:-199.9deg;}
+          .spin-out--52\\.1{--una-exit-rotate:-52.1deg;}
+          .spin-out--66\\.66{--una-exit-rotate:-66.66deg;}
+          .spin-out-0\\.1{--una-exit-rotate:0.1deg;}
+          .spin-out-10\\.1{--una-exit-rotate:10.1deg;}
+          .spin-out-180\\.37{--una-exit-rotate:180.37deg;}
+          .spin-out-199\\.9{--una-exit-rotate:199.9deg;}
+          .spin-out-52\\.1{--una-exit-rotate:52.1deg;}
+          .spin-out-66\\.66{--una-exit-rotate:66.66deg;}
+          .spin-out-99\\.9{--una-exit-rotate:99.9deg;}"
         `)
       })
 
@@ -406,7 +406,7 @@ describe('spin animation', () => {
           ...DATASET.map(i => `spin-out-${i}deg`),
           ...DATASET.map(i => `spin-out-${i}rad`),
           ...DATASET.map(i => `spin-out-${i}grad`),
-          ...DATASET.map(i => `spin-out-${i}turn`)
+          ...DATASET.map(i => `spin-out-${i}turn`),
         ]
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -584,7 +584,7 @@ describe('spin animation', () => {
           'spin-out-0deg',
           'spin-out-0rad',
           'spin-out-0grad',
-          'spin-out-0turn'
+          'spin-out-0turn',
         ]
 
         const { matched, css } = await uno.generate(classnames)
@@ -611,9 +611,9 @@ describe('spin animation', () => {
         expect(matched).toStrictEqual(new Set(classnames))
         expect(css).toMatchInlineSnapshot(`
           "/* layer: default */
-          .spin-out-\\\\$foo{--una-exit-rotate:var(--foo);}
-          .spin-out-\\\\$foo-bar{--una-exit-rotate:var(--foo-bar);}
-          .spin-out-\\\\$fooBar{--una-exit-rotate:var(--fooBar);}"
+          .spin-out-\\$foo{--una-exit-rotate:var(--foo);}
+          .spin-out-\\$foo-bar{--una-exit-rotate:var(--foo-bar);}
+          .spin-out-\\$fooBar{--una-exit-rotate:var(--fooBar);}"
         `)
       })
     })
