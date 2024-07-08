@@ -10,10 +10,5 @@ import './style.scss'
 
 export default {
   'extends': DefaultTheme,
-  Layout: () => h(Layout, null, {
-    // https://vitepress.dev/guide/extending-default-theme#layout-slots
-  }),
-  enhanceApp({ app, router, siteData }) {
-    // ...
-  },
+  Layout: () => h(Layout, null, {}),
 } satisfies Theme

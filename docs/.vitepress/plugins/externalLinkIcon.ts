@@ -9,7 +9,7 @@ const externalIcon = `
 `
 
 
-const externalLinkIcon = (md: MarkdownIt): void => {
+function externalLinkIcon(md: MarkdownIt): void {
   const renderToken: RenderRule = (tokens, idx, options, env, self) =>
     self.renderToken(tokens, idx, options)
 
@@ -31,7 +31,11 @@ const externalLinkIcon = (md: MarkdownIt): void => {
   }
 
   md.renderer.rules.link_close = (
-    tokens, idx, options, env, self,
+    tokens,
+    idx,
+    options,
+    env,
+    self,
   ): string => {
     if (isExternalLink) {
       isExternalLink = false

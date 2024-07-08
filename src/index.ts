@@ -5,7 +5,7 @@ import { theme } from '@/theme'
 
 
 // This is for fixing the `rollup-plugin-dts` generating wrong import issue.
-// eslint-disable-next-line ts/no-unused-vars
+// eslint-disable-next-line unused-imports/no-unused-imports
 import type { Theme } from '@unocss/preset-mini'
 
 

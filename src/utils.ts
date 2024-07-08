@@ -2,7 +2,7 @@ import { h } from '@unocss/preset-mini/utils'
 import { DEFAULT_SLIDE_TRANSLATE } from '@/rules'
 
 
-const normalizeDirection = (dir: string | undefined): string | undefined => {
+function normalizeDirection(dir: string | undefined): string | undefined {
   const dirMap: Record<string, string> = {
     t: 'top',
     b: 'bottom',
@@ -14,10 +14,10 @@ const normalizeDirection = (dir: string | undefined): string | undefined => {
 }
 
 
-export const handleSlide = (
+export function handleSlide(
   val: string | undefined,
   dir: string | undefined,
-): [value?: string | undefined, direction?: string | undefined] => {
+): [value?: string | undefined, direction?: string | undefined] {
   let value = h.cssvar.fraction.rem(val || DEFAULT_SLIDE_TRANSLATE)
 
   if (!value)

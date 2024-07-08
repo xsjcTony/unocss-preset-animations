@@ -57,7 +57,8 @@ const spinRules: Rule<Theme>[] = [
     { autocomplete: 'spin-(in|out)-<percent>' },
   ],
   [
-    /^spin-out(?:-(.+))?$/, ([, deg]) => ({
+    /^spin-out(?:-(.+))?$/,
+    ([, deg]) => ({
       [`${CSS_VARIABLE_PREFIX}-exit-rotate`]: h.cssvar.degree(deg || DEFAULT_SPIN_DEGREE),
     }),
   ],
@@ -75,13 +76,16 @@ const slideRules: Rule<Theme>[] = [
 
       switch (direction) {
         case 'top':
-        case 'bottom':
+        case 'bottom': {
           return { [`${CSS_VARIABLE_PREFIX}-enter-translate-y`]: value }
+        }
         case 'left':
-        case 'right':
+        case 'right': {
           return { [`${CSS_VARIABLE_PREFIX}-enter-translate-x`]: value }
-        default:
+        }
+        default: {
           return
+        }
       }
     },
     {
@@ -104,13 +108,16 @@ const slideRules: Rule<Theme>[] = [
 
       switch (direction) {
         case 'top':
-        case 'bottom':
+        case 'bottom': {
           return { [`${CSS_VARIABLE_PREFIX}-exit-translate-y`]: value }
+        }
         case 'left':
-        case 'right':
+        case 'right': {
           return { [`${CSS_VARIABLE_PREFIX}-exit-translate-x`]: value }
-        default:
+        }
+        default: {
           return
+        }
       }
     },
     {

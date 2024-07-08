@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { CSS_VARIABLE_PREFIX } from '@/constants'
 import { CSS_VARIABLES, DECIMALS, FRACTIONS, INTEGERS } from '~/data'
 import { uno } from '~/utils'
@@ -586,7 +586,7 @@ describe('slide animation', () => {
       })
 
 
-      it.only(`should convert "full" to "100%`, async () => {
+      it(`should convert "full" to "100%`, async () => {
         const { css } = await uno.generate('slide-out-t-full')
 
         expect(css).toMatchInlineSnapshot(`

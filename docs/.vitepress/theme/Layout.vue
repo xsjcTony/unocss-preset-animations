@@ -1,6 +1,4 @@
 <script setup lang="ts">
-/* eslint-disable ts/restrict-template-expressions */
-
 import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { nextTick, provide } from 'vue'
@@ -9,8 +7,10 @@ import { nextTick, provide } from 'vue'
 const { isDark } = useData()
 
 
-const enableTransitions = (): boolean => 'startViewTransition' in document
-  && window.matchMedia('(prefers-reduced-motion: no-preference)').matches
+function enableTransitions(): boolean {
+  return 'startViewTransition' in document
+    && window.matchMedia('(prefers-reduced-motion: no-preference)').matches
+}
 
 provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
   if (!enableTransitions()) {
