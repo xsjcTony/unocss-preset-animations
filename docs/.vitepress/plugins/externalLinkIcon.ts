@@ -1,5 +1,5 @@
 import type MarkdownIt from 'markdown-it'
-import type { RenderRule } from 'markdown-it/lib/renderer'
+import type { RenderRule } from 'markdown-it/lib/renderer.mjs'
 
 
 const externalIcon = `
