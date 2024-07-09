@@ -1,12 +1,12 @@
-import { describe, expect, it } from 'vitest'
+import { describe, it } from 'vitest'
 import { CSS_VARIABLE_PREFIX } from '@/constants'
 import { CSS_VARIABLES, DECIMALS, INTEGERS } from '~/data'
 import { uno } from '~/utils'
 
 
-describe('spin animation', () => {
+describe.concurrent('spin animation', () => {
   describe('spin-in', () => {
-    it(`should generate "${CSS_VARIABLE_PREFIX}-enter-rotate" css variable and default to "30deg"`, async () => {
+    it(`should generate "${CSS_VARIABLE_PREFIX}-enter-rotate" css variable and default to "30deg"`, async ({ expect }) => {
       const { css } = await uno.generate('spin-in')
 
       expect(css).toContain(`.spin-in{${CSS_VARIABLE_PREFIX}-enter-rotate:30deg;}`)
@@ -14,7 +14,7 @@ describe('spin animation', () => {
 
 
     describe('angle', () => {
-      it(`should handle any numbers including negative and unit default to "deg"`, async () => {
+      it(`should handle any numbers including negative and unit default to "deg"`, async ({ expect }) => {
         const classnames = INTEGERS.map(i => `spin-in-${i}`)
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -67,7 +67,7 @@ describe('spin animation', () => {
       })
 
 
-      it(`should also handle decimals including negative`, async () => {
+      it(`should also handle decimals including negative`, async ({ expect }) => {
         const classnames = DECIMALS.map(i => `spin-in-${i}`)
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -92,7 +92,7 @@ describe('spin animation', () => {
       })
 
 
-      it(`should use units ("deg", "rad", "grad", "turn") as is`, async () => {
+      it(`should use units ("deg", "rad", "grad", "turn") as is`, async ({ expect }) => {
         const DATASET = INTEGERS.filter(Boolean)
 
         const classnames = [
@@ -271,7 +271,7 @@ describe('spin animation', () => {
       })
 
 
-      it(`should not use any unit for "0"`, async () => {
+      it(`should not use any unit for "0"`, async ({ expect }) => {
         const classnames = [
           'spin-in-0',
           'spin-in-0deg',
@@ -296,7 +296,7 @@ describe('spin animation', () => {
 
 
     describe('css variable', () => {
-      it(`should handle css variables`, async () => {
+      it(`should handle css variables`, async ({ expect }) => {
         const classnames = CSS_VARIABLES.map(i => `spin-in-${i}`)
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -314,7 +314,7 @@ describe('spin animation', () => {
 
 
   describe('spin-out', () => {
-    it(`should generate "${CSS_VARIABLE_PREFIX}-exit-rotate" css variable and default to "30deg"`, async () => {
+    it(`should generate "${CSS_VARIABLE_PREFIX}-exit-rotate" css variable and default to "30deg"`, async ({ expect }) => {
       const { css } = await uno.generate('spin-out')
 
       expect(css).toContain(`.spin-out{${CSS_VARIABLE_PREFIX}-exit-rotate:30deg;}`)
@@ -322,7 +322,7 @@ describe('spin animation', () => {
 
 
     describe('angle', () => {
-      it(`should handle any numbers including negative and unit default to "deg"`, async () => {
+      it(`should handle any numbers including negative and unit default to "deg"`, async ({ expect }) => {
         const classnames = INTEGERS.map(i => `spin-out-${i}`)
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -375,7 +375,7 @@ describe('spin animation', () => {
       })
 
 
-      it(`should also handle decimals including negative`, async () => {
+      it(`should also handle decimals including negative`, async ({ expect }) => {
         const classnames = DECIMALS.map(i => `spin-out-${i}`)
 
         const { css } = await uno.generate(classnames.join(' '))
@@ -399,7 +399,7 @@ describe('spin animation', () => {
       })
 
 
-      it(`should use units ("deg", "rad", "grad", "turn") as is`, async () => {
+      it(`should use units ("deg", "rad", "grad", "turn") as is`, async ({ expect }) => {
         const DATASET = INTEGERS.filter(Boolean)
 
         const classnames = [
@@ -578,7 +578,7 @@ describe('spin animation', () => {
       })
 
 
-      it(`should not use any unit for "0"`, async () => {
+      it(`should not use any unit for "0"`, async ({ expect }) => {
         const classnames = [
           'spin-out-0',
           'spin-out-0deg',
@@ -603,7 +603,7 @@ describe('spin animation', () => {
 
 
     describe('css variable', () => {
-      it(`should handle css variables`, async () => {
+      it(`should handle css variables`, async ({ expect }) => {
         const classnames = CSS_VARIABLES.map(i => `spin-out-${i}`)
 
         const { matched, css } = await uno.generate(classnames.join(' '))

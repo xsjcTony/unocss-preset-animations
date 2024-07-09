@@ -1,12 +1,12 @@
-import { describe, expect, it } from 'vitest'
+import { describe, it } from 'vitest'
 import { CSS_VARIABLE_PREFIX } from '@/constants'
 import { CSS_VARIABLES, DECIMALS, FRACTIONS, INTEGERS } from '~/data'
 import { uno } from '~/utils'
 
 
-describe('zoom animation', () => {
+describe.concurrent('zoom animation', () => {
   describe('zoom-in', () => {
-    it(`should generate "${CSS_VARIABLE_PREFIX}-enter-scale" css variable and default to "0"`, async () => {
+    it(`should generate "${CSS_VARIABLE_PREFIX}-enter-scale" css variable and default to "0"`, async ({ expect }) => {
       const { css } = await uno.generate('zoom-in')
 
       expect(css).toContain(`.zoom-in{${CSS_VARIABLE_PREFIX}-enter-scale:0;}`)
@@ -14,7 +14,7 @@ describe('zoom animation', () => {
 
 
     describe('percentage', () => {
-      it(`should covert any percentages including negative`, async () => {
+      it(`should convert any percentages including negative`, async ({ expect }) => {
         const classnames = INTEGERS.map(i => `zoom-in-${i}`)
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -67,7 +67,7 @@ describe('zoom animation', () => {
       })
 
 
-      it(`should also convert decimals including negative`, async () => {
+      it(`should also convert decimals including negative`, async ({ expect }) => {
         const classnames = DECIMALS.map(i => `zoom-in-${i}`)
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -94,7 +94,7 @@ describe('zoom animation', () => {
 
 
     describe('fraction', () => {
-      it(`should covert any fractions including negative`, async () => {
+      it(`should convert any fractions including negative`, async ({ expect }) => {
         const classnames = FRACTIONS.map(i => `zoom-in-${i}`)
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -118,7 +118,7 @@ describe('zoom animation', () => {
       })
 
 
-      it(`should convert "full" to "100%`, async () => {
+      it(`should convert "full" to "100%`, async ({ expect }) => {
         const { css } = await uno.generate('zoom-in-full')
 
         expect(css).toMatchInlineSnapshot(`
@@ -130,7 +130,7 @@ describe('zoom animation', () => {
 
 
     describe('css variable', () => {
-      it(`should handle css variables`, async () => {
+      it(`should handle css variables`, async ({ expect }) => {
         const classnames = CSS_VARIABLES.map(i => `zoom-in-${i}`)
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -148,7 +148,7 @@ describe('zoom animation', () => {
 
 
   describe('zoom-out', () => {
-    it(`should generate "${CSS_VARIABLE_PREFIX}-exit-scale" css variable and default to "0"`, async () => {
+    it(`should generate "${CSS_VARIABLE_PREFIX}-exit-scale" css variable and default to "0"`, async ({ expect }) => {
       const { css } = await uno.generate('zoom-out')
 
       expect(css).toContain(`.zoom-out{${CSS_VARIABLE_PREFIX}-exit-scale:0;}`)
@@ -156,7 +156,7 @@ describe('zoom animation', () => {
 
 
     describe('percentage', () => {
-      it(`should covert any percentages including negative`, async () => {
+      it(`should convert any percentages including negative`, async ({ expect }) => {
         const classnames = INTEGERS.map(i => `zoom-out-${i}`)
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -209,7 +209,7 @@ describe('zoom animation', () => {
       })
 
 
-      it(`should also convert decimals including negative`, async () => {
+      it(`should also convert decimals including negative`, async ({ expect }) => {
         const classnames = DECIMALS.map(i => `zoom-out-${i}`)
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -236,7 +236,7 @@ describe('zoom animation', () => {
 
 
     describe('fraction', () => {
-      it(`should covert any fractions including negative`, async () => {
+      it(`should convert any fractions including negative`, async ({ expect }) => {
         const classnames = FRACTIONS.map(i => `zoom-out-${i}`)
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -260,7 +260,7 @@ describe('zoom animation', () => {
       })
 
 
-      it(`should convert "full" to "100%`, async () => {
+      it(`should convert "full" to "100%`, async ({ expect }) => {
         const { css } = await uno.generate('zoom-out-full')
 
         expect(css).toMatchInlineSnapshot(`
@@ -272,7 +272,7 @@ describe('zoom animation', () => {
 
 
     describe('css variable', () => {
-      it(`should handle css variables`, async () => {
+      it(`should handle css variables`, async ({ expect }) => {
         const classnames = CSS_VARIABLES.map(i => `zoom-out-${i}`)
 
         const { matched, css } = await uno.generate(classnames.join(' '))

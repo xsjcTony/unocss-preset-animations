@@ -1,13 +1,13 @@
-import { describe, expect, it } from 'vitest'
+import { describe, it } from 'vitest'
 import { CSS_VARIABLE_PREFIX } from '@/constants'
 import { CSS_VARIABLES, DECIMALS, FRACTIONS, INTEGERS } from '~/data'
 import { uno } from '~/utils'
 
 
-describe('slide animation', () => {
+describe.concurrent('slide animation', () => {
   describe('slide-in', () => {
     describe('misc', () => {
-      it(`"should generate "${CSS_VARIABLE_PREFIX}-enter-translate-x" and "-y" css variable and default to "100%"`, async () => {
+      it(`"should generate "${CSS_VARIABLE_PREFIX}-enter-translate-x" and "-y" css variable and default to "100%"`, async ({ expect }) => {
         const classnames = [
           'slide-in-t',
           'slide-in-b',
@@ -28,7 +28,7 @@ describe('slide animation', () => {
       })
 
 
-      it(`should handle both with or without "-from"`, async () => {
+      it(`should handle both with or without "-from"`, async ({ expect }) => {
         const classnames = [
           'slide-in-t',
           'slide-in-b',
@@ -57,7 +57,7 @@ describe('slide animation', () => {
       })
 
 
-      it(`should alias "t|b|l|r" to "top|bottom|left|right"`, async () => {
+      it(`should alias "t|b|l|r" to "top|bottom|left|right"`, async ({ expect }) => {
         const classnames = [
           'slide-in-t',
           'slide-in-b',
@@ -88,7 +88,7 @@ describe('slide animation', () => {
 
 
     describe('direction', () => {
-      it(`should generate "top|bottom" as "translate-y"`, async () => {
+      it(`should generate "top|bottom" as "translate-y"`, async ({ expect }) => {
         const classnames = [
           'slide-in-t',
           'slide-in-b',
@@ -105,7 +105,7 @@ describe('slide animation', () => {
       })
 
 
-      it(`should generate "left|right" as "translate-x"`, async () => {
+      it(`should generate "left|right" as "translate-x"`, async ({ expect }) => {
         const classnames = [
           'slide-in-l',
           'slide-in-r',
@@ -124,7 +124,7 @@ describe('slide animation', () => {
 
 
     describe('positivity and negativity', () => {
-      it(`should generate negative value for "top|left"`, async () => {
+      it(`should generate negative value for "top|left"`, async ({ expect }) => {
         const classnames = [
           'slide-in-t',
           'slide-in-l',
@@ -141,7 +141,7 @@ describe('slide animation', () => {
       })
 
 
-      it(`should generate positive value for "bottom|right"`, async () => {
+      it(`should generate positive value for "bottom|right"`, async ({ expect }) => {
         const classnames = [
           'slide-in-b',
           'slide-in-r',
@@ -158,7 +158,7 @@ describe('slide animation', () => {
       })
 
 
-      it(`should convert negative value to positive for "top|left"`, async () => {
+      it(`should convert negative value to positive for "top|left"`, async ({ expect }) => {
         const classnames = [
           'slide-in-t--10',
           'slide-in-l--10',
@@ -177,7 +177,7 @@ describe('slide animation', () => {
 
 
     describe('rem', () => {
-      it(`should covert any numbers to "rem" (x / 4rem) including negative`, async () => {
+      it(`should convert any numbers to "rem" (x / 4rem) including negative`, async ({ expect }) => {
         const classnames = INTEGERS.map(i => `slide-in-t-${i}`)
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -230,7 +230,7 @@ describe('slide animation', () => {
       })
 
 
-      it(`should also convert decimals including negative`, async () => {
+      it(`should also convert decimals including negative`, async ({ expect }) => {
         const classnames = DECIMALS.map(i => `slide-in-t-${i}`)
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -257,34 +257,12 @@ describe('slide animation', () => {
 
 
     describe('fraction', () => {
-      it(`should covert any fractions including negative`, async () => {
+      it(`should convert any fractions including negative`, async ({ expect }) => {
         const classnames = FRACTIONS.map(i => `slide-in-t-${i}`)
 
         const { matched, css } = await uno.generate(classnames.join(' '))
 
         expect(matched).toStrictEqual(new Set(classnames))
-        expect(css).toMatchInlineSnapshot(`
-          "/* layer: default */
-          .slide-in-t--0\\.1{--una-enter-translate-y:0.025rem;}
-          .slide-in-t--10\\.1{--una-enter-translate-y:2.525rem;}
-          .slide-in-t--180\\.37{--una-enter-translate-y:45.0925rem;}
-          .slide-in-t--199\\.9{--una-enter-translate-y:49.975rem;}
-          .slide-in-t--52\\.1{--una-enter-translate-y:13.025rem;}
-          .slide-in-t--66\\.66{--una-enter-translate-y:16.665rem;}
-          .slide-in-t-0\\.1{--una-enter-translate-y:-0.025rem;}
-          .slide-in-t-10\\.1{--una-enter-translate-y:-2.525rem;}
-          .slide-in-t-180\\.37{--una-enter-translate-y:-45.0925rem;}
-          .slide-in-t-199\\.9{--una-enter-translate-y:-49.975rem;}
-          .slide-in-t-52\\.1{--una-enter-translate-y:-13.025rem;}
-          .slide-in-t-66\\.66{--una-enter-translate-y:-16.665rem;}
-          .slide-in-t-99\\.9{--una-enter-translate-y:-24.975rem;}"
-        `)
-      })
-
-
-      it(`should convert "full" to "100%`, async () => {
-        const { css } = await uno.generate('slide-in-t-full')
-
         expect(css).toMatchInlineSnapshot(`
           "/* layer: default */
           .slide-in-t--1\\/3{--una-enter-translate-y:33.3333333333%;}
@@ -301,34 +279,22 @@ describe('slide animation', () => {
           .slide-in-t-5\\/6{--una-enter-translate-y:-83.3333333333%;}"
         `)
       })
-    })
 
 
-    describe('css variable', () => {
-      it(`should handle css variables`, async () => {
-        const classnames = CSS_VARIABLES.map(i => `slide-in-t-${i}`)
+      it(`should convert "full" to "100%`, async ({ expect }) => {
+        const { css } = await uno.generate('slide-in-t-full')
 
-        const { matched, css } = await uno.generate(classnames.join(' '))
-
-        expect(matched).toStrictEqual(new Set(classnames))
         expect(css).toMatchInlineSnapshot(`
           "/* layer: default */
           .slide-in-t-full{--una-enter-translate-y:-100%;}"
         `)
       })
     })
-  })
 
 
-  describe('slide-out', () => {
-    describe('misc', () => {
-      it(`"should generate "${CSS_VARIABLE_PREFIX}-exit-translate-x" and "-y" css variable and default to "100%"`, async () => {
-        const classnames = [
-          'slide-out-t',
-          'slide-out-b',
-          'slide-out-l',
-          'slide-out-r',
-        ]
+    describe('css variable', () => {
+      it(`should handle css variables`, async ({ expect }) => {
+        const classnames = CSS_VARIABLES.map(i => `slide-in-t-${i}`)
 
         const { matched, css } = await uno.generate(classnames.join(' '))
 
@@ -340,18 +306,18 @@ describe('slide animation', () => {
           .slide-in-t-\\$fooBar{--una-enter-translate-y:var(--fooBar);}"
         `)
       })
+    })
+  })
 
 
-      it(`should handle both with or without "-to"`, async () => {
+  describe('slide-out', () => {
+    describe('misc', () => {
+      it(`"should generate "${CSS_VARIABLE_PREFIX}-exit-translate-x" and "-y" css variable and default to "100%"`, async ({ expect }) => {
         const classnames = [
           'slide-out-t',
           'slide-out-b',
           'slide-out-l',
           'slide-out-r',
-          'slide-out-to-t',
-          'slide-out-to-b',
-          'slide-out-to-l',
-          'slide-out-to-r',
         ]
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -367,16 +333,16 @@ describe('slide animation', () => {
       })
 
 
-      it(`should alias "t|b|l|r" to "top|bottom|left|right"`, async () => {
+      it(`should handle both with or without "-to"`, async ({ expect }) => {
         const classnames = [
           'slide-out-t',
           'slide-out-b',
           'slide-out-l',
           'slide-out-r',
-          'slide-out-top',
-          'slide-out-bottom',
-          'slide-out-left',
-          'slide-out-right',
+          'slide-out-to-t',
+          'slide-out-to-b',
+          'slide-out-to-l',
+          'slide-out-to-r',
         ]
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -394,14 +360,18 @@ describe('slide animation', () => {
           .slide-out-to-t{--una-exit-translate-y:-100%;}"
         `)
       })
-    })
 
 
-    describe('direction', () => {
-      it(`should generate "top|bottom" as "translate-y"`, async () => {
+      it(`should alias "t|b|l|r" to "top|bottom|left|right"`, async ({ expect }) => {
         const classnames = [
           'slide-out-t',
           'slide-out-b',
+          'slide-out-l',
+          'slide-out-r',
+          'slide-out-top',
+          'slide-out-bottom',
+          'slide-out-left',
+          'slide-out-right',
         ]
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -419,12 +389,14 @@ describe('slide animation', () => {
           .slide-out-top{--una-exit-translate-y:-100%;}"
         `)
       })
+    })
 
 
-      it(`should generate "left|right" as "translate-x"`, async () => {
+    describe('direction', () => {
+      it(`should generate "top|bottom" as "translate-y"`, async ({ expect }) => {
         const classnames = [
-          'slide-out-l',
-          'slide-out-r',
+          'slide-out-t',
+          'slide-out-b',
         ]
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -436,11 +408,28 @@ describe('slide animation', () => {
           .slide-out-t{--una-exit-translate-y:-100%;}"
         `)
       })
+
+
+      it(`should generate "left|right" as "translate-x"`, async ({ expect }) => {
+        const classnames = [
+          'slide-out-l',
+          'slide-out-r',
+        ]
+
+        const { matched, css } = await uno.generate(classnames.join(' '))
+
+        expect(matched).toStrictEqual(new Set(classnames))
+        expect(css).toMatchInlineSnapshot(`
+          "/* layer: default */
+          .slide-out-l{--una-exit-translate-x:-100%;}
+          .slide-out-r{--una-exit-translate-x:100%;}"
+        `)
+      })
     })
 
 
     describe('positivity and negativity', () => {
-      it(`should generate negative value for "top|left"`, async () => {
+      it(`should generate negative value for "top|left"`, async ({ expect }) => {
         const classnames = [
           'slide-out-t',
           'slide-out-l',
@@ -452,32 +441,15 @@ describe('slide animation', () => {
         expect(css).toMatchInlineSnapshot(`
           "/* layer: default */
           .slide-out-l{--una-exit-translate-x:-100%;}
-          .slide-out-r{--una-exit-translate-x:100%;}"
-        `)
-      })
-
-
-      it(`should generate positive value for "bottom|right"`, async () => {
-        const classnames = [
-          'slide-out-b',
-          'slide-out-r',
-        ]
-
-        const { matched, css } = await uno.generate(classnames.join(' '))
-
-        expect(matched).toStrictEqual(new Set(classnames))
-        expect(css).toMatchInlineSnapshot(`
-          "/* layer: default */
-          .slide-out-l{--una-exit-translate-x:-100%;}
           .slide-out-t{--una-exit-translate-y:-100%;}"
         `)
       })
 
 
-      it(`should convert negative value to positive for "top|left"`, async () => {
+      it(`should generate positive value for "bottom|right"`, async ({ expect }) => {
         const classnames = [
-          'slide-out-t--10',
-          'slide-out-l--10',
+          'slide-out-b',
+          'slide-out-r',
         ]
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -489,12 +461,13 @@ describe('slide animation', () => {
           .slide-out-r{--una-exit-translate-x:100%;}"
         `)
       })
-    })
 
 
-    describe('rem', () => {
-      it(`should covert any numbers to "rem" (x / 4rem) including negative`, async () => {
-        const classnames = INTEGERS.map(i => `slide-out-t-${i}`)
+      it(`should convert negative value to positive for "top|left"`, async ({ expect }) => {
+        const classnames = [
+          'slide-out-t--10',
+          'slide-out-l--10',
+        ]
 
         const { matched, css } = await uno.generate(classnames.join(' '))
 
@@ -505,10 +478,12 @@ describe('slide animation', () => {
           .slide-out-t--10{--una-exit-translate-y:2.5rem;}"
         `)
       })
+    })
 
 
-      it(`should also convert decimals including negative`, async () => {
-        const classnames = DECIMALS.map(i => `slide-out-t-${i}`)
+    describe('rem', () => {
+      it(`should convert any numbers to "rem" (x / 4rem) including negative`, async ({ expect }) => {
+        const classnames = INTEGERS.map(i => `slide-out-t-${i}`)
 
         const { matched, css } = await uno.generate(classnames.join(' '))
 
@@ -558,11 +533,36 @@ describe('slide animation', () => {
           .slide-out-t-90{--una-exit-translate-y:-22.5rem;}"
         `)
       })
+
+
+      it(`should also convert decimals including negative`, async ({ expect }) => {
+        const classnames = DECIMALS.map(i => `slide-out-t-${i}`)
+
+        const { matched, css } = await uno.generate(classnames.join(' '))
+
+        expect(matched).toStrictEqual(new Set(classnames))
+        expect(css).toMatchInlineSnapshot(`
+          "/* layer: default */
+          .slide-out-t--0\\.1{--una-exit-translate-y:0.025rem;}
+          .slide-out-t--10\\.1{--una-exit-translate-y:2.525rem;}
+          .slide-out-t--180\\.37{--una-exit-translate-y:45.0925rem;}
+          .slide-out-t--199\\.9{--una-exit-translate-y:49.975rem;}
+          .slide-out-t--52\\.1{--una-exit-translate-y:13.025rem;}
+          .slide-out-t--66\\.66{--una-exit-translate-y:16.665rem;}
+          .slide-out-t-0\\.1{--una-exit-translate-y:-0.025rem;}
+          .slide-out-t-10\\.1{--una-exit-translate-y:-2.525rem;}
+          .slide-out-t-180\\.37{--una-exit-translate-y:-45.0925rem;}
+          .slide-out-t-199\\.9{--una-exit-translate-y:-49.975rem;}
+          .slide-out-t-52\\.1{--una-exit-translate-y:-13.025rem;}
+          .slide-out-t-66\\.66{--una-exit-translate-y:-16.665rem;}
+          .slide-out-t-99\\.9{--una-exit-translate-y:-24.975rem;}"
+        `)
+      })
     })
 
 
     describe('fraction', () => {
-      it(`should covert any fractions including negative`, async () => {
+      it(`should convert any fractions including negative`, async ({ expect }) => {
         const classnames = FRACTIONS.map(i => `slide-out-t-${i}`)
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -586,7 +586,7 @@ describe('slide animation', () => {
       })
 
 
-      it(`should convert "full" to "100%`, async () => {
+      it(`should convert "full" to "100%`, async ({ expect }) => {
         const { css } = await uno.generate('slide-out-t-full')
 
         expect(css).toMatchInlineSnapshot(`
@@ -598,7 +598,7 @@ describe('slide animation', () => {
 
 
     describe('css variable', () => {
-      it(`should handle css variables`, async () => {
+      it(`should handle css variables`, async ({ expect }) => {
         const classnames = CSS_VARIABLES.map(i => `slide-out-t-${i}`)
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -606,7 +606,9 @@ describe('slide animation', () => {
         expect(matched).toStrictEqual(new Set(classnames))
         expect(css).toMatchInlineSnapshot(`
           "/* layer: default */
-          .slide-out-t-full{--una-exit-translate-y:-100%;}"
+          .slide-out-t-\\$foo{--una-exit-translate-y:var(--foo);}
+          .slide-out-t-\\$foo-bar{--una-exit-translate-y:var(--foo-bar);}
+          .slide-out-t-\\$fooBar{--una-exit-translate-y:var(--fooBar);}"
         `)
       })
     })

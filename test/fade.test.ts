@@ -1,12 +1,12 @@
-import { describe, expect, it } from 'vitest'
+import { describe, it } from 'vitest'
 import { CSS_VARIABLE_PREFIX } from '@/constants'
 import { CSS_VARIABLES, DECIMALS_0_TO_100, INTEGERS_0_TO_100 } from '~/data'
 import { uno } from '~/utils'
 
 
-describe('fade animation', () => {
+describe.concurrent('fade animation', () => {
   describe('fade-in', () => {
-    it(`should generate "${CSS_VARIABLE_PREFIX}-enter-opacity" css variable and default to "0"`, async () => {
+    it(`should generate "${CSS_VARIABLE_PREFIX}-enter-opacity" css variable and default to "0"`, async ({ expect }) => {
       const { css } = await uno.generate('fade-in')
 
       expect(css).toContain(`.fade-in{${CSS_VARIABLE_PREFIX}-enter-opacity:0;}`)
@@ -14,7 +14,7 @@ describe('fade animation', () => {
 
 
     describe('percentage', () => {
-      it(`should covert percentages from "0" to "100"`, async () => {
+      it(`should convert percentages from "0" to "100"`, async ({ expect }) => {
         const classnames = INTEGERS_0_TO_100.map(i => `fade-in-${i}`)
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -37,7 +37,7 @@ describe('fade animation', () => {
       })
 
 
-      it(`should also convert decimals`, async () => {
+      it(`should also convert decimals`, async ({ expect }) => {
         const classnames = DECIMALS_0_TO_100.map(i => `fade-in-${i}`)
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -56,7 +56,7 @@ describe('fade animation', () => {
 
 
     describe('css variable', () => {
-      it(`should handle css variables`, async () => {
+      it(`should handle css variables`, async ({ expect }) => {
         const classnames = CSS_VARIABLES.map(i => `fade-in-${i}`)
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -74,7 +74,7 @@ describe('fade animation', () => {
 
 
   describe('fade-out', () => {
-    it(`should generate "${CSS_VARIABLE_PREFIX}-exit-opacity" css variable and default to "0"`, async () => {
+    it(`should generate "${CSS_VARIABLE_PREFIX}-exit-opacity" css variable and default to "0"`, async ({ expect }) => {
       const { css } = await uno.generate('fade-out')
 
       expect(css).toContain(`.fade-out{${CSS_VARIABLE_PREFIX}-exit-opacity:0;}`)
@@ -82,7 +82,7 @@ describe('fade animation', () => {
 
 
     describe('percentage', () => {
-      it(`should covert percentages from "0" to "100"`, async () => {
+      it(`should convert percentages from "0" to "100"`, async ({ expect }) => {
         const classnames = INTEGERS_0_TO_100.map(i => `fade-out-${i}`)
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -105,7 +105,7 @@ describe('fade animation', () => {
       })
 
 
-      it(`should also convert decimals`, async () => {
+      it(`should also convert decimals`, async ({ expect }) => {
         const classnames = DECIMALS_0_TO_100.map(i => `fade-out-${i}`)
 
         const { matched, css } = await uno.generate(classnames.join(' '))
@@ -124,7 +124,7 @@ describe('fade animation', () => {
 
 
     describe('css variable', () => {
-      it(`should handle css variables`, async () => {
+      it(`should handle css variables`, async ({ expect }) => {
         const classnames = CSS_VARIABLES.map(i => `fade-out-${i}`)
 
         const { matched, css } = await uno.generate(classnames.join(' '))

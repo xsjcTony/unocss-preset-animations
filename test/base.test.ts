@@ -1,9 +1,9 @@
-import { describe, expect, it } from 'vitest'
+import { describe, it } from 'vitest'
 import { generator, uno } from '~/utils'
 
 
-describe('base classname', () => {
-  it('"animate-in" should generate enter keyframe and css variables', async () => {
+describe.concurrent('base classname', () => {
+  it('"animate-in" should generate enter keyframe and css variables', async ({ expect }) => {
     const { css } = await uno.generate('animate-in')
 
     expect(css).toMatchInlineSnapshot(`
@@ -14,7 +14,7 @@ describe('base classname', () => {
   })
 
 
-  it('"animate-out" should generate exit keyframe and css variables', async () => {
+  it('"animate-out" should generate exit keyframe and css variables', async ({ expect }) => {
     const { css } = await uno.generate('animate-out')
 
     expect(css).toMatchInlineSnapshot(`
@@ -25,7 +25,7 @@ describe('base classname', () => {
   })
 
 
-  it('"animation-duration" should be default to "theme.duration"', async () => {
+  it('"animation-duration" should be default to "theme.duration"', async ({ expect }) => {
     const DURATION = '500ms'
 
     const uno = generator({ duration: { DEFAULT: DURATION } })
