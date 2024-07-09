@@ -9,5 +9,10 @@
     "noUncheckedIndexedAccess": true,
     "noEmit": true
   },
-  "include": ["vitest.config.ts"]
+  "include": [
+    "build.config.ts",
+    "changelogithub.config.ts",
+    "eslintConfig.ts",
+    "vitest.config.ts"
+  ]
 }
