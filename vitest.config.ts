@@ -9,4 +9,11 @@ export default defineConfig({
       '~': fileURLToPath(new URL('test', import.meta.url)),
     },
   },
+  test: {
+    coverage: {
+      provider: 'v8',
+      reporter: ['text-summary', 'text'],
+      include: ['src'],
+    },
+  },
 })
