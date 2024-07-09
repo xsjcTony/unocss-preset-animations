@@ -26,7 +26,9 @@ import { presetAnimations } from 'unocss-preset-animations'
 export default defineConfig({
   presets: [
     presetUno(),
-    presetAnimations({ fillMode: 'both' }), // or whatever mode you want
+    presetAnimations({
+      fillMode: 'both', // or whatever options you want
+    }),
   ],
 })
 

@@ -11,6 +11,7 @@ export default defineBuildConfig({
   externals: [
     '@unocss/core',
     '@unocss/preset-mini',
+    '@unocss/preset-mini/utils',
   ],
   alias: {
     '@': fileURLToPath(new URL('src', import.meta.url)),
@@ -20,6 +21,7 @@ export default defineBuildConfig({
     dts: {
       respectExternal: false,
     },
+    inlineDependencies: true,
   },
   failOnWarn: false,
 })
