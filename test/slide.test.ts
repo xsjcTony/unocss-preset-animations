@@ -256,6 +256,77 @@ describe.concurrent('slide animation', () => {
     })
 
 
+    describe('percentage', () => {
+      it(`should leave any percentage with "%" symbol as is`, async ({ expect }) => {
+        const classnames = [
+          ...INTEGERS.map(i => `slide-in-t-${i}%`),
+          ...DECIMALS.map(i => `slide-in-t-${i}%`),
+        ]
+
+        const { matched, css } = await uno.generate(classnames.join(' '))
+
+        expect(matched).toStrictEqual(new Set(classnames))
+        expect(css).toMatchInlineSnapshot(`
+          "/* layer: default */
+          .slide-in-t--0\\.1\\%{--una-enter-translate-y:0.1%;}
+          .slide-in-t--10\\.1\\%{--una-enter-translate-y:10.1%;}
+          .slide-in-t--10\\%{--una-enter-translate-y:10%;}
+          .slide-in-t--100\\%{--una-enter-translate-y:100%;}
+          .slide-in-t--110\\%{--una-enter-translate-y:110%;}
+          .slide-in-t--120\\%{--una-enter-translate-y:120%;}
+          .slide-in-t--130\\%{--una-enter-translate-y:130%;}
+          .slide-in-t--140\\%{--una-enter-translate-y:140%;}
+          .slide-in-t--150\\%{--una-enter-translate-y:150%;}
+          .slide-in-t--160\\%{--una-enter-translate-y:160%;}
+          .slide-in-t--170\\%{--una-enter-translate-y:170%;}
+          .slide-in-t--180\\.37\\%{--una-enter-translate-y:180.37%;}
+          .slide-in-t--180\\%{--una-enter-translate-y:180%;}
+          .slide-in-t--190\\%{--una-enter-translate-y:190%;}
+          .slide-in-t--199\\.9\\%{--una-enter-translate-y:199.9%;}
+          .slide-in-t--20\\%{--una-enter-translate-y:20%;}
+          .slide-in-t--200\\%{--una-enter-translate-y:200%;}
+          .slide-in-t--30\\%{--una-enter-translate-y:30%;}
+          .slide-in-t--40\\%{--una-enter-translate-y:40%;}
+          .slide-in-t--50\\%{--una-enter-translate-y:50%;}
+          .slide-in-t--52\\.1\\%{--una-enter-translate-y:52.1%;}
+          .slide-in-t--60\\%{--una-enter-translate-y:60%;}
+          .slide-in-t--66\\.66\\%{--una-enter-translate-y:66.66%;}
+          .slide-in-t--70\\%{--una-enter-translate-y:70%;}
+          .slide-in-t--80\\%{--una-enter-translate-y:80%;}
+          .slide-in-t--90\\%{--una-enter-translate-y:90%;}
+          .slide-in-t-0\\.1\\%{--una-enter-translate-y:-0.1%;}
+          .slide-in-t-0\\%{--una-enter-translate-y:0;}
+          .slide-in-t-10\\.1\\%{--una-enter-translate-y:-10.1%;}
+          .slide-in-t-10\\%{--una-enter-translate-y:-10%;}
+          .slide-in-t-100\\%{--una-enter-translate-y:-100%;}
+          .slide-in-t-110\\%{--una-enter-translate-y:-110%;}
+          .slide-in-t-120\\%{--una-enter-translate-y:-120%;}
+          .slide-in-t-130\\%{--una-enter-translate-y:-130%;}
+          .slide-in-t-140\\%{--una-enter-translate-y:-140%;}
+          .slide-in-t-150\\%{--una-enter-translate-y:-150%;}
+          .slide-in-t-160\\%{--una-enter-translate-y:-160%;}
+          .slide-in-t-170\\%{--una-enter-translate-y:-170%;}
+          .slide-in-t-180\\.37\\%{--una-enter-translate-y:-180.37%;}
+          .slide-in-t-180\\%{--una-enter-translate-y:-180%;}
+          .slide-in-t-190\\%{--una-enter-translate-y:-190%;}
+          .slide-in-t-199\\.9\\%{--una-enter-translate-y:-199.9%;}
+          .slide-in-t-20\\%{--una-enter-translate-y:-20%;}
+          .slide-in-t-200\\%{--una-enter-translate-y:-200%;}
+          .slide-in-t-30\\%{--una-enter-translate-y:-30%;}
+          .slide-in-t-40\\%{--una-enter-translate-y:-40%;}
+          .slide-in-t-50\\%{--una-enter-translate-y:-50%;}
+          .slide-in-t-52\\.1\\%{--una-enter-translate-y:-52.1%;}
+          .slide-in-t-60\\%{--una-enter-translate-y:-60%;}
+          .slide-in-t-66\\.66\\%{--una-enter-translate-y:-66.66%;}
+          .slide-in-t-70\\%{--una-enter-translate-y:-70%;}
+          .slide-in-t-80\\%{--una-enter-translate-y:-80%;}
+          .slide-in-t-90\\%{--una-enter-translate-y:-90%;}
+          .slide-in-t-99\\.9\\%{--una-enter-translate-y:-99.9%;}"
+        `)
+      })
+    })
+
+
     describe('fraction', () => {
       it(`should convert any fractions including negative`, async ({ expect }) => {
         const classnames = FRACTIONS.map(i => `slide-in-t-${i}`)
@@ -556,6 +627,77 @@ describe.concurrent('slide animation', () => {
           .slide-out-t-52\\.1{--una-exit-translate-y:-13.025rem;}
           .slide-out-t-66\\.66{--una-exit-translate-y:-16.665rem;}
           .slide-out-t-99\\.9{--una-exit-translate-y:-24.975rem;}"
+        `)
+      })
+    })
+
+
+    describe('percentage', () => {
+      it(`should leave any percentage with "%" symbol as is`, async ({ expect }) => {
+        const classnames = [
+          ...INTEGERS.map(i => `slide-out-t-${i}%`),
+          ...DECIMALS.map(i => `slide-out-t-${i}%`),
+        ]
+
+        const { matched, css } = await uno.generate(classnames.join(' '))
+
+        expect(matched).toStrictEqual(new Set(classnames))
+        expect(css).toMatchInlineSnapshot(`
+          "/* layer: default */
+          .slide-out-t--0\\.1\\%{--una-exit-translate-y:0.1%;}
+          .slide-out-t--10\\.1\\%{--una-exit-translate-y:10.1%;}
+          .slide-out-t--10\\%{--una-exit-translate-y:10%;}
+          .slide-out-t--100\\%{--una-exit-translate-y:100%;}
+          .slide-out-t--110\\%{--una-exit-translate-y:110%;}
+          .slide-out-t--120\\%{--una-exit-translate-y:120%;}
+          .slide-out-t--130\\%{--una-exit-translate-y:130%;}
+          .slide-out-t--140\\%{--una-exit-translate-y:140%;}
+          .slide-out-t--150\\%{--una-exit-translate-y:150%;}
+          .slide-out-t--160\\%{--una-exit-translate-y:160%;}
+          .slide-out-t--170\\%{--una-exit-translate-y:170%;}
+          .slide-out-t--180\\.37\\%{--una-exit-translate-y:180.37%;}
+          .slide-out-t--180\\%{--una-exit-translate-y:180%;}
+          .slide-out-t--190\\%{--una-exit-translate-y:190%;}
+          .slide-out-t--199\\.9\\%{--una-exit-translate-y:199.9%;}
+          .slide-out-t--20\\%{--una-exit-translate-y:20%;}
+          .slide-out-t--200\\%{--una-exit-translate-y:200%;}
+          .slide-out-t--30\\%{--una-exit-translate-y:30%;}
+          .slide-out-t--40\\%{--una-exit-translate-y:40%;}
+          .slide-out-t--50\\%{--una-exit-translate-y:50%;}
+          .slide-out-t--52\\.1\\%{--una-exit-translate-y:52.1%;}
+          .slide-out-t--60\\%{--una-exit-translate-y:60%;}
+          .slide-out-t--66\\.66\\%{--una-exit-translate-y:66.66%;}
+          .slide-out-t--70\\%{--una-exit-translate-y:70%;}
+          .slide-out-t--80\\%{--una-exit-translate-y:80%;}
+          .slide-out-t--90\\%{--una-exit-translate-y:90%;}
+          .slide-out-t-0\\.1\\%{--una-exit-translate-y:-0.1%;}
+          .slide-out-t-0\\%{--una-exit-translate-y:0;}
+          .slide-out-t-10\\.1\\%{--una-exit-translate-y:-10.1%;}
+          .slide-out-t-10\\%{--una-exit-translate-y:-10%;}
+          .slide-out-t-100\\%{--una-exit-translate-y:-100%;}
+          .slide-out-t-110\\%{--una-exit-translate-y:-110%;}
+          .slide-out-t-120\\%{--una-exit-translate-y:-120%;}
+          .slide-out-t-130\\%{--una-exit-translate-y:-130%;}
+          .slide-out-t-140\\%{--una-exit-translate-y:-140%;}
+          .slide-out-t-150\\%{--una-exit-translate-y:-150%;}
+          .slide-out-t-160\\%{--una-exit-translate-y:-160%;}
+          .slide-out-t-170\\%{--una-exit-translate-y:-170%;}
+          .slide-out-t-180\\.37\\%{--una-exit-translate-y:-180.37%;}
+          .slide-out-t-180\\%{--una-exit-translate-y:-180%;}
+          .slide-out-t-190\\%{--una-exit-translate-y:-190%;}
+          .slide-out-t-199\\.9\\%{--una-exit-translate-y:-199.9%;}
+          .slide-out-t-20\\%{--una-exit-translate-y:-20%;}
+          .slide-out-t-200\\%{--una-exit-translate-y:-200%;}
+          .slide-out-t-30\\%{--una-exit-translate-y:-30%;}
+          .slide-out-t-40\\%{--una-exit-translate-y:-40%;}
+          .slide-out-t-50\\%{--una-exit-translate-y:-50%;}
+          .slide-out-t-52\\.1\\%{--una-exit-translate-y:-52.1%;}
+          .slide-out-t-60\\%{--una-exit-translate-y:-60%;}
+          .slide-out-t-66\\.66\\%{--una-exit-translate-y:-66.66%;}
+          .slide-out-t-70\\%{--una-exit-translate-y:-70%;}
+          .slide-out-t-80\\%{--una-exit-translate-y:-80%;}
+          .slide-out-t-90\\%{--una-exit-translate-y:-90%;}
+          .slide-out-t-99\\.9\\%{--una-exit-translate-y:-99.9%;}"
         `)
       })
     })

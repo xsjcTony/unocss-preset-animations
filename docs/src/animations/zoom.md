@@ -9,6 +9,7 @@ Use classname `zoom-(in|out)-<value>` to define animation's `scale`.
 You can use either of below as the `<value>`:
 
 - Any number including negative and decimals. E.g. `zoom-in-50`
+- Any percentage including negative and decimals. E.g. `zoom-in-66.6%`
 - Any fraction including negative. E.g. `zoom-in-1/2`
 - `full` as `100%`. E.g. `zoom-in-full`
 - CSS variable. E.g. `zoom-in-$my-css-var`
@@ -22,9 +23,10 @@ Define enter animation's starting `scale`.
 ```html
 <button class="animate-in zoom-in">Button A</button>
 <button class="animate-in zoom-in-50">Button B</button>
-<button class="animate-in zoom-in-2/3">Button C</button>
-<button class="animate-in zoom-in-full">Button D</button>
-<button class="animate-in zoom-in-$my-css-var">Button E</button>
+<button class="animate-in zoom-in-66.6%">Button C</button>
+<button class="animate-in zoom-in-2/3">Button D</button>
+<button class="animate-in zoom-in-full">Button E</button>
+<button class="animate-in zoom-in-$my-css-var">Button F</button>
 ```
 
 <table>
@@ -37,18 +39,30 @@ Define enter animation's starting `scale`.
   <tbody>
     <tr>
       <td><code>zoom-in</code></td>
-      <td rowspan="2"><code>--una-enter-scale: 0;</code></td>
+      <td rowspan="3"><code>--una-enter-scale: 0;</code></td>
     </tr>
     <tr>
       <td><code>zoom-in-0</code></td>
     </tr>
     <tr>
+      <td><code>zoom-in-0%</code></td>
+    </tr>
+    <tr>
       <td><code>zoom-in-10</code></td>
-      <td><code>--una-enter-scale: 0.1;</code></td>
+      <td rowspan="2"><code>--una-enter-scale: 0.1;</code></td>
+    </tr>
+    <tr>
+      <td><code>zoom-in-10%</code></td>
     </tr>
     <tr>
       <td><code>zoom-in-.8</code></td>
-      <td><code>--una-enter-scale: 0.008;</code></td>
+      <td rowspan="3"><code>--una-enter-scale: 0.008;</code></td>
+    </tr>
+    <tr>
+      <td><code>zoom-in-0.8</code></td>
+    </tr>
+    <tr>
+      <td><code>zoom-in-.8%</code></td>
     </tr>
     <tr>
       <td><code>zoom-in-52.1</code></td>
@@ -60,7 +74,10 @@ Define enter animation's starting `scale`.
     </tr>
     <tr>
       <td><code>zoom-in--20</code></td>
-      <td><code>--una-enter-scale: -0.2;</code></td>
+      <td rowspan="2"><code>--una-enter-scale: -0.2;</code></td>
+    </tr>
+    <tr>
+      <td><code>zoom-in--20%</code></td>
     </tr>
     <tr>
       <td><code>zoom-in--66.66</code></td>
@@ -94,9 +111,10 @@ Define exit animation's ending `scale`.
 ```html
 <button class="animate-out zoom-out">Button A</button>
 <button class="animate-out zoom-out-50">Button B</button>
-<button class="animate-out zoom-out-2/3">Button C</button>
-<button class="animate-out zoom-out-full">Button D</button>
-<button class="animate-out zoom-out-$my-css-var">Button E</button>
+<button class="animate-out zoom-out-66.6%">Button C</button>
+<button class="animate-out zoom-out-2/3">Button D</button>
+<button class="animate-out zoom-out-full">Button E</button>
+<button class="animate-out zoom-out-$my-css-var">Button F</button>
 ```
 
 <table>
@@ -109,18 +127,30 @@ Define exit animation's ending `scale`.
   <tbody>
     <tr>
       <td><code>zoom-out</code></td>
-      <td rowspan="2"><code>--una-exit-scale: 0;</code></td>
+      <td rowspan="3"><code>--una-exit-scale: 0;</code></td>
     </tr>
     <tr>
       <td><code>zoom-out-0</code></td>
     </tr>
     <tr>
+      <td><code>zoom-out-0%</code></td>
+    </tr>
+    <tr>
       <td><code>zoom-out-10</code></td>
-      <td><code>--una-exit-scale: 0.1;</code></td>
+      <td rowspan="2"><code>--una-exit-scale: 0.1;</code></td>
+    </tr>
+    <tr>
+      <td><code>zoom-out-10%</code></td>
     </tr>
     <tr>
       <td><code>zoom-out-.8</code></td>
-      <td><code>--una-exit-scale: 0.008;</code></td>
+      <td rowspan="3"><code>--una-exit-scale: 0.008;</code></td>
+    </tr>
+    <tr>
+      <td><code>zoom-out-0.8</code></td>
+    </tr>
+    <tr>
+      <td><code>zoom-out-.8%</code></td>
     </tr>
     <tr>
       <td><code>zoom-out-52.1</code></td>
@@ -132,7 +162,10 @@ Define exit animation's ending `scale`.
     </tr>
     <tr>
       <td><code>zoom-out--20</code></td>
-      <td><code>--una-exit-scale: -0.2;</code></td>
+      <td rowspan="2"><code>--una-exit-scale: -0.2;</code></td>
+    </tr>
+    <tr>
+      <td><code>zoom-out--20%</code></td>
     </tr>
     <tr>
       <td><code>zoom-out--66.66</code></td>

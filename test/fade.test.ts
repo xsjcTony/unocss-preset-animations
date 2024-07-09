@@ -52,6 +52,37 @@ describe.concurrent('fade animation', () => {
           .fade-in-99\\.9{--una-enter-opacity:0.999;}"
         `)
       })
+
+
+      it(`should also convert both integers and decimals with "%" symbol`, async ({ expect }) => {
+        const classnames = [
+          ...INTEGERS_0_TO_100.map(i => `fade-in-${i}%`),
+          ...DECIMALS_0_TO_100.map(i => `fade-in-${i}%`),
+        ]
+
+        const { matched, css } = await uno.generate(classnames.join(' '))
+
+        expect(matched).toStrictEqual(new Set(classnames))
+        expect(css).toMatchInlineSnapshot(`
+          "/* layer: default */
+          .fade-in-0\\.1\\%{--una-enter-opacity:0.001;}
+          .fade-in-0\\%{--una-enter-opacity:0;}
+          .fade-in-10\\.1\\%{--una-enter-opacity:0.101;}
+          .fade-in-10\\%{--una-enter-opacity:0.1;}
+          .fade-in-100\\%{--una-enter-opacity:1;}
+          .fade-in-20\\%{--una-enter-opacity:0.2;}
+          .fade-in-30\\%{--una-enter-opacity:0.3;}
+          .fade-in-40\\%{--una-enter-opacity:0.4;}
+          .fade-in-50\\%{--una-enter-opacity:0.5;}
+          .fade-in-52\\.1\\%{--una-enter-opacity:0.521;}
+          .fade-in-60\\%{--una-enter-opacity:0.6;}
+          .fade-in-66\\.66\\%{--una-enter-opacity:0.6666;}
+          .fade-in-70\\%{--una-enter-opacity:0.7;}
+          .fade-in-80\\%{--una-enter-opacity:0.8;}
+          .fade-in-90\\%{--una-enter-opacity:0.9;}
+          .fade-in-99\\.9\\%{--una-enter-opacity:0.999;}"
+        `)
+      })
     })
 
 
@@ -118,6 +149,37 @@ describe.concurrent('fade animation', () => {
           .fade-out-52\\.1{--una-exit-opacity:0.521;}
           .fade-out-66\\.66{--una-exit-opacity:0.6666;}
           .fade-out-99\\.9{--una-exit-opacity:0.999;}"
+        `)
+      })
+
+
+      it(`should also convert both integers and decimals with "%" symbol`, async ({ expect }) => {
+        const classnames = [
+          ...INTEGERS_0_TO_100.map(i => `fade-out-${i}%`),
+          ...DECIMALS_0_TO_100.map(i => `fade-out-${i}%`),
+        ]
+
+        const { matched, css } = await uno.generate(classnames.join(' '))
+
+        expect(matched).toStrictEqual(new Set(classnames))
+        expect(css).toMatchInlineSnapshot(`
+          "/* layer: default */
+          .fade-out-0\\.1\\%{--una-exit-opacity:0.001;}
+          .fade-out-0\\%{--una-exit-opacity:0;}
+          .fade-out-10\\.1\\%{--una-exit-opacity:0.101;}
+          .fade-out-10\\%{--una-exit-opacity:0.1;}
+          .fade-out-100\\%{--una-exit-opacity:1;}
+          .fade-out-20\\%{--una-exit-opacity:0.2;}
+          .fade-out-30\\%{--una-exit-opacity:0.3;}
+          .fade-out-40\\%{--una-exit-opacity:0.4;}
+          .fade-out-50\\%{--una-exit-opacity:0.5;}
+          .fade-out-52\\.1\\%{--una-exit-opacity:0.521;}
+          .fade-out-60\\%{--una-exit-opacity:0.6;}
+          .fade-out-66\\.66\\%{--una-exit-opacity:0.6666;}
+          .fade-out-70\\%{--una-exit-opacity:0.7;}
+          .fade-out-80\\%{--una-exit-opacity:0.8;}
+          .fade-out-90\\%{--una-exit-opacity:0.9;}
+          .fade-out-99\\.9\\%{--una-exit-opacity:0.999;}"
         `)
       })
     })
