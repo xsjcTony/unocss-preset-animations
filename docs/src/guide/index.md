@@ -35,7 +35,7 @@ This preset requires `unocss` version of **v0.56.0+**
 :::
 
 ::: warning
-This preset is based on is based on `@unocss/preset-wind` or `@unocss/preset-uno`, please make sure they are included in the `presets`, otherwise it won't work as expected.
+This preset is based on `@unocss/preset-wind` or `@unocss/preset-uno`, please make sure they are included in the `presets`, otherwise it won't work as expected.
 :::
 
 
@@ -45,7 +45,7 @@ In your UnoCSS config, add this preset to the `presets` option:
 
 ```ts
 import { defineConfig, presetUno } from 'unocss' // v0.56.0 and above required
-import presetAnimations from 'unocss-preset-animations' // [!code ++]
+import { presetAnimations } from 'unocss-preset-animations' // [!code ++]
 import type { Theme } from '@unocss/preset-uno'
 
 export default defineConfig<Theme>({
