@@ -4,6 +4,7 @@
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "strict": true,
+    "noEmit": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "noUncheckedIndexedAccess": true,
@@ -20,5 +21,8 @@
     "docs",
     "**/.vitepress/**/*.ts",
     "**/.vitepress/**/*.vue"
+  ],
+  "references": [
+    { "path": "./tsconfig.node.json" }
   ]
 }

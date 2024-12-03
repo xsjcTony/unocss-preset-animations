@@ -1,5 +1,5 @@
-import { CSS_VARIABLE_PREFIX, ENTER_ANIMATION_NAME, EXIT_ANIMATION_NAME } from '@/constants'
 import type { Theme } from '@unocss/preset-mini'
+import { CSS_VARIABLE_PREFIX, ENTER_ANIMATION_NAME, EXIT_ANIMATION_NAME } from '@/constants'
 
 
 export const theme: Theme = {

@@ -1,8 +1,8 @@
+import type { Theme } from '@unocss/preset-mini'
+import type { Rule } from 'unocss'
 import { h } from '@unocss/preset-mini/utils'
 import { CSS_VARIABLE_PREFIX } from '@/constants'
 import { handleSlide } from '@/utils'
-import type { Theme } from '@unocss/preset-mini'
-import type { Rule } from 'unocss'
 
 
 const DEFAULT_FADE_OPACITY = '0'

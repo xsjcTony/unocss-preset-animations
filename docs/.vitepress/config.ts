@@ -1,4 +1,5 @@
 import unocss from 'unocss/vite'
+import tsconfigPaths from 'vite-tsconfig-paths'
 import { defineConfig } from 'vitepress'
 import { version } from '../../package.json'
 import externalLinkIcon from './plugins/externalLinkIcon'
@@ -9,7 +10,10 @@ export default defineConfig({
 
   vite: {
     plugins: [
+      // @ts-expect-error - Vite 6 type issue
       unocss(),
+      // @ts-expect-error - Vite 6 type issue
+      tsconfigPaths(),
     ],
   },
 

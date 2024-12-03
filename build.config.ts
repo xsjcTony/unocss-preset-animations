@@ -9,9 +9,7 @@ export default defineBuildConfig({
   clean: true,
   declaration: true,
   externals: [
-    '@unocss/core',
-    '@unocss/preset-mini',
-    '@unocss/preset-mini/utils',
+    /@unocss\/.+/,
   ],
   alias: {
     '@': fileURLToPath(new URL('src', import.meta.url)),
@@ -22,6 +20,9 @@ export default defineBuildConfig({
       respectExternal: false,
     },
     inlineDependencies: true,
+    output: {
+      exports: 'named',
+    },
   },
   failOnWarn: false,
 })

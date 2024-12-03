@@ -1,9 +1,9 @@
-import { createGenerator } from '@unocss/core'
-import { presetUno } from 'unocss'
-import presetAnimations from '@/index'
 import type { PresetAnimationsOptions } from '@/index'
 import type { UnoGenerator } from '@unocss/core'
 import type { Theme } from '@unocss/preset-mini'
+import { createGenerator } from '@unocss/core'
+import { presetUno } from 'unocss'
+import presetAnimations from '@/index'
 
 
 interface GeneratorOptions {
@@ -12,8 +12,8 @@ interface GeneratorOptions {
 }
 
 
-export function generator(options: GeneratorOptions = {}): UnoGenerator<Theme> {
-  return createGenerator({
+export async function generator(options: GeneratorOptions = {}): Promise<UnoGenerator<Theme>> {
+  return await createGenerator({
     presets: [
       presetUno({ preflight: false }),
       presetAnimations(options.presetOptions),
@@ -23,4 +23,4 @@ export function generator(options: GeneratorOptions = {}): UnoGenerator<Theme> {
 }
 
 
-export const uno = generator()
+export const uno = await generator()

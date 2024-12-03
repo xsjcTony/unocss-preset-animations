@@ -1,7 +1,7 @@
-import { CSS_VARIABLE_PREFIX, ENTER_ANIMATION_NAME, EXIT_ANIMATION_NAME } from '@/constants'
 import type { PresetAnimationsOptions } from '@/index'
 import type { Theme } from '@unocss/preset-mini'
 import type { CSSObject, UserShortcuts } from 'unocss'
+import { CSS_VARIABLE_PREFIX, ENTER_ANIMATION_NAME, EXIT_ANIMATION_NAME } from '@/constants'
 
 
 export function shortcuts(options: PresetAnimationsOptions): UserShortcuts<Theme> {

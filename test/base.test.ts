@@ -1,6 +1,6 @@
+import type { PresetAnimationsOptions } from '@/index'
 import { describe, it } from 'vitest'
 import { generator, uno } from '~/utils'
-import type { PresetAnimationsOptions } from '@/index'
 
 
 describe.concurrent('base', () => {
@@ -31,7 +31,7 @@ describe.concurrent('base', () => {
   it('"animation-duration" should be default to "theme.duration"', async ({ expect }) => {
     const DURATION = '500ms'
 
-    const uno = generator({ theme: { duration: { DEFAULT: DURATION } } })
+    const uno = await generator({ theme: { duration: { DEFAULT: DURATION } } })
     const { css } = await uno.generate('animate-in')
 
     expect(css).toContain(`animation-duration:${DURATION};`)
@@ -47,7 +47,7 @@ describe.concurrent('base', () => {
         const DURATION = 500
         const UNIT: NonNullable<PresetAnimationsOptions['unit']> = 's'
 
-        const uno = generator({ presetOptions: { unit: UNIT, duration: DURATION } })
+        const uno = await generator({ presetOptions: { unit: UNIT, duration: DURATION } })
         const { css } = await uno.generate('animate-in')
 
         expect(css).toContain(`animation-duration:${DURATION}${UNIT}`)
@@ -57,7 +57,7 @@ describe.concurrent('base', () => {
       it('should default to "ms" if no unit is provided', async ({ expect }) => {
         const DURATION = 500
 
-        const uno = generator({ presetOptions: { duration: DURATION } })
+        const uno = await generator({ presetOptions: { duration: DURATION } })
         const { css } = await uno.generate('animate-in')
 
         expect(css).toContain(`animation-duration:${DURATION}${DEFAULT_UNIT}`)
@@ -69,7 +69,7 @@ describe.concurrent('base', () => {
       it('should generate "animation-delay" based on given value', async ({ expect }) => {
         const DELAY = 100
 
-        const uno = generator({ presetOptions: { delay: DELAY } })
+        const uno = await generator({ presetOptions: { delay: DELAY } })
         const { css } = await uno.generate('animate-in')
 
         expect(css).toContain(`animation-delay:${DELAY}${DEFAULT_UNIT}`)
@@ -88,7 +88,7 @@ describe.concurrent('base', () => {
       it('should generate "animation-direction" based on given value', async ({ expect }) => {
         const DIRECTION: NonNullable<PresetAnimationsOptions['direction']> = 'reverse'
 
-        const uno = generator({ presetOptions: { direction: DIRECTION } })
+        const uno = await generator({ presetOptions: { direction: DIRECTION } })
         const { css } = await uno.generate('animate-in')
 
         expect(css).toContain(`animation-direction:${DIRECTION}`)
@@ -107,7 +107,7 @@ describe.concurrent('base', () => {
       it('should generate "animation-duration" based on given value', async ({ expect }) => {
         const DURATION = 100
 
-        const uno = generator({ presetOptions: { duration: DURATION } })
+        const uno = await generator({ presetOptions: { duration: DURATION } })
         const { css } = await uno.generate('animate-in')
 
         expect(css).toContain(`animation-duration:${DURATION}${DEFAULT_UNIT}`)
@@ -126,7 +126,7 @@ describe.concurrent('base', () => {
       it('should generate "animation-fill-mode" based on given value', async ({ expect }) => {
         const FILL_MODE: NonNullable<PresetAnimationsOptions['fillMode']> = 'forwards'
 
-        const uno = generator({ presetOptions: { fillMode: FILL_MODE } })
+        const uno = await generator({ presetOptions: { fillMode: FILL_MODE } })
         const { css } = await uno.generate('animate-in')
 
         expect(css).toContain(`animation-fill-mode:${FILL_MODE}`)
@@ -145,7 +145,7 @@ describe.concurrent('base', () => {
       it('should generate "animation-iteration-count" based on given value', async ({ expect }) => {
         const ITERATION_COUNT = 3
 
-        const uno = generator({ presetOptions: { iterationCount: ITERATION_COUNT } })
+        const uno = await generator({ presetOptions: { iterationCount: ITERATION_COUNT } })
         const { css } = await uno.generate('animate-in')
 
         expect(css).toContain(`animation-iteration-count:${ITERATION_COUNT}`)
@@ -164,7 +164,7 @@ describe.concurrent('base', () => {
       it('should generate "animation-play-state" based on given value', async ({ expect }) => {
         const PLAY_STATE: NonNullable<PresetAnimationsOptions['playState']> = 'paused'
 
-        const uno = generator({ presetOptions: { playState: PLAY_STATE } })
+        const uno = await generator({ presetOptions: { playState: PLAY_STATE } })
         const { css } = await uno.generate('animate-in')
 
         expect(css).toContain(`animation-play-state:${PLAY_STATE}`)
@@ -183,7 +183,7 @@ describe.concurrent('base', () => {
       it('should generate "animation-timing-function" based on given value', async ({ expect }) => {
         const TIMING_FUNCTION: NonNullable<PresetAnimationsOptions['timingFunction']> = 'ease-in-out'
 
-        const uno = generator({ presetOptions: { timingFunction: TIMING_FUNCTION } })
+        const uno = await generator({ presetOptions: { timingFunction: TIMING_FUNCTION } })
         const { css } = await uno.generate('animate-in')
 
         expect(css).toContain(`animation-timing-function:${TIMING_FUNCTION}`)

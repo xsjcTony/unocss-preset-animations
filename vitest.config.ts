@@ -1,14 +1,11 @@
-import { fileURLToPath } from 'node:url'
+import tsconfigPaths from 'vite-tsconfig-paths'
 import { defineConfig } from 'vitest/config'
 
 
 export default defineConfig({
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('src', import.meta.url)),
-      '~': fileURLToPath(new URL('test', import.meta.url)),
-    },
-  },
+  plugins: [
+    tsconfigPaths(),
+  ],
   test: {
     coverage: {
       provider: 'v8',

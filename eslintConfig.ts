@@ -3,8 +3,20 @@ import { defineConfig } from '@aelita-dev/eslint-config'
 
 export default defineConfig(
   {
+    stylistic: {
+      semi: false,
+      commaDangle: 'always-multiline',
+      indent: 2,
+      quotes: 'single',
+    },
+    'import': {
+      ruleOptions: {
+        order: {
+          typeImportsFirst: true,
+        },
+      },
+    },
     typescript: {
-      tsconfigPath: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.node.js.json'],
       projectType: 'lib',
     },
     vue: {

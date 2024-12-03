@@ -9,7 +9,7 @@ const { isDark } = useData()
 
 function enableTransitions(): boolean {
   return 'startViewTransition' in document
-    && window.matchMedia('(prefers-reduced-motion: no-preference)').matches
+    && globalThis.matchMedia('(prefers-reduced-motion: no-preference)').matches
 }
 
 provide('toggle-appearance', async () => {
