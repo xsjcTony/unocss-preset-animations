@@ -66,7 +66,7 @@
     "@unocss/preset-mini": "^65.4.2",
     "@vitest/coverage-v8": "^3.0.2",
     "@vitest/eslint-plugin": "^1.1.25",
-    "@vue/language-server": "2.1.10",
+    "@vue/language-server": "2.2.0",
     "bumpp": "^9.10.1",
     "bundle-require": "^5.1.0",
     "changelogithub": "^13.12.1",
@@ -87,7 +87,7 @@
     "vitepress": "1.5.0",
     "vitest": "^3.0.2",
     "vue": "^3.5.13",
-    "vue-tsc": "2.1.10"
+    "vue-tsc": "2.2.0"
   },
   "peerDependencies": {
     "@unocss/preset-wind": ">=0.56.0 < 101",
