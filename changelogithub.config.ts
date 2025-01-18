@@ -8,11 +8,12 @@ export default {
     perf: { title: '🔥 Performance' },
     refactor: { title: '💅 Refactors' },
     docs: { title: '📖 Documentation' },
-    build: { title: '📦 Build' },
+    build: { title: '🛠️ Build' },
     types: { title: '🌊 Types' },
     examples: { title: '🏀 Examples' },
     test: { title: '🧪 Tests' },
     style: { title: '🎨 Styles' },
     ci: { title: '🤖 CI' },
+    deps: { title: '📦 Dependencies' },
   },
 } satisfies ChangelogOptions
