@@ -2,15 +2,16 @@ import type { Theme } from '@unocss/preset-mini'
 import {
   defineConfig,
   presetIcons,
-  presetUno,
+  presetWind3,
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
 
 
 export default defineConfig<Theme>({
+  blocklist: ['outline'],
   presets: [
-    presetUno(),
+    presetWind3(),
     presetIcons(),
   ],
   transformers: [

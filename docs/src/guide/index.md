@@ -35,7 +35,7 @@ This preset requires `unocss` version of **v0.56.0+**
 :::
 
 ::: warning
-This preset is based on `@unocss/preset-wind` or `@unocss/preset-uno`, please make sure they are included in the `presets`, otherwise it won't work as expected.
+This preset is based on `@unocss/preset-wind3`, please make sure it is included in the `presets`, otherwise it won't work as expected.
 :::
 
 
@@ -44,20 +44,23 @@ This preset is based on `@unocss/preset-wind` or `@unocss/preset-uno`, please ma
 In your UnoCSS config, add this preset to the `presets` option:
 
 ```ts
-import { defineConfig, presetUno } from 'unocss' // v0.56.0 and above required
+import { defineConfig, presetWind3 } from 'unocss' // v0.56.0 or above is required [!code focus:3]
 import { presetAnimations } from 'unocss-preset-animations' // [!code ++]
-import type { Theme } from '@unocss/preset-uno'
+import type { Theme } from '@unocss/preset-wind3'
+// This can also be imported from '@unocss/preset-mini', or from 'unocss':
+import type { PresetWind3Theme as Theme } from 'unocss'
+// [!code focus:999]
 
 export default defineConfig<Theme>({
   presets: [
-    presetUno(), // This must be defined before this preset
-    presetAnimations() // [!code ++]
+    presetWind3(), // This must be defined before this preset
+    presetAnimations(/* options */) // [!code ++]
   ]
 })
 ```
 
 ::: warning
-Note that either `presetUno` or `presetWind` must be defined **before** this preset.
+Note that `presetWind3` must be defined ***before*** this preset.
 :::
 
 

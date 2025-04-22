@@ -9,7 +9,7 @@ next: Animations
 
 Animations part remains as is, but way more flexible and powerful thanks to UnoCSS's [dynamic rules](https://unocss.dev/config/rules#dynamic-rules). Please refer to [Animations](/animations/).
 
-Animation property modifiers are already supported by `@unocss/preset-wind` or `@unocss/preset-uno`, but with slightly different syntax.
+Animation property modifiers are already supported by `@unocss/preset-wind3`, but with slightly different syntax.
 
 ### `animation-delay`
 

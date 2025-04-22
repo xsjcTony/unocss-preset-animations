@@ -78,7 +78,7 @@
     "eslint-processor-vue-blocks": "^2.0.0",
     "lint-staged": "^15.5.1",
     "markdown-it": "^14.1.0",
-    "sass": "^1.87.0",
+    "sass-embedded": "^1.87.0",
     "simple-git-hooks": "^2.12.1",
     "typescript": "~5.8.3",
     "unbuild": "3.5.0",
@@ -91,8 +91,13 @@
     "vue-tsc": "^2.2.8"
   },
   "peerDependencies": {
-    "@unocss/preset-wind": ">=0.56.0 < 101",
+    "@unocss/preset-wind3": ">=0.56.0 < 101",
     "unocss": ">=0.56.0 < 101"
+  },
+  "peerDependenciesMeta": {
+    "@unocss/preset-wind3": {
+      "optional": true
+    }
   },
   "pnpm": {
     "neverBuiltDependencies": []

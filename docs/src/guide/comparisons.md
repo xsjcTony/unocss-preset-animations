@@ -7,7 +7,7 @@ The original `tailwindcss-animate` plugin consists with 2 parts
 - Animation property modifiers
 
 
-Animation property modifiers are already supported by `@unocss/preset-wind` or `@unocss/preset-uno`. Since this preset is based on them, so that part is removed.
+Animation property modifiers are already supported by `@unocss/preset-wind3`. Since this preset is based on it, so that part is removed.
 
 Options for configuring default value of animation properties are provided. Please refer to [Preset's Options](/guide/#options).
 

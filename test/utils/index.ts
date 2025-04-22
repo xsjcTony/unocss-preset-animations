@@ -2,7 +2,7 @@ import type { PresetAnimationsOptions } from '@/index'
 import type { UnoGenerator } from '@unocss/core'
 import type { Theme } from '@unocss/preset-mini'
 import { createGenerator } from '@unocss/core'
-import { presetUno } from 'unocss'
+import { presetWind3 } from 'unocss'
 import presetAnimations from '@/index'
 
 
@@ -15,7 +15,7 @@ interface GeneratorOptions {
 export async function generator(options: GeneratorOptions = {}): Promise<UnoGenerator<Theme>> {
   return await createGenerator({
     presets: [
-      presetUno({ preflight: false }),
+      presetWind3({ preflight: false }),
       presetAnimations(options.presetOptions),
     ],
     theme: options.theme,

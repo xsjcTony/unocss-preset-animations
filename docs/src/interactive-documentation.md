@@ -19,13 +19,13 @@ To set up the interactive documentation, follow these steps:
 - Copy the below code
 
 ```ts
-import { defineConfig, presetUno } from 'unocss'
+import { defineConfig, presetWind3 } from 'unocss'
 import { presetAnimations } from 'unocss-preset-animations'
 
 
 export default defineConfig({
   presets: [
-    presetUno(),
+    presetWind3(),
     presetAnimations({
       fillMode: 'both', // or whatever options you want
     }),
