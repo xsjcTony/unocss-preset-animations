@@ -10,7 +10,9 @@ export default defineConfig({
 
   vite: {
     plugins: [
+      // @ts-expect-error - wait for VitePress 2 to support Vite 6
       unocss(),
+      // @ts-expect-error - wait for VitePress 2 to support Vite 6
       tsconfigPaths(),
     ],
   },
