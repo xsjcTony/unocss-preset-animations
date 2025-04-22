@@ -55,6 +55,7 @@ export const presetAnimations = definePreset((options: PresetAnimationsOptions =
   return {
     name: 'unocss-preset-animations',
     theme,
+    layers: { 'una-base': -999 },
     shortcuts: shortcuts(options),
     rules,
   }

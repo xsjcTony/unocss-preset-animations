@@ -34,7 +34,7 @@ export function shortcuts(options: PresetAnimationsOptions): UserShortcuts<Theme
           [`${CSS_VARIABLE_PREFIX}-enter-translate-y`]: 'initial',
         },
       ],
-      { autocomplete: 'animate-in' },
+      { layer: 'una-base', autocomplete: 'animate-in' },
     ],
     [
       /^animate-out$/,
@@ -50,7 +50,7 @@ export function shortcuts(options: PresetAnimationsOptions): UserShortcuts<Theme
           [`${CSS_VARIABLE_PREFIX}-exit-translate-y`]: 'initial',
         },
       ],
-      { autocomplete: 'animate-out' },
+      { layer: 'una-base', autocomplete: 'animate-out' },
     ],
   ]
 }
