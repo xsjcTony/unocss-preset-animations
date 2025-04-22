@@ -3,7 +3,7 @@ import type { UnoGenerator } from '@unocss/core'
 import type { Theme } from '@unocss/preset-mini'
 import { createGenerator } from '@unocss/core'
 import { presetWind3 } from 'unocss'
-import presetAnimations from '@/index'
+import { presetAnimations } from '@/index'
 
 
 interface GeneratorOptions {

@@ -53,15 +53,11 @@ import type { PresetWind3Theme as Theme } from 'unocss'
 
 export default defineConfig<Theme>({
   presets: [
-    presetWind3(), // This must be defined before this preset
-    presetAnimations(/* options */) // [!code ++]
+    presetWind3(),
+    presetAnimations(/* options */), // [!code ++]
   ]
 })
 ```
-
-::: warning
-Note that `presetWind3` must be defined ***before*** this preset.
-:::
 
 
 ## Options
