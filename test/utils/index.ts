@@ -2,6 +2,7 @@ import type { PresetAnimationsOptions } from '@/index'
 import type { UnoGenerator } from '@unocss/core'
 import type { Theme } from '@unocss/preset-mini'
 import { createGenerator } from '@unocss/core'
+import * as prettier from 'prettier'
 import { presetWind3 } from 'unocss'
 import { presetAnimations } from '@/index'
 
@@ -24,3 +25,11 @@ export async function generator(options: GeneratorOptions = {}): Promise<UnoGene
 
 
 export const uno = await generator()
+
+
+export async function formatCSS(css: string): Promise<string> {
+  return await prettier.format(css, {
+    tabWidth: 2,
+    parser: 'css',
+  })
+}
