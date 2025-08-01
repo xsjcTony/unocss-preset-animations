@@ -12,11 +12,6 @@ describe.concurrent('layer', () => {
         animation: una-in;
         animation-name: una-in;
         animation-duration: 150ms;
-        --una-enter-opacity: initial;
-        --una-enter-scale: initial;
-        --una-enter-rotate: initial;
-        --una-enter-translate-x: initial;
-        --una-enter-translate-y: initial;
       }
       /* layer: default */
       @keyframes una-in {
@@ -52,11 +47,6 @@ describe.concurrent('layer', () => {
         animation: una-out;
         animation-name: una-out;
         animation-duration: 150ms;
-        --una-exit-opacity: initial;
-        --una-exit-scale: initial;
-        --una-exit-rotate: initial;
-        --una-exit-translate-x: initial;
-        --una-exit-translate-y: initial;
       }
       /* layer: default */
       @keyframes una-out {

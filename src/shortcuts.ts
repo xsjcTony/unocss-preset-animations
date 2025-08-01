@@ -27,11 +27,6 @@ export function shortcuts(options: PresetAnimationsOptions): UserShortcuts<Theme
         {
           'animation-name': ENTER_ANIMATION_NAME,
           ...getSharedAnimationProperties(theme),
-          [`${CSS_VARIABLE_PREFIX}-enter-opacity`]: 'initial',
-          [`${CSS_VARIABLE_PREFIX}-enter-scale`]: 'initial',
-          [`${CSS_VARIABLE_PREFIX}-enter-rotate`]: 'initial',
-          [`${CSS_VARIABLE_PREFIX}-enter-translate-x`]: 'initial',
-          [`${CSS_VARIABLE_PREFIX}-enter-translate-y`]: 'initial',
         },
       ],
       { layer: 'una-base', autocomplete: 'animate-in' },
@@ -43,11 +38,6 @@ export function shortcuts(options: PresetAnimationsOptions): UserShortcuts<Theme
         {
           'animation-name': EXIT_ANIMATION_NAME,
           ...getSharedAnimationProperties(theme),
-          [`${CSS_VARIABLE_PREFIX}-exit-opacity`]: 'initial',
-          [`${CSS_VARIABLE_PREFIX}-exit-scale`]: 'initial',
-          [`${CSS_VARIABLE_PREFIX}-exit-rotate`]: 'initial',
-          [`${CSS_VARIABLE_PREFIX}-exit-translate-x`]: 'initial',
-          [`${CSS_VARIABLE_PREFIX}-exit-translate-y`]: 'initial',
         },
       ],
       { layer: 'una-base', autocomplete: 'animate-out' },
