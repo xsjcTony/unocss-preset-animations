@@ -1,6 +1,6 @@
 import type { PresetAnimationsOptions } from '@/index'
 import { describe, it } from 'vitest'
-import { generator, uno } from '~/utils'
+import { formatCSS, generator, uno } from '~/utils'
 
 
 describe.concurrent('base', () => {
@@ -197,6 +197,78 @@ describe.concurrent('base', () => {
 
         expect(css).not.toContain('animation-timing-function')
       })
+    })
+  })
+
+
+  describe('shortcuts', () => {
+    it('should order CSS variables correctly', async ({ expect }) => {
+      const uno = await generator({
+        shortcuts: {
+          'alias-class': 'animate-in hover:animate-out fade-in hover:fade-out',
+        },
+      })
+      const { css } = await uno.generate('alias-class')
+
+      expect(await formatCSS(css)).toMatchInlineSnapshot(`
+        "/* layer: shortcuts */
+        .alias-class {
+          animation: una-in;
+          --una-enter-opacity: 0;
+          animation-name: una-in;
+          animation-duration: 150ms;
+          --una-enter-opacity: initial;
+          --una-enter-scale: initial;
+          --una-enter-rotate: initial;
+          --una-enter-translate-x: initial;
+          --una-enter-translate-y: initial;
+        }
+        .alias-class:hover {
+          animation: una-out;
+          --una-exit-opacity: 0;
+          animation-name: una-out;
+          animation-duration: 150ms;
+          --una-exit-opacity: initial;
+          --una-exit-scale: initial;
+          --una-exit-rotate: initial;
+          --una-exit-translate-x: initial;
+          --una-exit-translate-y: initial;
+        }
+        /* layer: default */
+        @keyframes una-in {
+          from {
+            opacity: var(--una-enter-opacity, 1);
+            transform: translate3d(
+                var(--una-enter-translate-x, 0),
+                var(--una-enter-translate-y, 0),
+                0
+              )
+              scale3d(
+                var(--una-enter-scale, 1),
+                var(--una-enter-scale, 1),
+                var(--una-enter-scale, 1)
+              )
+              rotate(var(--una-enter-rotate, 0));
+          }
+        }
+        @keyframes una-out {
+          to {
+            opacity: var(--una-exit-opacity, 1);
+            transform: translate3d(
+                var(--una-exit-translate-x, 0),
+                var(--una-exit-translate-y, 0),
+                0
+              )
+              scale3d(
+                var(--una-exit-scale, 1),
+                var(--una-exit-scale, 1),
+                var(--una-exit-scale, 1)
+              )
+              rotate(var(--una-exit-rotate, 0));
+          }
+        }
+        "
+      `)
     })
   })
 })
