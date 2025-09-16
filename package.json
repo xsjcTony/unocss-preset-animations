@@ -42,6 +42,7 @@
   ],
   "scripts": {
     "build": "unbuild",
+    "prepack": "unbuild",
     "release": "pnpm test:ci && bumpp",
     "typecheck": "vue-tsc",
     "lint": "eslint .",
