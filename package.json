@@ -96,8 +96,9 @@
     "vue-tsc": "^2.2.10"
   },
   "peerDependencies": {
-    "@unocss/preset-wind3": ">=0.56.0 < 101",
-    "unocss": ">=0.56.0 < 101"
+    "@unocss/core": ">=0.56.0 < 101",
+    "@unocss/preset-mini": ">=0.56.0 < 101",
+    "@unocss/preset-wind3": ">=0.56.0 < 101"
   },
   "peerDependenciesMeta": {
     "@unocss/preset-wind3": {
