@@ -9,7 +9,9 @@ export function shortcuts(options: PresetAnimationsOptions): UserShortcuts<Theme
 
 
   const getSharedAnimationProperties = (theme: Theme): CSSObject => ({
-    'animation-duration': options.duration ? `${options.duration}${unit}` : theme.duration?.DEFAULT,
+    // theme.duration?.DEFAULT is undefined if `presetWind4.preflights.theme.mode` is 'on-demand' by default
+    // so we fallback to '150ms' if theme.duration?.DEFAULT is undefined
+    'animation-duration': options.duration ? `${options.duration}${unit}` : theme.duration?.DEFAULT || '150ms',
     ...options.delay && { 'animation-delay': `${options.delay}${unit}` },
     ...options.direction && { 'animation-direction': options.direction },
     ...options.fillMode && { 'animation-fill-mode': options.fillMode },
