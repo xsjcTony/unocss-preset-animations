@@ -42,7 +42,7 @@ describe.concurrent('spin animation', () => {
           .spin-in--70{--una-enter-rotate:-70deg;}
           .spin-in--80{--una-enter-rotate:-80deg;}
           .spin-in--90{--una-enter-rotate:-90deg;}
-          .spin-in-0{--una-enter-rotate:0;}
+          .spin-in-0{--una-enter-rotate:0deg;}
           .spin-in-10{--una-enter-rotate:10deg;}
           .spin-in-100{--una-enter-rotate:100deg;}
           .spin-in-110{--una-enter-rotate:110deg;}
@@ -289,7 +289,7 @@ describe.concurrent('spin animation', () => {
           .spin-in-0deg,
           .spin-in-0grad,
           .spin-in-0rad,
-          .spin-in-0turn{--una-enter-rotate:0;}"
+          .spin-in-0turn{--una-enter-rotate:0deg;}"
         `)
       })
     })
@@ -350,7 +350,7 @@ describe.concurrent('spin animation', () => {
           .spin-out--70{--una-exit-rotate:-70deg;}
           .spin-out--80{--una-exit-rotate:-80deg;}
           .spin-out--90{--una-exit-rotate:-90deg;}
-          .spin-out-0{--una-exit-rotate:0;}
+          .spin-out-0{--una-exit-rotate:0deg;}
           .spin-out-10{--una-exit-rotate:10deg;}
           .spin-out-100{--una-exit-rotate:100deg;}
           .spin-out-110{--una-exit-rotate:110deg;}
@@ -596,7 +596,7 @@ describe.concurrent('spin animation', () => {
           .spin-out-0deg,
           .spin-out-0grad,
           .spin-out-0rad,
-          .spin-out-0turn{--una-exit-rotate:0;}"
+          .spin-out-0turn{--una-exit-rotate:0deg;}"
         `)
       })
     })
