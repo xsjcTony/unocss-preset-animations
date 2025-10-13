@@ -38,6 +38,12 @@ This preset requires `unocss` version of **v0.56.0+**
 This preset is based on `@unocss/preset-wind3`, please make sure it is included in the `presets`, otherwise it won't work as expected.
 :::
 
+::: tip
+This preset is compatible with `@unocss/preset-wind4`, but `@unocss/preset-wind3` is recommended for better compatibility.
+
+This preset will adapt `tw-animate-css` in `v2` to provide better integration with `@unocss/preset-wind4` soon.
+:::
+
 
 ## Usage
 
