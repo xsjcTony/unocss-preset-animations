@@ -1,6 +1,6 @@
 {
   "name": "unocss-preset-animations",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "💅 An animation preset for UnoCSS, which adapts the tailwindcss-animate plugin",
   "packageManager": "pnpm@10.18.2",
   "type": "module",
