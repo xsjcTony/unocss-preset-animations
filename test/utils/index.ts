@@ -15,6 +15,7 @@ interface GeneratorOptions {
 export async function generator(options: GeneratorOptions = {}): Promise<UnoGenerator<Theme>> {
   return await createGenerator({
     presets: [
+      // @ts-expect-error - vue-tsc issue
       presetWind4({ preflights: { reset: false } }),
       presetAnimations(options.presetOptions),
     ],
